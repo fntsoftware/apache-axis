@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="echo-sample" />
+        <module name="axis-rt-transport-http-javanet" />
+        <module name="wsdd-maven-plugin" />
+        <module name="axis-server-maven-plugin" />
+        <module name="axis-rt-core" />
+        <module name="faults-sample" />
+        <module name="axis-rt-transport-http-hc3" />
+        <module name="axis-rt-management" />
+        <module name="axis" />
+        <module name="axis-codegen" />
+        <module name="jaxm-sample" />
+        <module name="tcpmon" />
+        <module name="soapmonitor-applet" />
+        <module name="wsdl2java-maven-plugin" />
+        <module name="addr-sample" />
+        <module name="axis-rt-jws" />
+        <module name="encoding-sample" />
+        <module name="spring-compat-tests" />
+        <module name="message-sample" />
+        <module name="nsmap" />
+        <module name="attachments-sample" />
+        <module name="integration" />
+        <module name="integrationguide-sample" />
+        <module name="misc-sample" />
+        <module name="daemon-launcher" />
+        <module name="axis-tools" />
+        <module name="java2wsdl-maven-plugin" />
+        <module name="proxy-sample" />
+        <module name="jaxrpc-sample" />
+        <module name="interop-tests" />
+        <module name="axis-standalone-server" />
+        <module name="axis-model" />
+        <module name="interop-mock" />
+        <module name="transport-sample" />
+        <module name="mtomstub-sample" />
+        <module name="axis-rt-soapmonitor" />
+        <module name="axis-rt-databinding-castor" />
+        <module name="stock-sample" />
+        <module name="bidbuy-sample" />
+        <module name="axis-jaxrpc" />
+        <module name="axis-testutils" />
+        <module name="handler-sample" />
+        <module name="axis-rt-databinding-xmlbeans" />
+        <module name="axis-war" />
+        <module name="axis-ant" />
+        <module name="axis-rt-compat" />
+        <module name="axis-rt-provider-bsf" />
+        <module name="soapmonitor-client" />
+        <module name="axis-rt-transport-jms" />
+        <module name="jms-sample" />
+        <module name="axis-saaj" />
+        <module name="jetty-daemon" />
+        <module name="axis-rt-transport-mail" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

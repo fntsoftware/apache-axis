@@ -1,0 +1,55 @@
+~~ Licensed to the Apache Software Foundation (ASF) under one
+~~ or more contributor license agreements. See the NOTICE file
+~~ distributed with this work for additional information
+~~ regarding copyright ownership. The ASF licenses this file
+~~ to you under the Apache License, Version 2.0 (the
+~~ "License"); you may not use this file except in compliance
+~~ with the License. You may obtain a copy of the License at
+~~
+~~ http://www.apache.org/licenses/LICENSE-2.0
+~~
+~~ Unless required by applicable law or agreed to in writing,
+~~ software distributed under the License is distributed on an
+~~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+~~ KIND, either express or implied. See the License for the
+~~ specific language governing permissions and limitations
+~~ under the License.
+
+     ------------------------
+     Changelog for Axis 1.4.1
+     ------------------------
+
+Changes from 1.4 final
+
+    * The Axis build has been migrated from Ant to Maven. This implies that the source distribution has
+      a completely different structure.
+    
+    * A Maven plugin has been added. This plugin can be used as an alternative to the Axis Ant tasks.
+    
+    * A new stand-alone server has been added. It uses an embedded Jetty server and superseded the old
+      SimpleAxisServer. The Maven plugin has goals to start/stop stand-alone server instances so that the new
+      stand-alone server can be easily integrated into integration tests executed using Maven.
+    
+    * A new HTTP transport has been added. It can be used as an alternative to the default <<<HTTPSender>>>
+      or the Commons HttpClient based transport (<<<CommonsHTTPSender>>>). It uses the
+      <<<java.net.HttpURLConnection>>> API which supports HTTP 1.1 keep-alive connections. In contrast to
+      <<<CommonsHTTPSender>>>, it doesn't impose any additional requirements on the application code
+      (see the {{{http://wiki.apache.org/ws/FrontPage/Axis/AxisCommonsHTTP}AxisCommonsHTTP how-to}}) and can therefore be used
+      as a drop-in replacement for <<<HTTPSender>>>. However, it requires Java 1.5
+      because it relies on features of the <<<java.net.HttpURLConnection>>> API that were not available in
+      earlier Java versions.
+    
+    * It is now possible to change the Java class associated with an XML type when generating a client stub.
+      Note that this is only supported by the wsdl2java-maven-plugin, but not by the corresponding Ant task
+      or command line tool. The feature can be used to consume MTOM enabled services. Check the
+      {{{../maven/wsdl2java-maven-plugin/java-xml-type-mappings.html}plugin documentation}} for more information.
+    
+    * WSDL4J has been upgraded from 1.5.1 to 1.6.2.
+    
+    * Support for Java 1.3 has been dropped.
+    
+    * <<<AxisServlet>>> no longer attempts to register the Axis MBeans automatically. To enable them, add
+      <<<axis-rt-management>>> as a dependency and register <<<org.apache.axis.management.servlet.AxisServerMBeanExporter>>>
+      as a listener in <<<web.xml>>>.
+    
+    * The JWS support was updated to use the <<<javax.tools>>> API, which requires Java 6.

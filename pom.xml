@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements. See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership. The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License. You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied. See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>9</version>
+    </parent>
+    <groupId>org.apache.axis</groupId>
+    <artifactId>axis-project</artifactId>
+    <name>Axis</name>
+    <version>1.4.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <url>${baseUrl}/</url>
+    <issueManagement>
+        <system>jira</system>
+        <url>http://issues.apache.org/jira/browse/AXIS</url>
+    </issueManagement>
+    <scm>
+        <connection>scm:svn:http://svn.apache.org/repos/asf/axis/axis1/java/trunk</connection>
+        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/axis/axis1/java/trunk</developerConnection>
+        <url>http://svn.apache.org/viewvc/axis/axis1/java/trunk</url>
+    </scm>
+    <mailingLists>
+        <mailingList>
+            <name>Developer List</name>
+            <subscribe>java-dev-subscribe@axis.apache.org</subscribe>
+            <unsubscribe>java-dev-unsubscribe@axis.apache.org</unsubscribe>
+            <post>java-dev@axis.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/axis-java-dev/</archive>
+        </mailingList>
+        <mailingList>
+            <name>User List</name>
+            <subscribe>axis1-java-user-subscribe@axis.apache.org</subscribe>
+            <unsubscribe>axis1-java-user-unsubscribe@axis.apache.org</unsubscribe>
+            <post>axis1-java-user@axis.apache.org</post>
+            <archive>http://mail-archives.apache.org/mod_mbox/axis-axis1-java-user/</archive>
+        </mailingList>
+    </mailingLists>
+    <inceptionYear>2000</inceptionYear>
+    <modules>
+        <module>apidocs</module>
+        <module>axis</module>
+        <module>axis-ant</module>
+        <module>axis-codegen</module>
+        <module>axis-jaxrpc</module>
+        <module>axis-model</module>
+        <module>axis-rt-compat</module>
+        <module>axis-rt-core</module>
+        <module>axis-rt-jws</module>
+        <module>axis-rt-databinding-castor</module>
+        <module>axis-rt-databinding-xmlbeans</module>
+        <module>axis-rt-management</module>
+        <module>axis-rt-provider-bsf</module>
+        <module>axis-rt-soapmonitor</module>
+        <module>axis-rt-transport-http-hc3</module>
+        <module>axis-rt-transport-http-javanet</module>
+        <module>axis-rt-transport-jms</module>
+        <module>axis-rt-transport-mail</module>
+        <module>axis-saaj</module>
+        <module>axis-standalone-server</module>
+        <module>axis-testutils</module>
+        <module>axis-tools</module>
+        <module>axis-war</module>
+        <module>daemon-launcher</module>
+        <module>distribution</module>
+        <module>integration</module>
+        <module>interop-mock</module>
+        <module>jetty-daemon</module>
+        <module>maven</module>
+        <module>samples</module>
+        <module>soapmonitor-applet</module>
+        <module>soapmonitor-client</module>
+        <module>tcpmon</module>
+        <module>tests</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.activation</groupId>
+                <artifactId>activation</artifactId>
+                <version>1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.truth</groupId>
+                <artifactId>truth</artifactId>
+                <version>0.40</version>
+            </dependency>
+            <dependency>
+                <groupId>xmlunit</groupId>
+                <artifactId>xmlunit</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.8</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>1.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.ws.commons.axiom</groupId>
+                <artifactId>testutils</artifactId>
+                <version>1.2.15</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-daemon</groupId>
+                <artifactId>commons-daemon</artifactId>
+                <version>1.0.10</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-cli</groupId>
+                <artifactId>commons-cli</artifactId>
+                <version>1.2</version>
+            </dependency>
+            <dependency>
+                <!-- Jetty 6.1 is the last version with support for Java 1.4 -->
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty</artifactId>
+                <version>6.1.26</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <prerequisites>
+        <maven>3.0.3</maven>
+    </prerequisites>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>false</addDefaultImplementationEntries>
+                                <addDefaultSpecificationEntries>false</addDefaultSpecificationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <detectOfflineLinks>false</detectOfflineLinks>
+                        <source>${javaVersion}</source>
+                        <quiet>true</quiet>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.21.0</version>
+                    <configuration>
+                        <!-- Make test execution deterministic -->
+                        <runOrder>alphabetical</runOrder>
+                        <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                        <trimStackTrace>false</trimStackTrace>
+                        <systemPropertyVariables>
+                            <!-- Axis doesn't contain META-INF/services/* files for SAAJ. Instead, the SAAJ API
+                                 library provided by Axis uses the Axis SAAJ implementation by default. That's an issue on Java 1.6
+                                 because the SAAJ API provided by the JRE will be used. Therefore we need to set this system property
+                                 to execute the SAAJ unit tests on Java 1.6. -->
+                            <javax.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</javax.xml.soap.MessageFactory>
+                            <javax.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</javax.xml.soap.SOAPFactory>
+                            <javax.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</javax.xml.soap.SOAPConnectionFactory>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.21.0</version>
+                    <configuration>
+                        <!-- See the corresponding surefire configuration for more information about this. -->
+                        <runOrder>alphabetical</runOrder>
+                        <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                        <trimStackTrace>false</trimStackTrace>
+                        <systemPropertyVariables>
+                            <javax.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</javax.xml.soap.MessageFactory>
+                            <javax.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</javax.xml.soap.SOAPFactory>
+                            <javax.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</javax.xml.soap.SOAPConnectionFactory>
+                        </systemPropertyVariables>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.4</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.2.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>build-helper-maven-plugin</artifactId>
+                    <version>1.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-invoker-plugin</artifactId>
+                    <version>1.7</version>
+                    <configuration>
+                        <!-- Enable the JaCoCo agent. -->
+                        <mavenOpts>${argLine}</mavenOpts>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>7.5.4.v20111024</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.1.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.gmaven</groupId>
+                    <artifactId>gmaven-plugin</artifactId>
+                    <version>1.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>2.3</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-eclipse-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.veithen.filecheck</groupId>
+                    <artifactId>filecheck-maven-plugin</artifactId>
+                    <version>0.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.github.veithen.alta</groupId>
+                    <artifactId>alta-maven-plugin</artifactId>
+                    <version>0.6.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <!-- We don't want to support Maven 2 and we need at least 3.0.4 to avoid MINVOKER-107 -->
+                                <requireMavenVersion>
+                                    <version>3.0.4</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${javaVersion}</source>
+                    <target>${javaVersion}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.veithen.maven</groupId>
+                <artifactId>jacoco-report-maven-plugin</artifactId>
+                <version>0.1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>select-java-signatures</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                javaVersion = project.properties['javaVersion']
+                                if (javaVersion == '1.4') {
+                                    artifactId = 'java14-sun'
+                                } else if (javaVersion == '1.5') {
+                                    artifactId = 'java15-sun'
+                                } else if (javaVersion == '1.6') {
+                                    artifactId = 'java16-sun'
+                                } else if (javaVersion == '6') {
+                                    artifactId = 'java6'
+                                }
+                                project.properties['signatureArtifactId'] = artifactId
+                                project.properties['signatureVersion'] = '1.0'
+                            </source>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- This serves two purposes:
+                      (1) we want to generate source JARs for all builds, not just release builds;
+                      (2) we need (some of) the source JARs to generate the Javadoc in the apidocs module. -->
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>source-jars</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- Override the set of reports just for this project -->
+                <artifactId>maven-site-plugin</artifactId>
+                <inherited>false</inherited>
+                <configuration>
+                    <reportPlugins>
+                        <plugin>
+                            <artifactId>maven-project-info-reports-plugin</artifactId>
+                            <version>2.8</version>
+                            <reports>
+                                <report>index</report>
+                                <report>issue-tracking</report>
+                                <report>mailing-list</report>
+                                <!-- report>project-team</report -->
+                                <report>scm</report>
+                            </reports>
+                        </plugin>
+                    </reportPlugins>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <configuration>
+                    <!-- Required by maven-scm-publish-plugin -->
+                    <skipDeploy>true</skipDeploy>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-publish-plugin</artifactId>
+                <version>1.0-beta-2</version>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>apache-release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <!-- Skip the execution configured in org.apache:apache. We use our own configuration. -->
+                                <id>attach-sources</id>
+                                <phase>none</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <!-- Profile to generate Eclipse project metadata -->
+            <id>eclipse</id>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+            <build>
+                <defaultGoal>install</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-eclipse-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <!-- Since we configure the maven-shade-plugin with the dependencyReducedPomLocation
+                                     property, the basedir of the modules that use that plugin will change during
+                                     the build lifecycle. This is an issue for maven-eclipse-plugin. Therefore
+                                     we execute the eclipse goal in the prepare-package phase, i.e. before the shade goal. -->
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>eclipse</goal>
+                                </goals>
+                                <configuration>
+                                    <downloadSources>true</downloadSources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <reporting>
+        <!-- Note that the reporting plugins configured here are only executed in submodules
+             (because the configuration of the maven-site-plugin in this POM overrides the
+             reports configured here). -->
+        <plugins>
+            <plugin>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.8</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>index</report>
+                            <report>summary</report>
+                            <report>dependencies</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+                <configuration>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+    <properties>
+        <javaVersion>6</javaVersion>
+        <baseUrl>http://axis.apache.org/axis/java</baseUrl>
+        <baseSiteUrl>scm:svn:https://svn.apache.org/repos/asf/axis/site/axis/java</baseSiteUrl>
+    </properties>
+    <distributionManagement>
+        <site>
+            <id>axis</id>
+            <url>${baseSiteUrl}/</url>
+        </site>
+    </distributionManagement>
+</project>
