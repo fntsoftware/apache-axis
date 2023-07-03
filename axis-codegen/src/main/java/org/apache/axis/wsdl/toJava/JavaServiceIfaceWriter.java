@@ -67,12 +67,12 @@ public class JavaServiceIfaceWriter extends JavaClassWriter {
     }    // getClassString
 
     /**
-     * Returns "extends javax.xml.rpc.Service ".
+     * Returns "extends jakarta.xml.rpc.Service ".
      * 
      * @return 
      */
     protected String getExtendsText() {
-        return "extends javax.xml.rpc.Service ";
+        return "extends jakarta.xml.rpc.Service ";
     }    // getExtendsText
 
     /**
@@ -156,11 +156,11 @@ public class JavaServiceIfaceWriter extends JavaClassWriter {
             pw.println();
             pw.println("    public " + bindingType + " get" + portName
                     + "() throws "
-                    + javax.xml.rpc.ServiceException.class.getName() + ";");
+                    + jakarta.xml.rpc.ServiceException.class.getName() + ";");
             pw.println();
             pw.println("    public " + bindingType + " get" + portName
                     + "(java.net.URL portAddress) throws "
-                    + javax.xml.rpc.ServiceException.class.getName() + ";");
+                    + jakarta.xml.rpc.ServiceException.class.getName() + ";");
         }
     }    // writeFileBody
 }    // class JavaServiceIfaceWriter

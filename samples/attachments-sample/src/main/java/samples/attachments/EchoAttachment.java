@@ -26,19 +26,19 @@ import org.apache.axis.encoding.ser.JAFDataHandlerSerializerFactory;
 import org.apache.axis.transport.http.HTTPConstants;
 import org.apache.axis.utils.Options;
 
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
+import jakarta.activation.DataHandler;
+import jakarta.activation.FileDataSource;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
-import javax.xml.soap.AttachmentPart;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPBodyElement;
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPConnectionFactory;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
+import jakarta.xml.rpc.ParameterMode;
+import jakarta.xml.soap.AttachmentPart;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPBodyElement;
+import jakarta.xml.soap.SOAPConnection;
+import jakarta.xml.soap.SOAPConnectionFactory;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPPart;
 import java.io.File;
 import java.net.URL;
 import java.util.Hashtable;
@@ -77,7 +77,7 @@ public class EchoAttachment {
      */
     public boolean echo(final boolean doTheDIME, String filename) throws Exception {
 
-        //javax.activation.MimetypesFileTypeMap map= (javax.activation.MimetypesFileTypeMap)javax.activation.MimetypesFileTypeMap.getDefaultFileTypeMap();
+        //jakarta.activation.MimetypesFileTypeMap map= (jakarta.activation.MimetypesFileTypeMap)jakarta.activation.MimetypesFileTypeMap.getDefaultFileTypeMap();
         //map.addMimeTypes("application/x-org-apache-axis-wsdd wsdd");
 
 
@@ -238,7 +238,7 @@ public class EchoAttachment {
             throw new AxisFault("", (String) ret, null, null);
         }
 
-        if (!(ret instanceof javax.activation.DataHandler[])) {
+        if (!(ret instanceof jakarta.activation.DataHandler[])) {
             //The wrong type of object that what was expected.
             System.out.println("Received unexpected type :" +
                                ret.getClass().getName());
@@ -249,7 +249,7 @@ public class EchoAttachment {
         //Still here, so far so good.
         //Now lets brute force compare the source attachment
         // to the one we received.
-        javax.activation.DataHandler[] received = (javax.activation.DataHandler[]) ret;
+        jakarta.activation.DataHandler[] received = (jakarta.activation.DataHandler[]) ret;
 
         int i = 0;
         for (i = 0; i < received.length && i < attachments.length; ++i) {
@@ -453,7 +453,7 @@ public class EchoAttachment {
         String endPointURLString =  "http://localhost:" +opts.getPort() + "/axis/services/urn:EchoAttachmentsService";
 
         SOAPConnectionFactory soapConnectionFactory =
-                javax.xml.soap.SOAPConnectionFactory.newInstance();
+                jakarta.xml.soap.SOAPConnectionFactory.newInstance();
         SOAPConnection soapConnection =
                 soapConnectionFactory.createConnection();
 
@@ -479,16 +479,16 @@ public class EchoAttachment {
             while (dataHandlerIterator.hasNext()) {
                 DataHandler dataHandler = (DataHandler)
                         dataHandlerIterator.next();
-                javax.xml.soap.SOAPElement element =
+                jakarta.xml.soap.SOAPElement element =
                         operation.addChildElement(requestEnvelope.createName("source"));
-                javax.xml.soap.AttachmentPart attachment =
+                jakarta.xml.soap.AttachmentPart attachment =
                         soapMessage.createAttachmentPart(dataHandler);
                 soapMessage.addAttachmentPart(attachment);
                 element.addAttribute(requestEnvelope.createName
                                      ("href"), "cid:" + attachment.getContentId());
             }
         }
-        javax.xml.soap.SOAPMessage returnedSOAPMessage =
+        jakarta.xml.soap.SOAPMessage returnedSOAPMessage =
                 soapConnection.call(soapMessage, endPointURLString);
         Iterator iterator = returnedSOAPMessage.getAttachments();
         if (!iterator.hasNext()) {

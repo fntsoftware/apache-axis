@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc;
+package jakarta.xml.rpc;
 
 import javax.xml.namespace.QName;
 import java.net.URL;
 
 /**
- * The <code>javax.xml.rpc.ServiceFactory</code> is an abstract class
+ * The <code>jakarta.xml.rpc.ServiceFactory</code> is an abstract class
  * that provides a factory for the creation of instances of the type
- * <code>javax.xml.rpc.Service</code>. This abstract class follows the
+ * <code>jakarta.xml.rpc.Service</code>. This abstract class follows the
  * abstract static factory design pattern. This enables a J2SE based
  * client to create a <code>Service instance</code> in a portable manner
  * without using the constructor of the <code>Service</code>
@@ -43,7 +43,7 @@ public abstract class ServiceFactory {
      * class.
      */
     public static final java.lang.String SERVICEFACTORY_PROPERTY =
-        "javax.xml.rpc.ServiceFactory";
+        "jakarta.xml.rpc.ServiceFactory";
 
     /**
      * Gets an instance of the <code>ServiceFactory</code>
@@ -52,7 +52,7 @@ public abstract class ServiceFactory {
      * application each time this method is called.
      *
      * <p> The implementation class to be used can be overridden by
-     * setting the javax.xml.rpc.ServiceFactory system property.
+     * setting the jakarta.xml.rpc.ServiceFactory system property.
      *
      * @return  ServiceFactory.
      * @throws  ServiceException

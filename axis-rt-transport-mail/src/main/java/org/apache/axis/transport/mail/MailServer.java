@@ -24,8 +24,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.net.pop3.POP3Client;
 import org.apache.commons.net.pop3.POP3MessageInfo;
 
-import javax.mail.Session;
-import javax.mail.internet.MimeMessage;
+import jakarta.mail.Session;
+import jakarta.mail.internet.MimeMessage;
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.Reader;

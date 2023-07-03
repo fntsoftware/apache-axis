@@ -21,13 +21,13 @@ import org.apache.axis.message.SOAPEnvelope;
 import org.apache.axis.message.SOAPHeader;
 import org.apache.axis.message.SOAPHeaderElement;
 
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPPart;
 import java.io.ByteArrayInputStream;
 import java.util.Iterator;
 
@@ -227,8 +227,8 @@ public class TestSOAPHeader extends TestCase {
         ((org.apache.axis.Message) msg).setMessageContext(
                 new org.apache.axis.MessageContext(axisengine));
         SOAPPart sp = msg.getSOAPPart();
-        javax.xml.soap.SOAPEnvelope se = sp.getEnvelope();
-        javax.xml.soap.SOAPHeader sh = se.getHeader();
+        jakarta.xml.soap.SOAPEnvelope se = sp.getEnvelope();
+        jakarta.xml.soap.SOAPHeader sh = se.getHeader();
         SOAPBody sb = se.getBody();
         Iterator it = sh.getChildElements();
         int count = 0;

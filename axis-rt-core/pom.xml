@@ -22,17 +22,23 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>axis-rt-core</artifactId>
     <name>Axis Runtime Core</name>
     <url>${baseUrl}/core</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/core</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
@@ -41,13 +47,18 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.glassfish.corba</groupId>
+            <artifactId>glassfish-corba-orb</artifactId>
+            <version>4.2.4</version>
+        </dependency>
+        <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
         </dependency>
         <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
         </dependency>
         <dependency>
             <groupId>wsdl4j</groupId>
@@ -63,12 +74,17 @@
         <dependency>
             <groupId>xerces</groupId>
             <artifactId>xercesImpl</artifactId>
-            <version>2.6.2</version>
+            <version>2.12.2</version>
         </dependency>
         <dependency>
             <groupId>xerces</groupId>
             <artifactId>xmlParserAPIs</artifactId>
             <version>2.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

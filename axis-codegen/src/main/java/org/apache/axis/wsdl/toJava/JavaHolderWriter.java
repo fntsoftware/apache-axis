@@ -53,12 +53,12 @@ public class JavaHolderWriter extends JavaClassWriter {
     }    // getClassModifiers
 
     /**
-     * Return "implements javax.xml.rpc.holders.Holder ".
+     * Return "implements jakarta.xml.rpc.holders.Holder ".
      * 
      * @return 
      */
     protected String getImplementsText() {
-        return "implements javax.xml.rpc.holders.Holder ";
+        return "implements jakarta.xml.rpc.holders.Holder ";
     }    // getImplementsText
 
     /**

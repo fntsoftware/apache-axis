@@ -49,7 +49,7 @@ import javax.wsdl.Port;
 import javax.wsdl.PortType;
 import javax.wsdl.Service;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.holders.BooleanHolder;
+import jakarta.xml.rpc.holders.BooleanHolder;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;

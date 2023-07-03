@@ -27,7 +27,7 @@
     <groupId>org.apache.axis</groupId>
     <artifactId>axis-project</artifactId>
     <name>Axis</name>
-    <version>1.4.3-SNAPSHOT</version>
+    <version>1.4.3-FNT</version>
     <packaging>pom</packaging>
     <url>${baseUrl}/</url>
     <issueManagement>
@@ -76,33 +76,33 @@
         <module>axis-rt-transport-jms</module>
         <module>axis-rt-transport-mail</module>
         <module>axis-saaj</module>
-        <module>axis-standalone-server</module>
+<!--        <module>axis-standalone-server</module>-->
         <module>axis-testutils</module>
         <module>axis-tools</module>
         <module>axis-war</module>
-        <module>daemon-launcher</module>
+<!--        <module>daemon-launcher</module>-->
         <module>distribution</module>
-        <module>integration</module>
-        <module>interop-mock</module>
+<!--        <module>integration</module>-->
+<!--        <module>interop-mock</module>-->
         <module>jetty-daemon</module>
         <module>maven</module>
-        <module>samples</module>
+<!--        <module>samples</module>-->
         <module>soapmonitor-applet</module>
         <module>soapmonitor-client</module>
         <module>tcpmon</module>
-        <module>tests</module>
+<!--        <module>tests</module>-->
     </modules>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>javax.activation</groupId>
-                <artifactId>activation</artifactId>
-                <version>1.1</version>
+                <groupId>jakarta.activation</groupId>
+                <artifactId>jakarta.activation-api</artifactId>
+                <version>2.1.2</version>
             </dependency>
             <dependency>
-                <groupId>javax.mail</groupId>
-                <artifactId>mail</artifactId>
-                <version>1.4.1</version>
+                <groupId>jakarta.mail</groupId>
+                <artifactId>jakarta.mail-api</artifactId>
+                <version>2.1.2</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
@@ -132,7 +132,7 @@
             <dependency>
                 <groupId>org.apache.ws.commons.axiom</groupId>
                 <artifactId>testutils</artifactId>
-                <version>1.2.15</version>
+                <version>1.4.0</version>
             </dependency>
             <dependency>
                 <groupId>commons-lang</groupId>
@@ -209,9 +209,9 @@
                                  library provided by Axis uses the Axis SAAJ implementation by default. That's an issue on Java 1.6
                                  because the SAAJ API provided by the JRE will be used. Therefore we need to set this system property
                                  to execute the SAAJ unit tests on Java 1.6. -->
-                            <javax.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</javax.xml.soap.MessageFactory>
-                            <javax.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</javax.xml.soap.SOAPFactory>
-                            <javax.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</javax.xml.soap.SOAPConnectionFactory>
+                            <jakarta.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</jakarta.xml.soap.MessageFactory>
+                            <jakarta.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</jakarta.xml.soap.SOAPFactory>
+                            <jakarta.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</jakarta.xml.soap.SOAPConnectionFactory>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
@@ -224,9 +224,9 @@
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
                         <trimStackTrace>false</trimStackTrace>
                         <systemPropertyVariables>
-                            <javax.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</javax.xml.soap.MessageFactory>
-                            <javax.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</javax.xml.soap.SOAPFactory>
-                            <javax.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</javax.xml.soap.SOAPConnectionFactory>
+                            <jakarta.xml.soap.MessageFactory>org.apache.axis.soap.MessageFactoryImpl</jakarta.xml.soap.MessageFactory>
+                            <jakarta.xml.soap.SOAPFactory>org.apache.axis.soap.SOAPFactoryImpl</jakarta.xml.soap.SOAPFactory>
+                            <jakarta.xml.soap.SOAPConnectionFactory>org.apache.axis.soap.SOAPConnectionFactoryImpl</jakarta.xml.soap.SOAPConnectionFactory>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>
@@ -315,7 +315,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.11.0</version>
                 <configuration>
                     <source>${javaVersion}</source>
                     <target>${javaVersion}</target>
@@ -504,12 +504,18 @@
     <properties>
         <javaVersion>6</javaVersion>
         <baseUrl>http://axis.apache.org/axis/java</baseUrl>
-        <baseSiteUrl>scm:svn:https://svn.apache.org/repos/asf/axis/site/axis/java</baseSiteUrl>
+        <baseSiteUrl>https://maven.pkg.github.com/fntsoftware/apache-axis</baseSiteUrl>
     </properties>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>

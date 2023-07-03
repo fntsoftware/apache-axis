@@ -16,9 +16,9 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testTypeTestWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTestAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -29,7 +29,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -50,7 +50,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -61,7 +61,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
         binding.setTimeout(60000);
 
         // Test operation
-        binding.allPrimitivesInout(new javax.xml.rpc.holders.StringHolder(new java.lang.String()), new javax.xml.rpc.holders.BigIntegerHolder(new java.math.BigInteger("0")), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.LongHolder(0), new javax.xml.rpc.holders.ShortHolder((short)0), new javax.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)), new javax.xml.rpc.holders.FloatHolder(0), new javax.xml.rpc.holders.DoubleHolder(0), new javax.xml.rpc.holders.BooleanHolder(true), new javax.xml.rpc.holders.ByteHolder((byte)0), new javax.xml.rpc.holders.QNameHolder(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble")), new javax.xml.rpc.holders.CalendarHolder(java.util.Calendar.getInstance()), new javax.xml.rpc.holders.ByteArrayHolder(new byte[0]), new javax.xml.rpc.holders.ByteArrayHolder(new byte[0]), new javax.xml.rpc.holders.StringHolder(new java.lang.String()), new javax.xml.rpc.holders.BooleanWrapperHolder(new java.lang.Boolean(false)), new javax.xml.rpc.holders.FloatWrapperHolder(new java.lang.Float(0)), new javax.xml.rpc.holders.DoubleWrapperHolder(new java.lang.Double(0)), new javax.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)), new javax.xml.rpc.holders.IntegerWrapperHolder(new java.lang.Integer(0)), new javax.xml.rpc.holders.ShortWrapperHolder(new java.lang.Short((short)0)), new javax.xml.rpc.holders.ByteArrayHolder(new byte[0]), new org.apache.axis.holders.TimeHolder(new org.apache.axis.types.Time("15:45:45.275Z")), new org.apache.axis.holders.UnsignedLongHolder(new org.apache.axis.types.UnsignedLong(0)), new org.apache.axis.holders.UnsignedIntHolder(new org.apache.axis.types.UnsignedInt(0)), new org.apache.axis.holders.UnsignedShortHolder(new org.apache.axis.types.UnsignedShort(0)), new org.apache.axis.holders.UnsignedByteHolder(new org.apache.axis.types.UnsignedByte(0)), new org.apache.axis.holders.NonNegativeIntegerHolder(new org.apache.axis.types.NonNegativeInteger("0")), new org.apache.axis.holders.PositiveIntegerHolder(new org.apache.axis.types.PositiveInteger("1")), new org.apache.axis.holders.NonPositiveIntegerHolder(new org.apache.axis.types.NonPositiveInteger("0")), new org.apache.axis.holders.NegativeIntegerHolder(new org.apache.axis.types.NegativeInteger("-1")), new org.apache.axis.holders.URIHolder(new org.apache.axis.types.URI("urn:testing")), new org.apache.axis.holders.YearHolder(new org.apache.axis.types.Year(2000)), new org.apache.axis.holders.MonthHolder(new org.apache.axis.types.Month(1)), new org.apache.axis.holders.DayHolder(new org.apache.axis.types.Day(1)), new org.apache.axis.holders.YearMonthHolder(new org.apache.axis.types.YearMonth(2000,1)), new org.apache.axis.holders.MonthDayHolder(new org.apache.axis.types.MonthDay(1, 1)));
+        binding.allPrimitivesInout(new jakarta.xml.rpc.holders.StringHolder(new java.lang.String()), new jakarta.xml.rpc.holders.BigIntegerHolder(new java.math.BigInteger("0")), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.LongHolder(0), new jakarta.xml.rpc.holders.ShortHolder((short)0), new jakarta.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)), new jakarta.xml.rpc.holders.FloatHolder(0), new jakarta.xml.rpc.holders.DoubleHolder(0), new jakarta.xml.rpc.holders.BooleanHolder(true), new jakarta.xml.rpc.holders.ByteHolder((byte)0), new jakarta.xml.rpc.holders.QNameHolder(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble")), new jakarta.xml.rpc.holders.CalendarHolder(java.util.Calendar.getInstance()), new jakarta.xml.rpc.holders.ByteArrayHolder(new byte[0]), new jakarta.xml.rpc.holders.ByteArrayHolder(new byte[0]), new jakarta.xml.rpc.holders.StringHolder(new java.lang.String()), new jakarta.xml.rpc.holders.BooleanWrapperHolder(new java.lang.Boolean(false)), new jakarta.xml.rpc.holders.FloatWrapperHolder(new java.lang.Float(0)), new jakarta.xml.rpc.holders.DoubleWrapperHolder(new java.lang.Double(0)), new jakarta.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)), new jakarta.xml.rpc.holders.IntegerWrapperHolder(new java.lang.Integer(0)), new jakarta.xml.rpc.holders.ShortWrapperHolder(new java.lang.Short((short)0)), new jakarta.xml.rpc.holders.ByteArrayHolder(new byte[0]), new org.apache.axis.holders.TimeHolder(new org.apache.axis.types.Time("15:45:45.275Z")), new org.apache.axis.holders.UnsignedLongHolder(new org.apache.axis.types.UnsignedLong(0)), new org.apache.axis.holders.UnsignedIntHolder(new org.apache.axis.types.UnsignedInt(0)), new org.apache.axis.holders.UnsignedShortHolder(new org.apache.axis.types.UnsignedShort(0)), new org.apache.axis.holders.UnsignedByteHolder(new org.apache.axis.types.UnsignedByte(0)), new org.apache.axis.holders.NonNegativeIntegerHolder(new org.apache.axis.types.NonNegativeInteger("0")), new org.apache.axis.holders.PositiveIntegerHolder(new org.apache.axis.types.PositiveInteger("1")), new org.apache.axis.holders.NonPositiveIntegerHolder(new org.apache.axis.types.NonPositiveInteger("0")), new org.apache.axis.holders.NegativeIntegerHolder(new org.apache.axis.types.NegativeInteger("-1")), new org.apache.axis.holders.URIHolder(new org.apache.axis.types.URI("urn:testing")), new org.apache.axis.holders.YearHolder(new org.apache.axis.types.Year(2000)), new org.apache.axis.holders.MonthHolder(new org.apache.axis.types.Month(1)), new org.apache.axis.holders.DayHolder(new org.apache.axis.types.Day(1)), new org.apache.axis.holders.YearMonthHolder(new org.apache.axis.types.YearMonth(2000,1)), new org.apache.axis.holders.MonthDayHolder(new org.apache.axis.types.MonthDay(1, 1)));
         // TBD - validate results
     }
 
@@ -71,7 +71,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -82,7 +82,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
         binding.setTimeout(60000);
 
         // Test operation
-        binding.allPrimitivesOut(new javax.xml.rpc.holders.StringHolder(), new javax.xml.rpc.holders.BigIntegerHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.LongHolder(), new javax.xml.rpc.holders.ShortHolder(), new javax.xml.rpc.holders.BigDecimalHolder(), new javax.xml.rpc.holders.FloatHolder(), new javax.xml.rpc.holders.DoubleHolder(), new javax.xml.rpc.holders.BooleanHolder(), new javax.xml.rpc.holders.ByteHolder(), new javax.xml.rpc.holders.QNameHolder(), new javax.xml.rpc.holders.CalendarHolder(), new javax.xml.rpc.holders.ByteArrayHolder(), new javax.xml.rpc.holders.ByteArrayHolder(), new javax.xml.rpc.holders.StringHolder(), new javax.xml.rpc.holders.BooleanWrapperHolder(), new javax.xml.rpc.holders.FloatWrapperHolder(), new javax.xml.rpc.holders.DoubleWrapperHolder(), new javax.xml.rpc.holders.BigDecimalHolder(), new javax.xml.rpc.holders.IntegerWrapperHolder(), new javax.xml.rpc.holders.ShortWrapperHolder(), new javax.xml.rpc.holders.ByteArrayHolder(), new org.apache.axis.holders.TimeHolder(), new org.apache.axis.holders.UnsignedLongHolder(), new org.apache.axis.holders.UnsignedIntHolder(), new org.apache.axis.holders.UnsignedShortHolder(), new org.apache.axis.holders.UnsignedByteHolder(), new org.apache.axis.holders.NonNegativeIntegerHolder(), new org.apache.axis.holders.PositiveIntegerHolder(), new org.apache.axis.holders.NonPositiveIntegerHolder(), new org.apache.axis.holders.NegativeIntegerHolder(), new org.apache.axis.holders.URIHolder(), new org.apache.axis.holders.YearHolder(), new org.apache.axis.holders.MonthHolder(), new org.apache.axis.holders.DayHolder(), new org.apache.axis.holders.YearMonthHolder(), new org.apache.axis.holders.MonthDayHolder());
+        binding.allPrimitivesOut(new jakarta.xml.rpc.holders.StringHolder(), new jakarta.xml.rpc.holders.BigIntegerHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.LongHolder(), new jakarta.xml.rpc.holders.ShortHolder(), new jakarta.xml.rpc.holders.BigDecimalHolder(), new jakarta.xml.rpc.holders.FloatHolder(), new jakarta.xml.rpc.holders.DoubleHolder(), new jakarta.xml.rpc.holders.BooleanHolder(), new jakarta.xml.rpc.holders.ByteHolder(), new jakarta.xml.rpc.holders.QNameHolder(), new jakarta.xml.rpc.holders.CalendarHolder(), new jakarta.xml.rpc.holders.ByteArrayHolder(), new jakarta.xml.rpc.holders.ByteArrayHolder(), new jakarta.xml.rpc.holders.StringHolder(), new jakarta.xml.rpc.holders.BooleanWrapperHolder(), new jakarta.xml.rpc.holders.FloatWrapperHolder(), new jakarta.xml.rpc.holders.DoubleWrapperHolder(), new jakarta.xml.rpc.holders.BigDecimalHolder(), new jakarta.xml.rpc.holders.IntegerWrapperHolder(), new jakarta.xml.rpc.holders.ShortWrapperHolder(), new jakarta.xml.rpc.holders.ByteArrayHolder(), new org.apache.axis.holders.TimeHolder(), new org.apache.axis.holders.UnsignedLongHolder(), new org.apache.axis.holders.UnsignedIntHolder(), new org.apache.axis.holders.UnsignedShortHolder(), new org.apache.axis.holders.UnsignedByteHolder(), new org.apache.axis.holders.NonNegativeIntegerHolder(), new org.apache.axis.holders.PositiveIntegerHolder(), new org.apache.axis.holders.NonPositiveIntegerHolder(), new org.apache.axis.holders.NegativeIntegerHolder(), new org.apache.axis.holders.URIHolder(), new org.apache.axis.holders.YearHolder(), new org.apache.axis.holders.MonthHolder(), new org.apache.axis.holders.DayHolder(), new org.apache.axis.holders.YearMonthHolder(), new org.apache.axis.holders.MonthDayHolder());
         // TBD - validate results
     }
 
@@ -92,7 +92,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -113,7 +113,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -134,7 +134,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -155,7 +155,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -177,7 +177,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -198,7 +198,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -219,7 +219,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -240,7 +240,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -262,7 +262,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -283,7 +283,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -304,7 +304,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -325,7 +325,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -347,7 +347,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -368,7 +368,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -389,7 +389,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -410,7 +410,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -432,7 +432,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -453,7 +453,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -474,7 +474,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -495,7 +495,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -517,7 +517,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -538,7 +538,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -559,7 +559,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -580,7 +580,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -602,7 +602,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -623,7 +623,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -644,7 +644,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -665,7 +665,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -687,7 +687,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -713,7 +713,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -739,7 +739,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -765,7 +765,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -792,7 +792,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -813,7 +813,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -824,7 +824,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
         binding.setTimeout(60000);
 
         // Test operation
-        binding.anyInout(new javax.xml.rpc.holders.ObjectHolder(new java.lang.String()));
+        binding.anyInout(new jakarta.xml.rpc.holders.ObjectHolder(new java.lang.String()));
         // TBD - validate results
     }
 
@@ -834,7 +834,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -845,7 +845,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
         binding.setTimeout(60000);
 
         // Test operation
-        binding.anyOut(new javax.xml.rpc.holders.ObjectHolder());
+        binding.anyOut(new jakarta.xml.rpc.holders.ObjectHolder());
         // TBD - validate results
     }
 
@@ -855,7 +855,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -877,7 +877,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -898,7 +898,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -919,7 +919,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -940,7 +940,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -962,7 +962,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -983,7 +983,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1004,7 +1004,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1025,7 +1025,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1047,7 +1047,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1059,7 +1059,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         boolean value = false;
-        value = binding.methodBoolean(true, new javax.xml.rpc.holders.BooleanHolder(true));
+        value = binding.methodBoolean(true, new jakarta.xml.rpc.holders.BooleanHolder(true));
         // TBD - validate results
     }
 
@@ -1069,7 +1069,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1081,7 +1081,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         byte value = -3;
-        value = binding.methodByte((byte)0, new javax.xml.rpc.holders.ByteHolder((byte)0));
+        value = binding.methodByte((byte)0, new jakarta.xml.rpc.holders.ByteHolder((byte)0));
         // TBD - validate results
     }
 
@@ -1091,7 +1091,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1103,7 +1103,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         short value = -3;
-        value = binding.methodShort((short)0, new javax.xml.rpc.holders.ShortHolder((short)0));
+        value = binding.methodShort((short)0, new jakarta.xml.rpc.holders.ShortHolder((short)0));
         // TBD - validate results
     }
 
@@ -1113,7 +1113,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1125,7 +1125,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         int value = -3;
-        value = binding.methodInt(0, new javax.xml.rpc.holders.IntHolder(0));
+        value = binding.methodInt(0, new jakarta.xml.rpc.holders.IntHolder(0));
         // TBD - validate results
     }
 
@@ -1135,7 +1135,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1147,7 +1147,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         long value = -3;
-        value = binding.methodLong(0, new javax.xml.rpc.holders.LongHolder(0));
+        value = binding.methodLong(0, new jakarta.xml.rpc.holders.LongHolder(0));
         // TBD - validate results
     }
 
@@ -1157,7 +1157,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1169,7 +1169,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         float value = -3;
-        value = binding.methodFloat(0, new javax.xml.rpc.holders.FloatHolder(0));
+        value = binding.methodFloat(0, new jakarta.xml.rpc.holders.FloatHolder(0));
         // TBD - validate results
     }
 
@@ -1179,7 +1179,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1191,7 +1191,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         double value = -3;
-        value = binding.methodDouble(0, new javax.xml.rpc.holders.DoubleHolder(0));
+        value = binding.methodDouble(0, new jakarta.xml.rpc.holders.DoubleHolder(0));
         // TBD - validate results
     }
 
@@ -1201,7 +1201,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1213,7 +1213,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.String value = null;
-        value = binding.methodString(new java.lang.String(), new javax.xml.rpc.holders.StringHolder(new java.lang.String()));
+        value = binding.methodString(new java.lang.String(), new jakarta.xml.rpc.holders.StringHolder(new java.lang.String()));
         // TBD - validate results
     }
 
@@ -1223,7 +1223,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1235,7 +1235,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.math.BigInteger value = null;
-        value = binding.methodInteger(new java.math.BigInteger("0"), new javax.xml.rpc.holders.BigIntegerHolder(new java.math.BigInteger("0")));
+        value = binding.methodInteger(new java.math.BigInteger("0"), new jakarta.xml.rpc.holders.BigIntegerHolder(new java.math.BigInteger("0")));
         // TBD - validate results
     }
 
@@ -1245,7 +1245,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1257,7 +1257,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.math.BigDecimal value = null;
-        value = binding.methodDecimal(new java.math.BigDecimal(0), new javax.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)));
+        value = binding.methodDecimal(new java.math.BigDecimal(0), new jakarta.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)));
         // TBD - validate results
     }
 
@@ -1267,7 +1267,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1279,7 +1279,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.util.Calendar value = null;
-        value = binding.methodDateTime(java.util.Calendar.getInstance(), new javax.xml.rpc.holders.CalendarHolder(java.util.Calendar.getInstance()));
+        value = binding.methodDateTime(java.util.Calendar.getInstance(), new jakarta.xml.rpc.holders.CalendarHolder(java.util.Calendar.getInstance()));
         // TBD - validate results
     }
 
@@ -1289,7 +1289,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1301,7 +1301,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         javax.xml.namespace.QName value = null;
-        value = binding.methodQName(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble"), new javax.xml.rpc.holders.QNameHolder(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble")));
+        value = binding.methodQName(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble"), new jakarta.xml.rpc.holders.QNameHolder(new javax.xml.namespace.QName("http://double-double", "toil-and-trouble")));
         // TBD - validate results
     }
 
@@ -1311,7 +1311,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1333,7 +1333,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1355,7 +1355,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1377,7 +1377,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1399,7 +1399,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1421,7 +1421,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1443,7 +1443,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1465,7 +1465,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1487,7 +1487,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1509,7 +1509,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1531,7 +1531,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1552,7 +1552,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1574,7 +1574,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1596,7 +1596,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1618,7 +1618,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1640,7 +1640,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1662,7 +1662,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1674,7 +1674,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.String value = null;
-        value = binding.methodSoapString(new java.lang.String(), new javax.xml.rpc.holders.StringHolder(new java.lang.String()));
+        value = binding.methodSoapString(new java.lang.String(), new jakarta.xml.rpc.holders.StringHolder(new java.lang.String()));
         // TBD - validate results
     }
 
@@ -1684,7 +1684,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1696,7 +1696,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.Boolean value = null;
-        value = binding.methodSoapBoolean(new java.lang.Boolean(false), new javax.xml.rpc.holders.BooleanWrapperHolder(new java.lang.Boolean(false)));
+        value = binding.methodSoapBoolean(new java.lang.Boolean(false), new jakarta.xml.rpc.holders.BooleanWrapperHolder(new java.lang.Boolean(false)));
         // TBD - validate results
     }
 
@@ -1706,7 +1706,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1718,7 +1718,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.Float value = null;
-        value = binding.methodSoapFloat(new java.lang.Float(0), new javax.xml.rpc.holders.FloatWrapperHolder(new java.lang.Float(0)));
+        value = binding.methodSoapFloat(new java.lang.Float(0), new jakarta.xml.rpc.holders.FloatWrapperHolder(new java.lang.Float(0)));
         // TBD - validate results
     }
 
@@ -1728,7 +1728,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1740,7 +1740,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.Double value = null;
-        value = binding.methodSoapDouble(new java.lang.Double(0), new javax.xml.rpc.holders.DoubleWrapperHolder(new java.lang.Double(0)));
+        value = binding.methodSoapDouble(new java.lang.Double(0), new jakarta.xml.rpc.holders.DoubleWrapperHolder(new java.lang.Double(0)));
         // TBD - validate results
     }
 
@@ -1750,7 +1750,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1762,7 +1762,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.math.BigDecimal value = null;
-        value = binding.methodSoapDecimal(new java.math.BigDecimal(0), new javax.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)));
+        value = binding.methodSoapDecimal(new java.math.BigDecimal(0), new jakarta.xml.rpc.holders.BigDecimalHolder(new java.math.BigDecimal(0)));
         // TBD - validate results
     }
 
@@ -1772,7 +1772,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1784,7 +1784,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.Integer value = null;
-        value = binding.methodSoapInt(new java.lang.Integer(0), new javax.xml.rpc.holders.IntegerWrapperHolder(new java.lang.Integer(0)));
+        value = binding.methodSoapInt(new java.lang.Integer(0), new jakarta.xml.rpc.holders.IntegerWrapperHolder(new java.lang.Integer(0)));
         // TBD - validate results
     }
 
@@ -1794,7 +1794,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
             TypeTestServiceLocator loc = new TypeTestServiceLocator();
             binding = (TypeTestBindingStub)loc.getTypeTest(HttpTestUtil.getTestEndpoint(loc.getTypeTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1806,7 +1806,7 @@ public class TypeTestServiceTestCase extends junit.framework.TestCase {
 
         // Test operation
         java.lang.Short value = null;
-        value = binding.methodSoapShort(new java.lang.Short((short)0), new javax.xml.rpc.holders.ShortWrapperHolder(new java.lang.Short((short)0)));
+        value = binding.methodSoapShort(new java.lang.Short((short)0), new jakarta.xml.rpc.holders.ShortWrapperHolder(new java.lang.Short((short)0)));
         // TBD - validate results
     }
 

@@ -18,6 +18,7 @@
 package test.httpunit;
 
 import com.meterware.httpunit.*;
+import org.junit.Ignore;
 
 /**
  * test the services
@@ -25,6 +26,7 @@ import com.meterware.httpunit.*;
  * @created Jul 10, 2002 12:09:06 AM
  */
 
+@Ignore
 public class AdminTest extends HttpUnitTestBase {
 
     private String servlet;

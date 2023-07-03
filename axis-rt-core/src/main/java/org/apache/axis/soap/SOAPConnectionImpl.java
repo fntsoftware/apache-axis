@@ -20,9 +20,9 @@ import org.apache.axis.attachments.Attachments;
 import org.apache.axis.client.Call;
 import org.apache.axis.utils.Messages;
 
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MimeHeaders;
 import java.util.Iterator;
 
 /**
@@ -30,7 +30,7 @@ import java.util.Iterator;
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class SOAPConnectionImpl extends javax.xml.soap.SOAPConnection {
+public class SOAPConnectionImpl extends jakarta.xml.soap.SOAPConnection {
     private boolean closed = false;
     private Integer timeout = null;
 

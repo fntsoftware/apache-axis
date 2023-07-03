@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package javax.xml.rpc;
+package jakarta.xml.rpc;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -26,16 +26,16 @@ import org.w3c.dom.Element;
 import org.xml.sax.Attributes;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import java.io.InputStream;
 
 /** 
  * A Body element.
  */
 public class SOAPBodyElement extends MessageElement
-    implements javax.xml.soap.SOAPBodyElement {
+    implements jakarta.xml.soap.SOAPBodyElement {
 
     private static Log log =
         LogFactory.getLog(SOAPBodyElement.class.getName());

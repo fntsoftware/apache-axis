@@ -83,7 +83,7 @@ public class StartServerMojo extends AbstractStartWebServerMojo {
     
     protected void doStartDaemon(int port) throws MojoExecutionException, MojoFailureException {
         // Need to setup additional dependencies before building the default configuration!
-        addAxisDependency("axis-standalone-server");
+//        addAxisDependency("axis-standalone-server");
         if (jwsDirs != null && jwsDirs.length > 0) {
             addAxisDependency("axis-rt-jws");
         }

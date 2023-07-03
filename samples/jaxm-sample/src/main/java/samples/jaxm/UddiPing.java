@@ -16,12 +16,12 @@
 package samples.jaxm;
 
 import javax.xml.messaging.URLEndpoint;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPConnectionFactory;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPConnection;
+import jakarta.xml.soap.SOAPConnectionFactory;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPMessage;
 
 public class UddiPing {
 
@@ -48,7 +48,7 @@ public class UddiPing {
         // Get hold of the the body
         SOAPBody body = envelope.getBody();
 
-        javax.xml.soap.SOAPBodyElement bodyElement = body.addBodyElement(envelope.createName("find_business", "",
+        jakarta.xml.soap.SOAPBodyElement bodyElement = body.addBodyElement(envelope.createName("find_business", "",
                 "urn:uddi-org:api"));
 
         bodyElement.addAttribute(envelope.createName("generic"), "1.0")

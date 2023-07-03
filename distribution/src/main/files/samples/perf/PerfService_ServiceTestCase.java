@@ -25,7 +25,7 @@ public class PerfService_ServiceTestCase extends junit.framework.TestCase {
             binding = (samples.perf.PerfPortSoapBindingStub)
                           new samples.perf.PerfService_ServiceLocator().getPerfPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -51,7 +51,7 @@ public class PerfService_ServiceTestCase extends junit.framework.TestCase {
             throws java.rmi.RemoteException {
         String[] s = new String[count];
         for (int i = 0; i < s.length; i++) {
-            s[i] = "qwertyuiopåasdfghjklöäzxcvbnm";
+            s[i] = "qwertyuiopï¿½asdfghjklï¿½ï¿½zxcvbnm";
         }
         Date start = new Date();
         String value = binding.handleStringArray(s);

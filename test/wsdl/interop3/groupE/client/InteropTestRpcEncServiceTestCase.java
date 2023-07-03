@@ -41,7 +41,7 @@ public class InteropTestRpcEncServiceTestCase extends junit.framework.TestCase {
             } else {
                 binding = new InteropTestRpcEncServiceLocator().getInteropTestRpcEnc(url);
             }
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -67,7 +67,7 @@ public class InteropTestRpcEncServiceTestCase extends junit.framework.TestCase {
                 binding = new InteropTestRpcEncServiceLocator().getInteropTestRpcEnc(url);
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -104,7 +104,7 @@ public class InteropTestRpcEncServiceTestCase extends junit.framework.TestCase {
                 binding = new InteropTestRpcEncServiceLocator().getInteropTestRpcEnc(url);
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -135,7 +135,7 @@ public class InteropTestRpcEncServiceTestCase extends junit.framework.TestCase {
                 binding = new InteropTestRpcEncServiceLocator().getInteropTestRpcEnc(url);
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

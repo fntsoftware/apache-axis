@@ -182,14 +182,14 @@ public class JavaStubWriter extends JavaClassWriter {
         pw.println();
         pw.println(
                 "    public " + className
-                + "(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
+                + "(java.net.URL endpointURL, jakarta.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
         pw.println("         this(service);");
         pw.println("         super.cachedEndpoint = endpointURL;");
         pw.println("    }");
         pw.println();
         pw.println(
                 "    public " + className
-                + "(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
+                + "(jakarta.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
         pw.println("        if (service == null) {");
         pw.println(
                 "            super.service = new org.apache.axis.client.Service();");
@@ -372,7 +372,7 @@ public class JavaStubWriter extends JavaClassWriter {
 
             pw.println("                        }");
             pw.println(
-                    "                        else if (x instanceof javax.xml.rpc.encoding.SerializerFactory) {");
+                    "                        else if (x instanceof jakarta.xml.rpc.encoding.SerializerFactory) {");
             pw.println(
                     "                            org.apache.axis.encoding.SerializerFactory sf = (org.apache.axis.encoding.SerializerFactory)");
             pw.println(
@@ -904,7 +904,7 @@ public class JavaStubWriter extends JavaClassWriter {
                     + qname.getNamespaceURI() + "\", \""
                     + qname.getLocalPart() + "\");");
             pw.println("            cachedSerQNames.add(qName);");
-            pw.println("            cls = javax.activation.DataHandler.class;");
+            pw.println("            cls = jakarta.activation.DataHandler.class;");
             pw.println("            cachedSerClasses.add(cls);");
             pw.println("            cachedSerFactories.add(mimesf);");
             pw.println("            cachedDeserFactories.add(mimedf);");

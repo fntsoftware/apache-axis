@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>samples</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>mtomstub-sample</artifactId>
@@ -32,6 +32,8 @@
     </description>
     <properties>
         <cxf.version>2.4.4</cxf.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
@@ -59,6 +61,17 @@
             <artifactId>testutils</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>jakarta.jws</groupId>
+            <artifactId>jakarta.jws-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -75,8 +88,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>6</source>
+                    <target>6</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -119,7 +132,7 @@
                             <javaXmlTypeMappings>
                                 <javaXmlTypeMapping>
                                     <xmlType>{http://www.w3.org/2001/XMLSchema}base64Binary</xmlType>
-                                    <javaType>javax.activation.DataHandler</javaType>
+                                    <javaType>jakarta.activation.DataHandler</javaType>
                                 </javaXmlTypeMapping>
                             </javaXmlTypeMappings>
 <!-- END SNIPPET: javaXmlTypeMappings -->

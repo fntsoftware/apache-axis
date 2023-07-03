@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.apache.axis.enum;
+package org.apache.axis.enumeration;
 
 import org.apache.axis.deployment.wsdd.WSDDConstants;
 

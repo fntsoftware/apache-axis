@@ -21,7 +21,7 @@ package org.apache.axis.holders;
  * 
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public final class SchemaHolder implements javax.xml.rpc.holders.Holder {
+public final class SchemaHolder implements jakarta.xml.rpc.holders.Holder {
     public org.apache.axis.types.Schema value;
 
     public SchemaHolder() {

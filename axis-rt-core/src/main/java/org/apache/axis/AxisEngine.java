@@ -29,7 +29,7 @@ import org.apache.axis.utils.cache.ClassCache;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.server.ServiceLifecycle;
+import jakarta.xml.rpc.server.ServiceLifecycle;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;

@@ -26,7 +26,7 @@ import java.io.StringWriter;
 
 import javax.xml.namespace.QName;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.rpc.soap.SOAPFaultException;
+import jakarta.xml.rpc.soap.SOAPFaultException;
 
 import org.apache.axis.components.logger.LogFactory;
 import org.apache.axis.encoding.SerializationContext;

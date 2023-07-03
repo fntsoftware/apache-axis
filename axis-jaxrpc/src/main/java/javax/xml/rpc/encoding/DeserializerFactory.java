@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.encoding;
+package jakarta.xml.rpc.encoding;
 
 /**
- * The javax.xml.rpc.encoding.DeserializerFactory is a factory of
+ * The jakarta.xml.rpc.encoding.DeserializerFactory is a factory of
  * deserializers. A DeserializerFactory is registered with a
  * TypeMapping instance as part of the TypeMappingRegistry.
  *
@@ -32,7 +32,7 @@ public interface DeserializerFactory extends java.io.Serializable {
      *
      * @return a Deserializer for the specified XML processing mechanism type
      *
-     * @throws javax.xml.rpc.JAXRPCException if DeserializerFactory does not
+     * @throws jakarta.xml.rpc.JAXRPCException if DeserializerFactory does not
      *             support the specified XML processing mechanism
      */
     public Deserializer getDeserializerAs(String mechanismType);

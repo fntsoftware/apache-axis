@@ -1,6 +1,6 @@
 package test.holders.holders;
 
-public final class ArrayOfBookHolder implements javax.xml.rpc.holders.Holder {
+public final class ArrayOfBookHolder implements jakarta.xml.rpc.holders.Holder {
     public test.holders.ArrayOfBook value;
 
     public ArrayOfBookHolder() {

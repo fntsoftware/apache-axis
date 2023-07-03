@@ -160,7 +160,7 @@
 
 <section name="Call configuration">
 
-<p>The Call object can be configured before a call can be made. The <code>org.apache.axis.client.Call</code> is Axis's implementation of the <code>javax.xml.rpc.Call</code> interface. The JAX-RPC standard interface defines a <code>setProperty()</code> method that lets the caller set properties; there are both JAX-RPC standard properties and Axis's own properties that you can set.</p>
+<p>The Call object can be configured before a call can be made. The <code>org.apache.axis.client.Call</code> is Axis's implementation of the <code>jakarta.xml.rpc.Call</code> interface. The JAX-RPC standard interface defines a <code>setProperty()</code> method that lets the caller set properties; there are both JAX-RPC standard properties and Axis's own properties that you can set.</p>
 
 <p>All properties have a string name, a name defined in a public static final declaration in the class.</p>
 

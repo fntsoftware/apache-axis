@@ -27,11 +27,11 @@ import org.apache.axis.utils.Messages;
 import org.apache.axis.utils.XMLUtils;
 import org.apache.commons.logging.Log;
 
-import javax.xml.soap.AttachmentPart;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.AttachmentPart;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPMessage;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -53,7 +53,7 @@ import java.util.Collections;
  * @author Rick Rineholt
  * @author Heejune Ahn (cityboy@tmax.co.kr)
  */
-public class Message extends javax.xml.soap.SOAPMessage
+public class Message extends jakarta.xml.soap.SOAPMessage
     implements java.io.Serializable {
 
     /**
@@ -190,7 +190,7 @@ public class Message extends javax.xml.soap.SOAPMessage
      *                     containing just the SOAP body (no SOAP-ENV).
      * @param headers Mime Headers.
      */
-    public Message(Object initialContents, boolean bodyInStream, javax.xml.soap.MimeHeaders headers) {
+    public Message(Object initialContents, boolean bodyInStream, jakarta.xml.soap.MimeHeaders headers) {
         setup(initialContents, bodyInStream, null, null, headers);
     }
 
@@ -273,8 +273,8 @@ public class Message extends javax.xml.soap.SOAPMessage
                 /**
                  * Attempt to resolve class name, verify that these are present...
                  */
-                ClassUtils.forName("javax.activation.DataHandler");
-                ClassUtils.forName("javax.mail.internet.MimeMultipart");
+                ClassUtils.forName("jakarta.activation.DataHandler");
+                ClassUtils.forName("jakarta.mail.internet.MimeMultipart");
 
                 attachImpl = ClassUtils.forName(attachImpName);
 
@@ -306,7 +306,7 @@ public class Message extends javax.xml.soap.SOAPMessage
      */
     private void setup(Object initialContents, boolean bodyInStream,
                        String contentType, String contentLocation,
-                       javax.xml.soap.MimeHeaders mimeHeaders) {
+                       jakarta.xml.soap.MimeHeaders mimeHeaders) {
 
         if(contentType == null && mimeHeaders != null) {
             String contentTypes[] = mimeHeaders.getHeader("Content-Type");
@@ -395,7 +395,7 @@ public class Message extends javax.xml.soap.SOAPMessage
      *
      * @return the soap part of this message
      */
-    public javax.xml.soap.SOAPPart getSOAPPart() {
+    public jakarta.xml.soap.SOAPPart getSOAPPart() {
         return mSOAPPart;
     }
 
@@ -653,7 +653,7 @@ public class Message extends javax.xml.soap.SOAPMessage
      * @return a <CODE>MimeHeaders</CODE> object containing the
      *     <CODE>MimeHeader</CODE> objects
      */
-    public javax.xml.soap.MimeHeaders getMimeHeaders() {
+    public jakarta.xml.soap.MimeHeaders getMimeHeaders() {
         return headers;
     }
 
@@ -706,7 +706,7 @@ public class Message extends javax.xml.soap.SOAPMessage
      * @return an iterator over all attachments that have a header
      *     that matches one of the given headers
      */
-    public Iterator getAttachments(javax.xml.soap.MimeHeaders headers){
+    public Iterator getAttachments(jakarta.xml.soap.MimeHeaders headers){
         return mAttachments.getAttachments(headers);
     }
 

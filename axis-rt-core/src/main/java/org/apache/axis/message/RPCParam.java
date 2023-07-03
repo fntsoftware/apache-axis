@@ -26,8 +26,8 @@ import org.apache.axis.MessageContext;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -242,14 +242,14 @@ public class RPCParam extends MessageElement implements Serializable
     }
 
     /**
-     * @see javax.xml.soap.SOAPElement#addTextNode(java.lang.String)
+     * @see jakarta.xml.soap.SOAPElement#addTextNode(java.lang.String)
      */
     public SOAPElement addTextNode(String s) throws SOAPException {
         value = s;
         return super.addTextNode(s);
     }
     /**
-     * @see javax.xml.soap.Node#setValue(java.lang.String)
+     * @see jakarta.xml.soap.Node#setValue(java.lang.String)
      */
     public void setValue(String value) {
         this.value = value;

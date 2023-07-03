@@ -15,9 +15,9 @@ public class PolymorphismTest_ServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testPolymorphismTestWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.polymorphism.PolymorphismTest_ServiceLocator().getPolymorphismTestAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.polymorphism.PolymorphismTest_ServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.polymorphism.PolymorphismTest_ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class PolymorphismTest_ServiceTestCase extends junit.framework.TestCase {
             PolymorphismTest_ServiceLocator loc = new PolymorphismTest_ServiceLocator();
             binding = loc.getPolymorphismTest(HttpTestUtil.getTestEndpoint(loc.getPolymorphismTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -59,7 +59,7 @@ public class PolymorphismTest_ServiceTestCase extends junit.framework.TestCase {
             PolymorphismTest_ServiceLocator loc = new PolymorphismTest_ServiceLocator();
             binding = loc.getPolymorphismTest(HttpTestUtil.getTestEndpoint(loc.getPolymorphismTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

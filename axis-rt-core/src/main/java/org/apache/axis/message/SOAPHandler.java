@@ -31,7 +31,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPException;
 import java.io.CharArrayWriter;
 
 public class SOAPHandler extends DefaultHandler

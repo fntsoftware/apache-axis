@@ -18,7 +18,7 @@ package org.apache.axis.holders;
 
 import org.apache.axis.types.URI;
 
-import javax.xml.rpc.holders.Holder;
+import jakarta.xml.rpc.holders.Holder;
 
 /**
  * Class URIHolder

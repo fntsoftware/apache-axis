@@ -49,8 +49,8 @@ import org.w3c.dom.Text;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
 import javax.xml.transform.Source;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamSource;
@@ -87,7 +87,7 @@ import java.util.Vector;
  * @author Glen Daniels (gdaniels@allaire.com)
  * @author Heejune Ahn (cityboy@tmax.co.kr)
  */
-public class SOAPPart extends javax.xml.soap.SOAPPart implements Part
+public class SOAPPart extends jakarta.xml.soap.SOAPPart implements Part
 {
     protected static Log log =
         LogFactory.getLog(SOAPPart.class.getName());
@@ -998,7 +998,7 @@ public class SOAPPart extends javax.xml.soap.SOAPPart implements Part
      *     SOAPPart</CODE> object
      * @throws  SOAPException if there is a SOAP error
      */
-    public javax.xml.soap.SOAPEnvelope getEnvelope() throws SOAPException {
+    public jakarta.xml.soap.SOAPEnvelope getEnvelope() throws SOAPException {
         try {
             return getAsSOAPEnvelope();
         } catch (AxisFault af) {

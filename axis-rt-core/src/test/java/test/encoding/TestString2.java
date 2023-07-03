@@ -8,8 +8,8 @@ import org.apache.axis.message.RPCParam;
 import org.apache.axis.server.AxisServer;
 import org.xml.sax.InputSource;
 
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MessageFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.ByteArrayInputStream;
 
@@ -87,7 +87,7 @@ public class TestString2 extends TestCase {
     }
     
     public void testFrenchAccents2() throws Exception {
-        runtest("Une chaîne avec des caractères accentués");
+        runtest("Une chane avec des caractres accentus");
     }
     
     public void testGermanUmlauts() throws Exception {

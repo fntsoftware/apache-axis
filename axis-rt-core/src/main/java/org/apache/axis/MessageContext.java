@@ -35,8 +35,8 @@ import org.apache.axis.utils.Messages;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Call;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.rpc.Call;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -615,7 +615,7 @@ public class MessageContext implements SOAPMessageContext {
      *          <code>SOAPMessage</code> is present in this
      *          <code>SOAPMessageContext</code>
      */
-    public javax.xml.soap.SOAPMessage getMessage() {
+    public jakarta.xml.soap.SOAPMessage getMessage() {
         return getCurrentMessage();
     }
 
@@ -645,7 +645,7 @@ public class MessageContext implements SOAPMessageContext {
      *
      * @param message  the <code>SOAPMessage</code> this context is for
      */
-    public void setMessage(javax.xml.soap.SOAPMessage message) {
+    public void setMessage(jakarta.xml.soap.SOAPMessage message) {
         setCurrentMessage((Message)message);
     }
 
@@ -1320,8 +1320,8 @@ public class MessageContext implements SOAPMessageContext {
      * <code>HandlerChain</code>.
      *
      * @return an array of URIs for SOAP actor roles
-     * @see javax.xml.rpc.handler.HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
-     * @see javax.xml.rpc.handler.HandlerChain#getRoles() HandlerChain.getRoles()
+     * @see jakarta.xml.rpc.handler.HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
+     * @see jakarta.xml.rpc.handler.HandlerChain#getRoles() HandlerChain.getRoles()
      */
     public String[] getRoles() {
         //TODO: Flesh this out.

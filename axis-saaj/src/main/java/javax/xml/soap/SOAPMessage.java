@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
-import javax.activation.DataHandler;
+import jakarta.activation.DataHandler;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Iterator;
@@ -186,7 +186,7 @@ public abstract class SOAPMessage {
      * populates it using the given <CODE>DataHandler</CODE>
      * object.
      * @param   datahandler  the <CODE>
-     *     javax.activation.DataHandler</CODE> object that will
+     *     jakarta.activation.DataHandler</CODE> object that will
      *     generate the content for this <CODE>SOAPMessage</CODE>
      *     object
      * @return a new <CODE>AttachmentPart</CODE> object that
@@ -196,7 +196,7 @@ public abstract class SOAPMessage {
      *     there was a problem with the specified <CODE>
      *     DataHandler</CODE> object
      * @see DataHandler DataHandler
-     * @see javax.activation.DataContentHandler DataContentHandler
+     * @see jakarta.activation.DataContentHandler DataContentHandler
      */
     public AttachmentPart createAttachmentPart(DataHandler datahandler) {
 
@@ -233,7 +233,7 @@ public abstract class SOAPMessage {
      *     DataContentHandler</CODE> object for the given content
      *     object
      * @see DataHandler DataHandler
-     * @see javax.activation.DataContentHandler DataContentHandler
+     * @see jakarta.activation.DataContentHandler DataContentHandler
      */
     public AttachmentPart createAttachmentPart(Object content,
                                                String contentType) {
@@ -329,7 +329,7 @@ public abstract class SOAPMessage {
      * <p>
      * The valid property names include <code>WRITE_XML_DECLARATION</code> and
      * <code>CHARACTER_SET_ENCODING</code>. All of these standard SAAJ
-     * properties are prefixed by "javax.xml.soap". Vendors may also add
+     * properties are prefixed by "jakarta.xml.soap". Vendors may also add
      * implementation specific properties. These properties must be prefixed
      * with package names that are unique to the vendor.
      * <p>
@@ -370,9 +370,9 @@ public abstract class SOAPMessage {
 
     /** Specifies the character type encoding for the SOAP Message. */
     public static final String CHARACTER_SET_ENCODING
-            = "javax.xml.soap.character-set-encoding";
+            = "jakarta.xml.soap.character-set-encoding";
 
     /** Specifies whether the SOAP Message should contain an XML declaration. */
     public static final String WRITE_XML_DECLARATION
-            = "javax.xml.soap.write-xml-declaration";
+            = "jakarta.xml.soap.write-xml-declaration";
 }

@@ -35,7 +35,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPElement;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Vector;

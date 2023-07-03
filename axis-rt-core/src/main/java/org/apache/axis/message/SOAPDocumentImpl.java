@@ -38,7 +38,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.ProcessingInstruction;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPException;
 
 /**
  * SOAPDcoumentImpl implements the Document API for SOAPPART. At the moment, it

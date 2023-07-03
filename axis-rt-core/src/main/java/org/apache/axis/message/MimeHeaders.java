@@ -16,21 +16,21 @@
 
 package org.apache.axis.message;
 
-import javax.xml.soap.MimeHeader;
+import jakarta.xml.soap.MimeHeader;
 import java.io.IOException;
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.util.Iterator;
 
 /**
- * wraps javax.xml.soap.MimeHeaders and implements java.io.Serializable interface 
+ * wraps jakarta.xml.soap.MimeHeaders and implements java.io.Serializable interface
  */
-public class MimeHeaders extends javax.xml.soap.MimeHeaders
+public class MimeHeaders extends jakarta.xml.soap.MimeHeaders
         implements java.io.Externalizable {
     public MimeHeaders() {
     }
 
-    public MimeHeaders(javax.xml.soap.MimeHeaders h) {
+    public MimeHeaders(jakarta.xml.soap.MimeHeaders h) {
         Iterator iterator = h.getAllHeaders();
         while (iterator.hasNext()) {
             MimeHeader hdr = (MimeHeader) iterator.next();

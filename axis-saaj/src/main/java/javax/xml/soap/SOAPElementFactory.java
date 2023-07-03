@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 /**
  * <P><CODE>SOAPElementFactory</CODE> is a factory for XML
@@ -26,7 +26,7 @@ package javax.xml.soap;
  * properties of an element that lives inside a SOAP header
  * document. These elements are copied into the XML document tree
  * when they are inserted.</P>
- * @deprecated - Use javax.xml.soap.SOAPFactory for creating SOAPElements.
+ * @deprecated - Use jakarta.xml.soap.SOAPFactory for creating SOAPElements.
  * @see SOAPFactory SOAPFactory
  */
 public class SOAPElementFactory {
@@ -49,8 +49,8 @@ public class SOAPElementFactory {
      *     created
      * @throws  SOAPException if there is an error in
      *     creating the <CODE>SOAPElement</CODE> object
-     * @deprecated Use javax.xml.soap.SOAPFactory.createElement(javax.xml.soap.Name) instead
-     * @see SOAPFactory#createElement(javax.xml.soap.Name) SOAPFactory.createElement(javax.xml.soap.Name)
+     * @deprecated Use jakarta.xml.soap.SOAPFactory.createElement(jakarta.xml.soap.Name) instead
+     * @see SOAPFactory#createElement(jakarta.xml.soap.Name) SOAPFactory.createElement(jakarta.xml.soap.Name)
      */
     public SOAPElement create(Name name) throws SOAPException {
         return sf.createElement(name);
@@ -65,7 +65,7 @@ public class SOAPElementFactory {
      *     created
      * @throws  SOAPException if there is an error in
      *     creating the <CODE>SOAPElement</CODE> object
-     * @deprecated Use javax.xml.soap.SOAPFactory.createElement(String localName) instead
+     * @deprecated Use jakarta.xml.soap.SOAPFactory.createElement(String localName) instead
      * @see SOAPFactory#createElement(java.lang.String) SOAPFactory.createElement(java.lang.String)
      */
     public SOAPElement create(String localName) throws SOAPException {
@@ -86,7 +86,7 @@ public class SOAPElementFactory {
      *     created
      * @throws  SOAPException if there is an error in
      *     creating the <CODE>SOAPElement</CODE> object
-     * @deprecated Use javax.xml.soap.SOAPFactory.createElement(String localName, String prefix, String uri) instead
+     * @deprecated Use jakarta.xml.soap.SOAPFactory.createElement(String localName, String prefix, String uri) instead
      * @see SOAPFactory#createElement(java.lang.String, java.lang.String, java.lang.String) SOAPFactory.createElement(java.lang.String, java.lang.String, java.lang.String)
      */
     public SOAPElement create(String localName, String prefix, String uri)

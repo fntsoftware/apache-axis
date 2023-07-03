@@ -20,10 +20,10 @@ import org.apache.axis.encoding.XMLType;
 import org.apache.axis.utils.Options;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Call;
-import javax.xml.rpc.ParameterMode;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.Call;
+import jakarta.xml.rpc.ParameterMode;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceFactory;
 
 /**
  * This version of GetInfo is a near-duplicate of the GetInfo class in

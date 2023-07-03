@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.handler;
+package jakarta.xml.rpc.handler;
 
 import javax.xml.namespace.QName;
 import java.io.Serializable;
 
 /**
- * The <code>javax.xml.rpc.handler.HandlerRegistry</code>
+ * The <code>jakarta.xml.rpc.handler.HandlerRegistry</code>
  * provides support for the programmatic configuration of
  * handlers in a <code>HandlerRegistry</code>.
  * <p>
@@ -29,7 +29,7 @@ import java.io.Serializable;
  * specified service endpoint. The returned handler chain is
  * configured using the java.util.List interface. Each element
  * in this list is required to be of the Java type
- * <code>javax.xml.rpc.handler.HandlerInfo</code>
+ * <code>jakarta.xml.rpc.handler.HandlerInfo</code>
  *
  * @version 1.0
  */
@@ -40,7 +40,7 @@ public interface HandlerRegistry extends Serializable {
      * The returned <code>List</code> is used to configure this
      * specific handler chain in this <code>HandlerRegistry</code>.
      * Each element in this list is required to be of the Java type
-     * <code>javax.xml.rpc.handler.HandlerInfo</code>.
+     * <code>jakarta.xml.rpc.handler.HandlerInfo</code>.
      *
      * @param   portName Qualified name of the target service
      * @return  HandlerChain java.util.List Handler chain
@@ -52,12 +52,12 @@ public interface HandlerRegistry extends Serializable {
      * Sets the handler chain for the specified service endpoint
      * as a <code>java.util.List</code>. Each element in this list
      * is required to be of the Java type
-     * <code>javax.xml.rpc.handler.HandlerInfo</code>.
+     * <code>jakarta.xml.rpc.handler.HandlerInfo</code>.
      *
      *  @param   portName Qualified name of the target service endpoint
      *  @param   chain a List representing configuration for the
      *             handler chain
-     *  @throws  javax.xml.rpc.JAXRPCException if there is any error in the
+     *  @throws  jakarta.xml.rpc.JAXRPCException if there is any error in the
      *             configuration of the handler chain
      *  @throws java.lang.UnsupportedOperationException if this
      *     set operation is not supported. This is done to

@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>apidocs</artifactId>
@@ -30,10 +30,16 @@
     <name>Javadoc</name>
     <url>${baseUrl}/apiDocs</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/apiDocs</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <properties>
         <javaVersion>6</javaVersion>
@@ -64,11 +70,11 @@
             <artifactId>axis-rt-databinding-castor</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>axis-rt-databinding-xmlbeans</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>${project.groupId}</groupId>-->
+<!--            <artifactId>axis-rt-databinding-xmlbeans</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>axis-rt-jws</artifactId>
@@ -114,11 +120,11 @@
             <artifactId>axis-saaj</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>axis-standalone-server</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>${project.groupId}</groupId>-->
+<!--            <artifactId>axis-standalone-server</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>axis-tools</artifactId>

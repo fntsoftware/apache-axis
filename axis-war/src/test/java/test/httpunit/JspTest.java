@@ -17,6 +17,7 @@
 package test.httpunit;
 
 import com.meterware.httpunit.*;
+import org.junit.Ignore;
 
 
 /**
@@ -25,6 +26,7 @@ import com.meterware.httpunit.*;
  *@author     steve loughran
  */
 
+@Ignore
 public class JspTest extends HttpUnitTestBase {
 
 

@@ -18,10 +18,10 @@
  */
 package test.wsdl.attachments;
 
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMultipart;
-import javax.xml.rpc.holders.FloatHolder;
-import javax.xml.rpc.holders.StringHolder;
+import jakarta.mail.internet.MimeBodyPart;
+import jakarta.mail.internet.MimeMultipart;
+import jakarta.xml.rpc.holders.FloatHolder;
+import jakarta.xml.rpc.holders.StringHolder;
 
 import org.apache.axis.attachments.OctetStream;
 import org.apache.axis.holders.ImageHolder;

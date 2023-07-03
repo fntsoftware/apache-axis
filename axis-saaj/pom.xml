@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>axis-saaj</artifactId>
@@ -30,15 +30,21 @@
     <description>Contains the SAAJ 1.2 API</description>
     <url>${baseUrl}/saaj</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/saaj</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
         </dependency>
     </dependencies>
     <build>

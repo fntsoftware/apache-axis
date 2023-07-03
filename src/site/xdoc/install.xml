@@ -109,7 +109,7 @@ version of Java everywhere.</p>
 
 <subsection name="WebLogic 8.1">
 
-<p>WebLogic 8.1 ships with <code>webservices.jar</code> that conflicts with Axis' <code>saaj.jar</code> and prevents Axis 1.4 from working right out of the box. This conflict exists because WebLogic uses an older definition of <code>javax.xml.soap.*</code> package from <a href="http://java.sun.com/webservices/docs/1.0/api/javax/xml/soap"> Java Web Services Developer Pack Version 1.0</a>, whereas Axis uses a newer revision from J2EE 1.4.</p>
+<p>WebLogic 8.1 ships with <code>webservices.jar</code> that conflicts with Axis' <code>saaj.jar</code> and prevents Axis 1.4 from working right out of the box. This conflict exists because WebLogic uses an older definition of <code>jakarta.xml.soap.*</code> package from <a href="http://java.sun.com/webservices/docs/1.0/api/javax/xml/soap"> Java Web Services Developer Pack Version 1.0</a>, whereas Axis uses a newer revision from J2EE 1.4.</p>
 
 <p>However, there are two alternative configuration changes that enable Axis based web services to run on Weblogic 8.1.</p>
 

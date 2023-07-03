@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,7 +24,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 /**
- * This class is used to locate factory classes for javax.xml.soap.
+ * This class is used to locate factory classes for jakarta.xml.soap.
  * It has package scope since it is not part of JAXM and should not
  * be accessed from other packages.
  */

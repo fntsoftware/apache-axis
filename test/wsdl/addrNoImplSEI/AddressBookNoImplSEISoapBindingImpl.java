@@ -24,7 +24,7 @@ public class AddressBookNoImplSEISoapBindingImpl {
     }
     public test.wsdl.addrNoImplSEI.Address getAddressFromName(java.lang.String name) 
         throws java.rmi.RemoteException,
-               javax.xml.rpc.JAXRPCException // This should be accepted
+               jakarta.xml.rpc.JAXRPCException // This should be accepted
     {
         return (test.wsdl.addrNoImplSEI.Address) this.addresses.get(name);
     }

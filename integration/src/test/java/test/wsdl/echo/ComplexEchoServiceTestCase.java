@@ -15,9 +15,9 @@ public class ComplexEchoServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testComplexEchoServiceWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.echo.ComplexEchoServiceLocator().getComplexEchoServiceAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.echo.ComplexEchoServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.echo.ComplexEchoServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class ComplexEchoServiceTestCase extends junit.framework.TestCase {
             ComplexEchoServiceLocator loc = new ComplexEchoServiceLocator();
             binding = loc.getComplexEchoService(HttpTestUtil.getTestEndpoint(loc.getComplexEchoServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -50,7 +50,7 @@ public class ComplexEchoServiceTestCase extends junit.framework.TestCase {
             ComplexEchoServiceLocator loc = new ComplexEchoServiceLocator();
             binding = (ComplexEchoServiceSoapBindingStub)loc.getComplexEchoService(HttpTestUtil.getTestEndpoint(loc.getComplexEchoServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -81,7 +81,7 @@ public class ComplexEchoServiceTestCase extends junit.framework.TestCase {
             ComplexEchoServiceLocator loc = new ComplexEchoServiceLocator();
             binding = (ComplexEchoServiceSoapBindingStub)loc.getComplexEchoService(HttpTestUtil.getTestEndpoint(loc.getComplexEchoServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

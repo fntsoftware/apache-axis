@@ -1,25 +1,25 @@
 package samples.jaxrpc.hello;
 
-public class ServerHandler implements javax.xml.rpc.handler.Handler {
+public class ServerHandler implements jakarta.xml.rpc.handler.Handler {
     public ServerHandler() {
     }
 
-    public boolean handleRequest(javax.xml.rpc.handler.MessageContext context) {
+    public boolean handleRequest(jakarta.xml.rpc.handler.MessageContext context) {
         System.out.println("ServerHandler: In handleRequest");
         return true;
     }
 
-    public boolean handleResponse(javax.xml.rpc.handler.MessageContext context) {
+    public boolean handleResponse(jakarta.xml.rpc.handler.MessageContext context) {
         System.out.println("ServerHandler: In handleResponse");
         return true;
     }
 
-    public boolean handleFault(javax.xml.rpc.handler.MessageContext context) {
+    public boolean handleFault(jakarta.xml.rpc.handler.MessageContext context) {
         System.out.println("ServerHandler: In handleFault");
         return true;
     }
 
-    public void init(javax.xml.rpc.handler.HandlerInfo config) {
+    public void init(jakarta.xml.rpc.handler.HandlerInfo config) {
     }
 
     public void destroy() {

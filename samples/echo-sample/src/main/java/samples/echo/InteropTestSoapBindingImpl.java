@@ -69,7 +69,7 @@ public class InteropTestSoapBindingImpl implements samples.echo.InteropTestPortT
         return inputBoolean;
     }
 
-    public void echoStructAsSimpleTypes(samples.echo.SOAPStruct inputStruct, javax.xml.rpc.holders.StringHolder outputString, javax.xml.rpc.holders.IntHolder outputInteger, javax.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
+    public void echoStructAsSimpleTypes(samples.echo.SOAPStruct inputStruct, jakarta.xml.rpc.holders.StringHolder outputString, jakarta.xml.rpc.holders.IntHolder outputInteger, jakarta.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
         outputString.value = inputStruct.getVarString() ;
         outputInteger.value = inputStruct.getVarInt() ;
         outputFloat.value = inputStruct.getVarFloat() ;

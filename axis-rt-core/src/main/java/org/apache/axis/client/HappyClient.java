@@ -320,13 +320,13 @@ public class HappyClient {
         /**
          * the essentials, without these Axis is not going to work
          */
-        needed = needClass("javax.xml.soap.SOAPMessage",
+        needed = needClass("jakarta.xml.soap.SOAPMessage",
                 "saaj.jar",
                 "SAAJ",
                 "happyClientNoAxis",
                 "http://xml.apache.org/axis/");
 
-        needed += needClass("javax.xml.rpc.Service",
+        needed += needClass("jakarta.xml.rpc.Service",
                 "jaxrpc.jar",
                 "JAX-RPC",
                 "happyClientNoAxis",
@@ -368,13 +368,13 @@ public class HappyClient {
 
         title("happyClientOptional");
 
-        wanted += wantClass("javax.mail.internet.MimeMessage",
+        wanted += wantClass("jakarta.mail.internet.MimeMessage",
                 "mail.jar",
                 "Mail",
                 "happyClientNoAttachments",
                 "http://java.sun.com/products/javamail/");
 
-        wanted += wantClass("javax.activation.DataHandler",
+        wanted += wantClass("jakarta.activation.DataHandler",
                 "activation.jar",
                 "Activation",
                 "happyClientNoAttachments",

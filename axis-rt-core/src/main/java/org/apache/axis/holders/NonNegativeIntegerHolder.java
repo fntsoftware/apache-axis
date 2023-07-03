@@ -18,7 +18,7 @@ package org.apache.axis.holders;
 
 import org.apache.axis.types.NonNegativeInteger;
 
-import javax.xml.rpc.holders.Holder;
+import jakarta.xml.rpc.holders.Holder;
 
 /**
  * Class NonNegativeIntegerHolder

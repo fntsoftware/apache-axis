@@ -24,11 +24,11 @@ public class MarshallTestCase extends junit.framework.TestCase {
     }
 
     public void testMarshallPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory
                 .newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(
                 new MarshallLocator().getMarshallPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url,
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url,
                 new test.wsdl.marshall.MarshallLocator().getServiceName());
         assertTrue(service != null);
     }
@@ -38,7 +38,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -58,7 +58,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -79,7 +79,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -99,7 +99,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -130,7 +130,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -161,7 +161,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -190,7 +190,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -219,7 +219,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -249,7 +249,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -280,7 +280,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -311,7 +311,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -342,7 +342,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -413,7 +413,7 @@ public class MarshallTestCase extends junit.framework.TestCase {
         try {
             MarshallLocator loc = new MarshallLocator();
             binding = (MarshallBindingStub)loc.getMarshallPort(HttpTestUtil.getTestEndpoint(loc.getMarshallPortAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(

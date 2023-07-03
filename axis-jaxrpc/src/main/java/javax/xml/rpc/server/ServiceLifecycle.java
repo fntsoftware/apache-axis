@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.server;
+package jakarta.xml.rpc.server;
 
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 
 /**
- * The <code>javax.xml.rpc.server.ServiceLifecycle</code> defines a lifecycle interface for a
+ * The <code>jakarta.xml.rpc.server.ServiceLifecycle</code> defines a lifecycle interface for a
  * JAX-RPC service endpoint. If the service endpoint class implements the
  * <code>ServiceLifeycle</code>  interface, the servlet container based JAX-RPC runtime system
  * is required to manage the lifecycle of the corresponding service endpoint objects.
@@ -42,7 +42,7 @@ public interface ServiceLifecycle {
      * parameter to an appropriate Java type. For service endpoints
      * deployed on a servlet container based JAX-RPC runtime system,
      * the <code>context</code> parameter is of the Java type
-     * <code>javax.xml.rpc.server.ServletEndpointContext</code>. The
+     * <code>jakarta.xml.rpc.server.ServletEndpointContext</code>. The
      * <code>ServletEndpointContext</code> provides an endpoint context
      * maintained by the underlying servlet container based JAX-RPC
      * runtime system

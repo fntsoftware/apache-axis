@@ -321,7 +321,7 @@ public abstract class AbstractStartDaemonMojo extends AbstractDaemonControlMojo 
     }
 
     protected final void doExecute() throws MojoExecutionException, MojoFailureException {
-        addAxisDependency("daemon-launcher");
+//        addAxisDependency("daemon-launcher");
         doStartDaemon();
     }
     

@@ -35,7 +35,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -47,7 +47,7 @@ import java.util.List;
  * Implementation of a SOAP Envelope
  */ 
 public class SOAPEnvelope extends MessageElement
-    implements javax.xml.soap.SOAPEnvelope
+    implements jakarta.xml.soap.SOAPEnvelope
 {
     protected static Log log =
         LogFactory.getLog(SOAPEnvelope.class.getName());
@@ -533,7 +533,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.SOAPBody addBody() throws SOAPException {
+    public jakarta.xml.soap.SOAPBody addBody() throws SOAPException {
         if (body == null) {
             body = new SOAPBody(this, soapConstants);
             _isDirty = true;
@@ -549,7 +549,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.SOAPHeader addHeader() throws SOAPException {
+    public jakarta.xml.soap.SOAPHeader addHeader() throws SOAPException {
         if (header == null) {
             header = new SOAPHeader(this, soapConstants);
             header.setOwnerDocument(getOwnerDocument());
@@ -565,7 +565,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.Name createName(String localName)
+    public jakarta.xml.soap.Name createName(String localName)
         throws SOAPException {
         return new PrefixedQName(null, localName,  null);
     }
@@ -578,7 +578,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.Name createName(String localName,
+    public jakarta.xml.soap.Name createName(String localName,
                                           String prefix,
                                           String uri)
         throws SOAPException {
@@ -590,7 +590,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.SOAPBody getBody() throws SOAPException {
+    public jakarta.xml.soap.SOAPBody getBody() throws SOAPException {
         return body;
     }
 
@@ -599,7 +599,7 @@ public class SOAPEnvelope extends MessageElement
      * @return
      * @throws SOAPException
      */ 
-    public javax.xml.soap.SOAPHeader getHeader() throws SOAPException {
+    public jakarta.xml.soap.SOAPHeader getHeader() throws SOAPException {
         return header;
     }
 

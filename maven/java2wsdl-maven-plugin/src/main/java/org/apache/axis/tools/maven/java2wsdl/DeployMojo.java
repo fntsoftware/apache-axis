@@ -118,8 +118,8 @@ public class DeployMojo extends AbstractGenerateWsdlMojo {
         CompilerConfiguration compilerConfiguration = new CompilerConfiguration();
         compilerConfiguration.setOutputLocation(outputDirectory.getAbsolutePath());
         compilerConfiguration.setSourceLocations(Collections.singletonList(sourceOutputDirectory.getAbsolutePath()));
-        compilerConfiguration.setSourceVersion("1.4");
-        compilerConfiguration.setTargetVersion("1.4");
+        compilerConfiguration.setSourceVersion("6");
+        compilerConfiguration.setTargetVersion("6");
         
         Compiler compiler;
         try {

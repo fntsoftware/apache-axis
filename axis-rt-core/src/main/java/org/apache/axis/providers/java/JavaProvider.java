@@ -38,9 +38,9 @@ import org.apache.axis.utils.cache.JavaClass;
 import org.apache.commons.logging.Log;
 import org.xml.sax.SAXException;
 
-import javax.xml.rpc.holders.IntHolder;
-import javax.xml.rpc.server.ServiceLifecycle;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.rpc.holders.IntHolder;
+import jakarta.xml.rpc.server.ServiceLifecycle;
+import jakarta.xml.soap.SOAPMessage;
 import javax.wsdl.OperationType;
 import java.io.Serializable;
 import java.util.ArrayList;

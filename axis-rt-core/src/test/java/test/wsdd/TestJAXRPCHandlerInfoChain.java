@@ -17,9 +17,9 @@
 package test.wsdd;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.Handler;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.rpc.handler.Handler;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
 
 import junit.framework.TestCase;
 
@@ -89,7 +89,7 @@ public class TestJAXRPCHandlerInfoChain extends TestCase implements Handler {
     public void destroy() {
     }
 
-    public boolean handleRequest(javax.xml.rpc.handler.MessageContext mc) {
+    public boolean handleRequest(jakarta.xml.rpc.handler.MessageContext mc) {
 
         String[] roles = ((SOAPMessageContext) mc).getRoles();
         for (int i = 0; i < roles.length; i++) {            
@@ -107,12 +107,12 @@ public class TestJAXRPCHandlerInfoChain extends TestCase implements Handler {
         return null;
     }
 
-    public boolean handleResponse(javax.xml.rpc.handler.MessageContext mc) {
+    public boolean handleResponse(jakarta.xml.rpc.handler.MessageContext mc) {
         handleResponseCalled = true;
         return true;
     }
 
-    public boolean handleFault(javax.xml.rpc.handler.MessageContext mc) {
+    public boolean handleFault(jakarta.xml.rpc.handler.MessageContext mc) {
         return true;
     }
 

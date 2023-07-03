@@ -48,8 +48,8 @@ import org.apache.axis.utils.JavaUtils;
 import org.apache.axis.utils.Messages;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.encoding.DeserializerFactory;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.encoding.DeserializerFactory;
 
 /**
  * This is the implementation of the axis Default TypeMapping (which extends
@@ -305,12 +305,12 @@ public class DefaultTypeMappingImpl extends TypeMappingImpl {
                     new JAFDataHandlerDeserializerFactory(
                             java.awt.Image.class,
                             Constants.MIME_IMAGE));
-            myRegister(Constants.MIME_MULTIPART, javax.mail.internet.MimeMultipart.class,
+            myRegister(Constants.MIME_MULTIPART, jakarta.mail.internet.MimeMultipart.class,
                     new JAFDataHandlerSerializerFactory(
-                            javax.mail.internet.MimeMultipart.class,
+                            jakarta.mail.internet.MimeMultipart.class,
                             Constants.MIME_MULTIPART),
                     new JAFDataHandlerDeserializerFactory(
-                            javax.mail.internet.MimeMultipart.class,
+                            jakarta.mail.internet.MimeMultipart.class,
                             Constants.MIME_MULTIPART));
             myRegister(Constants.MIME_SOURCE, javax.xml.transform.Source.class,
                     new JAFDataHandlerSerializerFactory(
@@ -326,7 +326,7 @@ public class DefaultTypeMappingImpl extends TypeMappingImpl {
                     new JAFDataHandlerDeserializerFactory(
                             OctetStream.class,
                             Constants.MIME_OCTETSTREAM));
-            myRegister(Constants.MIME_DATA_HANDLER, javax.activation.DataHandler.class,
+            myRegister(Constants.MIME_DATA_HANDLER, jakarta.activation.DataHandler.class,
                     new JAFDataHandlerSerializerFactory(),
                     new JAFDataHandlerDeserializerFactory());
         }
@@ -607,8 +607,8 @@ public class DefaultTypeMappingImpl extends TypeMappingImpl {
     // Don't allow anyone to muck with the default type mapping because
     // it is a singleton used for the whole system.
     public void register(Class javaType, QName xmlType,
-                         javax.xml.rpc.encoding.SerializerFactory sf,
-                         javax.xml.rpc.encoding.DeserializerFactory dsf)
+                         jakarta.xml.rpc.encoding.SerializerFactory sf,
+                         jakarta.xml.rpc.encoding.DeserializerFactory dsf)
         throws JAXRPCException {
         super.register(javaType, xmlType, sf, dsf);
     }

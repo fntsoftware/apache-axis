@@ -3,8 +3,8 @@ package test.utils;
 import junit.framework.TestCase;
 import org.apache.axis.utils.JavaUtils;
 
-import javax.xml.rpc.holders.ByteHolder;
-import javax.xml.rpc.holders.LongHolder;
+import jakarta.xml.rpc.holders.ByteHolder;
+import jakarta.xml.rpc.holders.LongHolder;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;

@@ -48,10 +48,10 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.encoding.TypeMapping;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.rpc.encoding.TypeMapping;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.Reader;
 import java.io.Serializable;
@@ -143,7 +143,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
     }
 
     /**
-     * construct using a {@link javax.xml.soap.Name} implementation,
+     * construct using a {@link jakarta.xml.soap.Name} implementation,
      * @see #MessageElement(String, String, String)
      * @param eltName
      */
@@ -1300,7 +1300,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param childName uri, prefix and local name of the element to add
      * @return the child element
      * @throws SOAPException
-     * @see javax.xml.soap.SOAPElement#addChildElement(javax.xml.soap.Name)
+     * @see jakarta.xml.soap.SOAPElement#addChildElement(jakarta.xml.soap.Name)
      */
     public SOAPElement addChildElement(Name childName) throws SOAPException {
         MessageElement child = new MessageElement(childName.getLocalName(),
@@ -1315,7 +1315,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param localName
      * @return the child element
      * @throws SOAPException
-     * @see javax.xml.soap.SOAPElement#addChildElement(String)
+     * @see jakarta.xml.soap.SOAPElement#addChildElement(String)
      */
     public SOAPElement addChildElement(String localName) throws SOAPException {
         // Inherit parent's namespace
@@ -1331,7 +1331,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param prefixName
      * @return the child element
      * @throws SOAPException
-     * @see javax.xml.soap.SOAPElement#addChildElement(String, String)
+     * @see jakarta.xml.soap.SOAPElement#addChildElement(String, String)
      */
     public SOAPElement addChildElement(String localName,
                                        String prefixName) throws SOAPException {
@@ -1349,7 +1349,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param uri
      * @return the child element
      * @throws SOAPException
-     * @see javax.xml.soap.SOAPElement#addChildElement(String, String, String)
+     * @see jakarta.xml.soap.SOAPElement#addChildElement(String, String, String)
      */
     public SOAPElement addChildElement(String localName,
                                        String childPrefix,
@@ -1365,7 +1365,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * The added child must be an instance of MessageElement rather than
      * an abitrary SOAPElement otherwise a (wrapped) ClassCastException
      * will be thrown.
-     * @see javax.xml.soap.SOAPElement#addChildElement(javax.xml.soap.SOAPElement)
+     * @see jakarta.xml.soap.SOAPElement#addChildElement(jakarta.xml.soap.SOAPElement)
      */
     public SOAPElement addChildElement(SOAPElement element)
         throws SOAPException {
@@ -1381,7 +1381,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
     /**
      * add a text node to the document.
      * @return ourselves
-     * @see javax.xml.soap.SOAPElement#addTextNode(String)
+     * @see jakarta.xml.soap.SOAPElement#addTextNode(String)
      */
     public SOAPElement addTextNode(String s) throws SOAPException {
         try {
@@ -1403,7 +1403,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param value a string value
      * @return ourselves
      * @throws SOAPException
-     * @see javax.xml.soap.SOAPElement#addAttribute(javax.xml.soap.Name, String)
+     * @see jakarta.xml.soap.SOAPElement#addAttribute(jakarta.xml.soap.Name, String)
      */
     public SOAPElement addAttribute(Name attrName, String value)
         throws SOAPException {
@@ -1421,7 +1421,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @param uri
      * @return
      * @throws SOAPException for any {@link RuntimeException} caught
-     * @see javax.xml.soap.SOAPElement#addNamespaceDeclaration(String, String)
+     * @see jakarta.xml.soap.SOAPElement#addNamespaceDeclaration(String, String)
      */
     // TODO: for some reason this logic catches all rutime exceptions and
     // rethrows them as SOAPExceptions. This is unusual behavio, and should
@@ -1443,7 +1443,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * Get the value of an attribute whose namespace and local name are described.
      * @param attrName qualified name of the attribute
      * @return the attribute or null if there was no match
-     * @see SOAPElement#getAttributeValue(javax.xml.soap.Name)
+     * @see SOAPElement#getAttributeValue(jakarta.xml.soap.Name)
      */
     public String getAttributeValue(Name attrName) {
         return attributes.getValue(attrName.getURI(), attrName.getLocalName());
@@ -1455,7 +1455,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * are added or deleted during the iteration, this iterator will be not
      * be updated to follow the changes.
      * @return an iterator of the attributes.
-     * @see javax.xml.soap.SOAPElement#getAllAttributes()
+     * @see jakarta.xml.soap.SOAPElement#getAllAttributes()
      */
     public Iterator getAllAttributes() {
         int num = attributes.getLength();
@@ -1485,7 +1485,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * get an iterator of the prefixes. The iterator
      * does not get updated in response to changes in the namespace list.
      * @return an iterator over a vector of prefixes
-     * @see javax.xml.soap.SOAPElement#getNamespacePrefixes()
+     * @see jakarta.xml.soap.SOAPElement#getNamespacePrefixes()
      */
     public Iterator getNamespacePrefixes() {
         Vector prefixes = new Vector();
@@ -1498,7 +1498,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
     /**
      * get the full name of the element
      * @return
-     * @see javax.xml.soap.SOAPElement#getElementName()
+     * @see jakarta.xml.soap.SOAPElement#getElementName()
      */
     public Name getElementName() {
         return new PrefixedQName(getNamespaceURI(), getName(), getPrefix());
@@ -1508,7 +1508,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * remove an element
      * @param attrName name of the element
      * @return true if the attribute was found and removed.
-     * @see javax.xml.soap.SOAPElement#removeAttribute(javax.xml.soap.Name)
+     * @see jakarta.xml.soap.SOAPElement#removeAttribute(jakarta.xml.soap.Name)
      */
     public boolean removeAttribute(Name attrName) {
         AttributesImpl attributes = makeAttributesEditable();
@@ -1528,7 +1528,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * remove a namespace declaration.
      * @param namespacePrefix
      * @return true if the prefix was found and removed.
-     * @see javax.xml.soap.SOAPElement#removeNamespaceDeclaration(String)
+     * @see jakarta.xml.soap.SOAPElement#removeNamespaceDeclaration(String)
      */
     public boolean removeNamespaceDeclaration(String namespacePrefix) {
         makeAttributesEditable();
@@ -1548,7 +1548,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * This iterator <i>may</i> get confused if changes are made to the
      * children while the iteration is in progress.
      * @return an iterator over child elements.
-     * @see javax.xml.soap.SOAPElement#getChildElements()
+     * @see jakarta.xml.soap.SOAPElement#getChildElements()
      */
     public Iterator getChildElements() {
         initializeChildren();
@@ -1560,7 +1560,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      *
      * @param qname
      * @return child element or null
-     * @see javax.xml.soap.SOAPElement#getChildElements()
+     * @see jakarta.xml.soap.SOAPElement#getChildElements()
      */
     public MessageElement getChildElement(QName qname) {
         if (children != null) {
@@ -1603,7 +1603,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * list during its lifetime, though changes in the contents of the elements
      * are picked up.
      * @return an iterator.
-     * @see javax.xml.soap.SOAPElement#getChildElements(javax.xml.soap.Name)
+     * @see jakarta.xml.soap.SOAPElement#getChildElements(jakarta.xml.soap.Name)
      */
     public Iterator getChildElements(Name childName) {
         return getChildElements(new QName(childName.getURI(), childName.getLocalName()));
@@ -2060,7 +2060,7 @@ public class MessageElement extends NodeImpl implements SOAPElement,
      * @return the value of any child node, or null if there is no node/something went
      * wrong during serialization. If the first child is text, the return value
      * is the text itself.
-     * @see javax.xml.soap.Node#getValue() ;
+     * @see jakarta.xml.soap.Node#getValue() ;
      */
     public String getValue() {
         /*--- Fix for AXIS-1817

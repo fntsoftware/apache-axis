@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 /** The definition of constants pertaining to the SOAP 1.1 protocol. */
 public interface SOAPConstants {

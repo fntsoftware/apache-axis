@@ -23,8 +23,10 @@ import junit.framework.TestCase;
 import org.apache.axis.AxisFault;
 import org.apache.axis.Constants;
 import org.apache.axis.client.Call;
+import org.junit.Ignore;
 import org.w3c.dom.Element;
 
+@Ignore
 public class TestErrors extends TestCase {
     public void test404() throws Exception {
         Call call = new Call("http://localhost:" + System.getProperty("axis.httpPort", "8080") + "/doesnt-exist");

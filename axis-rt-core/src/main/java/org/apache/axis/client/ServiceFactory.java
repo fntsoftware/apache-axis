@@ -29,7 +29,7 @@ import javax.naming.RefAddr;
 import javax.naming.Reference;
 import javax.naming.spi.ObjectFactory;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.util.Hashtable;
@@ -44,7 +44,7 @@ import java.util.Properties;
  * @author Glen Daniels (gdaniels@apache.org)
  */ 
 
-public class ServiceFactory extends javax.xml.rpc.ServiceFactory
+public class ServiceFactory extends jakarta.xml.rpc.ServiceFactory
         implements ObjectFactory
 {
     // Constants for RefAddrs in the Reference.
@@ -193,7 +193,7 @@ public class ServiceFactory extends javax.xml.rpc.ServiceFactory
      *  @return  Service.
      *  @throws  ServiceException If any error in creation of the specified service
      */
-    public javax.xml.rpc.Service createService(URL wsdlDocumentLocation,
+    public jakarta.xml.rpc.Service createService(URL wsdlDocumentLocation,
             QName serviceName) throws ServiceException {
         return new Service(wsdlDocumentLocation, serviceName);
     } // createService
@@ -209,7 +209,7 @@ public class ServiceFactory extends javax.xml.rpc.ServiceFactory
      *  @return  Service.
      *  @throws  ServiceException If any error in creation of the specified service
      */
-    public javax.xml.rpc.Service createService(QName serviceName)
+    public jakarta.xml.rpc.Service createService(QName serviceName)
             throws ServiceException {
         return new Service(serviceName);
     } // createService
@@ -223,12 +223,12 @@ public class ServiceFactory extends javax.xml.rpc.ServiceFactory
      *  @throws  ServiceException If there is any error while creating the specified service, 
      *      including the case where a generated service implementation class cannot be located
      */
-    public javax.xml.rpc.Service loadService(Class serviceInterface) throws ServiceException {
+    public jakarta.xml.rpc.Service loadService(Class serviceInterface) throws ServiceException {
         if (serviceInterface == null) {
             throw new IllegalArgumentException(
                     Messages.getMessage("serviceFactoryIllegalServiceInterface"));
         }
-        if (!(javax.xml.rpc.Service.class).isAssignableFrom(serviceInterface))
+        if (!(jakarta.xml.rpc.Service.class).isAssignableFrom(serviceInterface))
         {
             throw new ServiceException(
                     Messages.getMessage("serviceFactoryServiceInterfaceRequirement", serviceInterface.getName()));
@@ -254,13 +254,13 @@ public class ServiceFactory extends javax.xml.rpc.ServiceFactory
      *  @throws  ServiceException If there is any error while creating the specified service, 
      *      including the case where a generated service implementation class cannot be located
      */
-    public javax.xml.rpc.Service loadService(URL wsdlDocumentLocation, 
+    public jakarta.xml.rpc.Service loadService(URL wsdlDocumentLocation,
             Class serviceInterface, Properties properties) throws ServiceException {
         if (serviceInterface == null) {
             throw new IllegalArgumentException(
                     Messages.getMessage("serviceFactoryIllegalServiceInterface"));
         }
-        if (!(javax.xml.rpc.Service.class).isAssignableFrom(serviceInterface))
+        if (!(jakarta.xml.rpc.Service.class).isAssignableFrom(serviceInterface))
         {
             throw new ServiceException(
                     Messages.getMessage("serviceFactoryServiceInterfaceRequirement", serviceInterface.getName()));
@@ -286,10 +286,10 @@ public class ServiceFactory extends javax.xml.rpc.ServiceFactory
      *  @throws  ServiceException If there is any error while creating the specified service, 
      *      including the case where a generated service implementation class cannot be located
      */
-    public javax.xml.rpc.Service loadService(URL wsdlDocumentLocation, 
+    public jakarta.xml.rpc.Service loadService(URL wsdlDocumentLocation,
             QName serviceName, Properties properties) throws ServiceException {
         String serviceImplementationName = properties.getProperty(SERVICE_IMPLEMENTATION_NAME_PROPERTY);
-        javax.xml.rpc.Service service = createService(serviceImplementationName);
+        jakarta.xml.rpc.Service service = createService(serviceImplementationName);
         if (service.getServiceName().equals(serviceName)) {
             return service;
         } else {

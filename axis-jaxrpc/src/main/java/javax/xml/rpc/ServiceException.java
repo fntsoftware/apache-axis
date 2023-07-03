@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc;
+package jakarta.xml.rpc;
 
 /**
- * The <code>javax.xml.rpc.ServiceException</code> is thrown from the
- * methods in the <code>javax.xml.rpc.Service</code> interface and
+ * The <code>jakarta.xml.rpc.ServiceException</code> is thrown from the
+ * methods in the <code>jakarta.xml.rpc.Service</code> interface and
  * <code>ServiceFactory</code> class.
  *
  *

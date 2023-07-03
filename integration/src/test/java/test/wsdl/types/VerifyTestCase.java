@@ -65,26 +65,26 @@ import test.wsdl.types.comprehensive_types2.A;
 import test.wsdl.types.comprehensive_types2.B;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ServiceException;
-import javax.xml.rpc.holders.BigDecimalHolder;
-import javax.xml.rpc.holders.BigIntegerHolder;
-import javax.xml.rpc.holders.BooleanHolder;
-import javax.xml.rpc.holders.BooleanWrapperHolder;
-import javax.xml.rpc.holders.ByteArrayHolder;
-import javax.xml.rpc.holders.ByteHolder;
-import javax.xml.rpc.holders.CalendarHolder;
-import javax.xml.rpc.holders.DoubleHolder;
-import javax.xml.rpc.holders.DoubleWrapperHolder;
-import javax.xml.rpc.holders.FloatHolder;
-import javax.xml.rpc.holders.FloatWrapperHolder;
-import javax.xml.rpc.holders.IntHolder;
-import javax.xml.rpc.holders.IntegerWrapperHolder;
-import javax.xml.rpc.holders.LongHolder;
-import javax.xml.rpc.holders.ObjectHolder;
-import javax.xml.rpc.holders.QNameHolder;
-import javax.xml.rpc.holders.ShortHolder;
-import javax.xml.rpc.holders.ShortWrapperHolder;
-import javax.xml.rpc.holders.StringHolder;
+import jakarta.xml.rpc.ServiceException;
+import jakarta.xml.rpc.holders.BigDecimalHolder;
+import jakarta.xml.rpc.holders.BigIntegerHolder;
+import jakarta.xml.rpc.holders.BooleanHolder;
+import jakarta.xml.rpc.holders.BooleanWrapperHolder;
+import jakarta.xml.rpc.holders.ByteArrayHolder;
+import jakarta.xml.rpc.holders.ByteHolder;
+import jakarta.xml.rpc.holders.CalendarHolder;
+import jakarta.xml.rpc.holders.DoubleHolder;
+import jakarta.xml.rpc.holders.DoubleWrapperHolder;
+import jakarta.xml.rpc.holders.FloatHolder;
+import jakarta.xml.rpc.holders.FloatWrapperHolder;
+import jakarta.xml.rpc.holders.IntHolder;
+import jakarta.xml.rpc.holders.IntegerWrapperHolder;
+import jakarta.xml.rpc.holders.LongHolder;
+import jakarta.xml.rpc.holders.ObjectHolder;
+import jakarta.xml.rpc.holders.QNameHolder;
+import jakarta.xml.rpc.holders.ShortHolder;
+import jakarta.xml.rpc.holders.ShortWrapperHolder;
+import jakarta.xml.rpc.holders.StringHolder;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -95,9 +95,9 @@ public class VerifyTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testTypeTestWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTestAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */

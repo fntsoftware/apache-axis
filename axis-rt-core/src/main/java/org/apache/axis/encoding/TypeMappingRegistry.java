@@ -23,7 +23,7 @@ import java.io.Serializable;
  * This interface describes the AXIS TypeMappingRegistry.
  */
 public interface TypeMappingRegistry 
-    extends javax.xml.rpc.encoding.TypeMappingRegistry, Serializable {
+    extends jakarta.xml.rpc.encoding.TypeMappingRegistry, Serializable {
     /**
      * delegate
      *

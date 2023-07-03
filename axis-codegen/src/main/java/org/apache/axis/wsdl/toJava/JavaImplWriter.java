@@ -26,7 +26,7 @@ import javax.wsdl.Binding;
 import javax.wsdl.BindingOperation;
 import javax.wsdl.Operation;
 import javax.wsdl.OperationType;
-import javax.xml.rpc.holders.BooleanHolder;
+import jakarta.xml.rpc.holders.BooleanHolder;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;

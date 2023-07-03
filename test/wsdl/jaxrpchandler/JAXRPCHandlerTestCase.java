@@ -6,8 +6,8 @@ import org.apache.axis.utils.Admin;
 import org.apache.axis.utils.Options;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.HandlerRegistry;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.HandlerRegistry;
 import java.net.URL;
 
 /**

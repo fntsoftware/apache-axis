@@ -15,15 +15,15 @@
  */
 package org.apache.axis.soap;
 
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPConnection;
+import jakarta.xml.soap.SOAPException;
 
 /**
  * SOAP Connection Factory implementation
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class SOAPConnectionFactoryImpl extends javax.xml.soap.SOAPConnectionFactory {
+public class SOAPConnectionFactoryImpl extends jakarta.xml.soap.SOAPConnectionFactory {
     /**
      * Create a new <CODE>SOAPConnection</CODE>.
      * @return the new <CODE>SOAPConnection</CODE> object.

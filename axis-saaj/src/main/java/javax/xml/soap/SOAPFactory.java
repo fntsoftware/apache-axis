@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 /**
  * <code>SOAPFactory</code> is a factory for creating various objects
@@ -26,7 +26,7 @@ package javax.xml.soap;
  * <code>SOAPEnvelope</code>.
  *
  * <code>SOAPFactory</code> also has methods to create
- * <code>javax.xml.soap.Detail</code> objects as well as
+ * <code>jakarta.xml.soap.Detail</code> objects as well as
  * <code>java.xml.soap.Name</code> objects.
  *
  */
@@ -140,7 +140,7 @@ public abstract class SOAPFactory {
         }
     }
 
-    private static final String SF_PROPERTY = "javax.xml.soap.SOAPFactory";
+    private static final String SF_PROPERTY = "jakarta.xml.soap.SOAPFactory";
 
     private static final String DEFAULT_SF =
         "org.apache.axis.soap.SOAPFactoryImpl";

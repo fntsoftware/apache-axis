@@ -15,9 +15,9 @@ public class MyServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testHelloWorldWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.axis2098.MyServiceLocator().getHelloWorldAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.axis2098.MyServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.axis2098.MyServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class MyServiceTestCase extends junit.framework.TestCase {
             MyServiceLocator loc = new MyServiceLocator();
             binding = (MySOAPBindingStub)loc.getHelloWorld(HttpTestUtil.getTestEndpoint(loc.getHelloWorldAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -124,12 +124,12 @@ Usage
   is in the class path. Therefore, you need to add the relevant dependency to your project:
   
 --------------------------------------------------------------------------------
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>axis-standalone-server</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
+##        <dependency>
+##            <groupId>${project.groupId}</groupId>
+##            <artifactId>axis-standalone-server</artifactId>
+##            <version>${project.version}</version>
+##            <scope>test</scope>
+##        </dependency>
 --------------------------------------------------------------------------------
   
   Obviously the integration tests also need to know the port number of the

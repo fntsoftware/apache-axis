@@ -17,8 +17,8 @@ package org.apache.axis.wsi.scm.retailer;
 
 import java.math.BigDecimal;
 
-import javax.xml.rpc.ServiceException;
-import javax.xml.rpc.server.ServiceLifecycle;
+import jakarta.xml.rpc.ServiceException;
+import jakarta.xml.rpc.server.ServiceLifecycle;
 
 import org.apache.axis.wsi.scm.retailer.catalog.CatalogItem;
 import org.apache.axis.wsi.scm.retailer.catalog.CatalogType;
@@ -49,7 +49,7 @@ public class RetailerSoapBindingImpl implements org.apache.axis.wsi.scm.retailer
     }
 
     /**
-     * @see javax.xml.rpc.server.ServiceLifecycle#init(java.lang.Object)
+     * @see jakarta.xml.rpc.server.ServiceLifecycle#init(java.lang.Object)
      */
     public void init(Object context) throws ServiceException {
         CatalogItem[] items = new CatalogItem[10];
@@ -140,7 +140,7 @@ public class RetailerSoapBindingImpl implements org.apache.axis.wsi.scm.retailer
     }
 
     /**
-     * @see javax.xml.rpc.server.ServiceLifecycle#destroy()
+     * @see jakarta.xml.rpc.server.ServiceLifecycle#destroy()
      */
     public void destroy() {
     }

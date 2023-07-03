@@ -2,15 +2,15 @@ package test.saaj;
 
 import junit.framework.TestCase;
 
-import javax.xml.soap.Node;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPFactory;
-import javax.xml.soap.Text;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPPart;
-import javax.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.Node;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPFactory;
+import jakarta.xml.soap.Text;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPPart;
+import jakarta.xml.soap.SOAPEnvelope;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

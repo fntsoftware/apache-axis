@@ -3,12 +3,12 @@ package test.saaj;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPPart;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPPart;
 import javax.xml.transform.stream.StreamSource;
 
 public class TestMessageProperty2 extends junit.framework.TestCase {

@@ -21,11 +21,11 @@ import org.apache.axis.Message;
 import org.apache.axis.message.SOAPBodyElement;
 import org.apache.axis.message.SOAPHeaderElement;
 
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPHeader;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPHeader;
 
 /**
  * Test SOAPEnvelope class.

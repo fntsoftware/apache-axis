@@ -16,7 +16,7 @@
 package org.apache.axis.wsdl;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
+import jakarta.xml.rpc.ParameterMode;
 import java.util.HashMap;
 
 /**

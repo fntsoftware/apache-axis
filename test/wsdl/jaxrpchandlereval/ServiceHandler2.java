@@ -1,13 +1,13 @@
 package test.wsdl.jaxrpchandlereval;
 
-import javax.xml.rpc.handler.*;
-import javax.xml.rpc.soap.*;
+import jakarta.xml.rpc.handler.*;
+import jakarta.xml.rpc.soap.*;
 import javax.xml.namespace.*;
-import javax.xml.soap.*;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.soap.*;
-import javax.xml.rpc.*;
+import jakarta.xml.soap.*;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.soap.*;
+import jakarta.xml.rpc.*;
 import org.w3c.dom.NodeList;
 
 

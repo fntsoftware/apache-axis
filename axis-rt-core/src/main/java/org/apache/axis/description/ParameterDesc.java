@@ -232,9 +232,9 @@ public class ParameterDesc implements Serializable {
         // parameters that don't represent the return type.
         if (javaType != null) {
             if ((mode == IN || isReturn) &&
-                javax.xml.rpc.holders.Holder.class.isAssignableFrom(javaType) ||
+                jakarta.xml.rpc.holders.Holder.class.isAssignableFrom(javaType) ||
                 mode != IN && !isReturn &&
-                !javax.xml.rpc.holders.Holder.class.isAssignableFrom(javaType)) {
+                !jakarta.xml.rpc.holders.Holder.class.isAssignableFrom(javaType)) {
                 throw new IllegalArgumentException(
                      Messages.getMessage("setJavaTypeErr00",
                                           javaType.getName(),

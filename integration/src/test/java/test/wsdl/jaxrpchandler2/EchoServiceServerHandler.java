@@ -6,10 +6,10 @@ import java.util.*;
 import java.util.Iterator;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.*;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
-import javax.xml.soap.*;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.rpc.handler.*;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.soap.*;
+import jakarta.xml.soap.SOAPMessage;
 import javax.xml.transform.stream.*;
 
 public class EchoServiceServerHandler implements Handler {

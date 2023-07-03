@@ -228,8 +228,8 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * or null if there was no TypeMapping associated with the specified namespaceURI
      *
      */
-    public javax.xml.rpc.encoding.TypeMapping register(String namespaceURI,
-                         javax.xml.rpc.encoding.TypeMapping mapping) {
+    public jakarta.xml.rpc.encoding.TypeMapping register(String namespaceURI,
+                         jakarta.xml.rpc.encoding.TypeMapping mapping) {
 //        namespaceURI = "";
         if (mapping == null || 
             !(mapping instanceof TypeMappingDelegate)) {
@@ -261,7 +261,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * java.lang.IllegalArgumentException - 
      * if an invalid type mapping is specified or the delegate is already set
      */
-    public void registerDefault(javax.xml.rpc.encoding.TypeMapping mapping) {
+    public void registerDefault(jakarta.xml.rpc.encoding.TypeMapping mapping) {
         if (mapping == null ||
             !(mapping instanceof TypeMappingDelegate)) {
             throw new IllegalArgumentException(
@@ -359,7 +359,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * @return The registered TypeMapping 
      * (which may be the default TypeMapping) or null.
      */
-    public javax.xml.rpc.encoding.TypeMapping 
+    public jakarta.xml.rpc.encoding.TypeMapping
         getTypeMapping(String namespaceURI) {
 //        namespaceURI = "";
         TypeMapping del = (TypeMappingDelegate) mapTM.get(namespaceURI);
@@ -393,7 +393,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * @param namespaceURI - The namespace URI
      * @return The registered TypeMapping .
      */
-    public javax.xml.rpc.encoding.TypeMapping 
+    public jakarta.xml.rpc.encoding.TypeMapping
         unregisterTypeMapping(String namespaceURI) {
         return (TypeMappingDelegate)mapTM.remove(namespaceURI);
     }
@@ -405,7 +405,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * @return true if found and removed
      */
     public boolean removeTypeMapping(
-                                  javax.xml.rpc.encoding.TypeMapping mapping) {
+                                  jakarta.xml.rpc.encoding.TypeMapping mapping) {
         String[] ns = getRegisteredEncodingStyleURIs();
         boolean rc = false;
         for (int i=0; i < ns.length; i++) {
@@ -423,7 +423,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      *
      * @return An empty generic TypeMapping object
      */
-    public javax.xml.rpc.encoding.TypeMapping createTypeMapping() {
+    public jakarta.xml.rpc.encoding.TypeMapping createTypeMapping() {
         TypeMappingImpl impl = new TypeMappingImpl();
         TypeMappingDelegate del = new TypeMappingDelegate(impl);
         del.setNext(defaultDelTM);
@@ -462,7 +462,7 @@ public class TypeMappingRegistryImpl implements TypeMappingRegistry {
      * Return the default TypeMapping
      * @return TypeMapping or null
      **/
-    public javax.xml.rpc.encoding.TypeMapping getDefaultTypeMapping() {
+    public jakarta.xml.rpc.encoding.TypeMapping getDefaultTypeMapping() {
         return defaultDelTM;
     }
 

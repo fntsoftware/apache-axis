@@ -19,9 +19,9 @@ public class FaultServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testFaultServiceWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.faults.FaultServiceLocator().getFaultServiceAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.faults.FaultServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.faults.FaultServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -32,7 +32,7 @@ public class FaultServiceTestCase extends junit.framework.TestCase {
             FaultServiceLocator loc = new FaultServiceLocator();
             binding = loc.getFaultService(HttpTestUtil.getTestEndpoint(loc.getFaultServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.
                     AssertionFailedError("JAX-RPC ServiceException caught: " + jre);            
         }
@@ -63,7 +63,7 @@ public class FaultServiceTestCase extends junit.framework.TestCase {
             FaultServiceLocator loc = new FaultServiceLocator();
             binding = loc.getFaultService(HttpTestUtil.getTestEndpoint(loc.getFaultServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.
                     AssertionFailedError("JAX-RPC ServiceException caught: " + jre);            
         }
@@ -104,7 +104,7 @@ public class FaultServiceTestCase extends junit.framework.TestCase {
             FaultServiceLocator loc = new FaultServiceLocator();
             binding = loc.getFaultService(HttpTestUtil.getTestEndpoint(loc.getFaultServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.
                     AssertionFailedError("JAX-RPC ServiceException caught: " + jre);            
         }

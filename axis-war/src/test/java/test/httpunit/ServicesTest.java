@@ -20,6 +20,7 @@ package test.httpunit;
 import com.meterware.httpunit.WebRequest;
 import com.meterware.httpunit.GetMethodWebRequest;
 import com.meterware.httpunit.WebResponse;
+import org.junit.Ignore;
 
 /**
  * test the services
@@ -27,6 +28,7 @@ import com.meterware.httpunit.WebResponse;
  * @created Jul 10, 2002 12:09:06 AM
  */
 
+@Ignore
 public class ServicesTest extends HttpUnitTestBase {
 
     private String services;

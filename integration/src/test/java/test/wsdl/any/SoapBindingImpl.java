@@ -27,7 +27,7 @@ public class SoapBindingImpl implements test.wsdl.any.Soap{
         m3.addTextNode("A>B");
         MessageElement[] me = new MessageElement[]{m1, m2, m3};
         record.set_any(me);
-        } catch(javax.xml.soap.SOAPException e){
+        } catch(jakarta.xml.soap.SOAPException e){
         	
         }
         

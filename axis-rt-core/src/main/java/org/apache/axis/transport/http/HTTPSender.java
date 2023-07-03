@@ -32,9 +32,9 @@ import org.apache.axis.utils.Messages;
 import org.apache.axis.utils.TeeOutputStream;
 import org.apache.commons.logging.Log;
 
-import javax.xml.soap.MimeHeader;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.MimeHeader;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPException;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;

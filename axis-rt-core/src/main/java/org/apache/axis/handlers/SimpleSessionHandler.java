@@ -30,7 +30,7 @@ import org.apache.axis.utils.SessionUtils;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.server.ServiceLifecycle;
+import jakarta.xml.rpc.server.ServiceLifecycle;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Hashtable;

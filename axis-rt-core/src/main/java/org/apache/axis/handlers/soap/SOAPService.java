@@ -42,7 +42,7 @@ import org.apache.axis.utils.ClassUtils;
 import org.apache.commons.logging.Log;
 import org.w3c.dom.Document;
 
-import javax.xml.rpc.soap.SOAPFaultException;
+import jakarta.xml.rpc.soap.SOAPFaultException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

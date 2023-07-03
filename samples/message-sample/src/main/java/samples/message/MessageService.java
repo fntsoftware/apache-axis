@@ -17,12 +17,12 @@
 package samples.message ;
 
 import org.w3c.dom.Element;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPBodyElement;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPBodyElement;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPElement;
 
 /**
  * Simple message-style service sample.
@@ -38,7 +38,7 @@ public class MessageService {
         return elems;
     }
 
-    public void process(SOAPEnvelope req, SOAPEnvelope resp) throws javax.xml.soap.SOAPException {
+    public void process(SOAPEnvelope req, SOAPEnvelope resp) throws jakarta.xml.soap.SOAPException {
     	SOAPBody body = resp.getBody();
     	Name ns0 =  resp.createName("TestNS0", "ns0", "http://example.com");
     	Name ns1 =  resp.createName("TestNS1", "ns1", "http://example.com");

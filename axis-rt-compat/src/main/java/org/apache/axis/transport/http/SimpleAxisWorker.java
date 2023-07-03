@@ -34,9 +34,9 @@ import org.apache.commons.logging.Log;
 import org.w3c.dom.Document;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.MimeHeader;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MimeHeader;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPMessage;
 
 import java.io.OutputStream;
 import java.io.ByteArrayInputStream;

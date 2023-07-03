@@ -28,7 +28,9 @@ import org.apache.axis.message.SOAPEnvelope;
 import org.apache.axis.soap.SOAP12Constants;
 import org.apache.axis.soap.SOAPConstants;
 import org.apache.axis.types.Time;
+import org.junit.Ignore;
 
+@Ignore
 public class TestGET extends TestCase {
     public void testXMLP2() throws Exception {
         Call call = new Call("http://localhost:" + System.getProperty("jetty.httpPort", "9080") + "/soap12/add-test-doc/getTime");

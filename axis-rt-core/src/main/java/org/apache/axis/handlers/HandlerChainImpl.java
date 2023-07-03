@@ -20,17 +20,17 @@ import org.apache.axis.utils.ClassUtils;
 import org.apache.axis.utils.Messages;
 import org.apache.commons.logging.Log;
 
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.handler.Handler;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.MessageContext;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
-import javax.xml.rpc.soap.SOAPFaultException;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.handler.Handler;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.MessageContext;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.rpc.soap.SOAPFaultException;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -40,7 +40,7 @@ import java.util.Map;
 /**
  * Implementation of HandlerChain
  */
-public class HandlerChainImpl extends ArrayList implements javax.xml.rpc.handler
+public class HandlerChainImpl extends ArrayList implements jakarta.xml.rpc.handler
         .HandlerChain {
     protected static Log log =
             LogFactory.getLog(HandlerChainImpl.class.getName());

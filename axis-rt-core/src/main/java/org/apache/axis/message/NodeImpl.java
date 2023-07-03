@@ -33,8 +33,8 @@ import org.w3c.dom.Text;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.AttributesImpl;
 
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -42,7 +42,7 @@ import java.util.Iterator;
 /**
  * This is our implementation of the DOM node
  */
-public class NodeImpl implements org.w3c.dom.Node, javax.xml.soap.Node,
+public class NodeImpl implements org.w3c.dom.Node, jakarta.xml.soap.Node,
         Serializable, Cloneable {
 
     protected static Log log =
@@ -620,7 +620,7 @@ public class NodeImpl implements org.w3c.dom.Node, javax.xml.soap.Node,
      * 
      * @param parent the <code>SOAPElement</code> object to be set as
      *               the parent of this <code>Node</code> object
-     * @throws javax.xml.soap.SOAPException if there is a problem in setting the
+     * @throws jakarta.xml.soap.SOAPException if there is a problem in setting the
      *                                      parent to the given element
      * @see #getParentElement() getParentElement()
      */
@@ -644,7 +644,7 @@ public class NodeImpl implements org.w3c.dom.Node, javax.xml.soap.Node,
      *         this <code>Node</code> object or <code>null</code> if this
      *         <code>Node</code> object is root
      * @throws UnsupportedOperationException if the whole tree is not kept in memory
-     * @see #setParentElement(javax.xml.soap.SOAPElement) setParentElement(javax.xml.soap.SOAPElement)
+     * @see #setParentElement(jakarta.xml.soap.SOAPElement) setParentElement(jakarta.xml.soap.SOAPElement)
      */
     public SOAPElement getParentElement() {
         return (SOAPElement) getParent();
@@ -695,11 +695,11 @@ public class NodeImpl implements org.w3c.dom.Node, javax.xml.soap.Node,
             if (children.size() != 1) {
                 throw new IllegalStateException( "setValue() may not be called on a non-Text node with more than one child." );
             }
-            javax.xml.soap.Node child = (javax.xml.soap.Node) children.get(0);
+            jakarta.xml.soap.Node child = (jakarta.xml.soap.Node) children.get(0);
             if (!(child instanceof org.apache.axis.message.Text)) {
                 throw new IllegalStateException( "setValue() may not be called on a non-Text node with a non-Text child." );
             }
-            ((javax.xml.soap.Text)child).setNodeValue(value);
+            ((jakarta.xml.soap.Text)child).setNodeValue(value);
         } else {
             appendChild(new org.apache.axis.message.Text(value));
         }

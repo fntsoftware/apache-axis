@@ -34,7 +34,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -57,7 +57,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -81,7 +81,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -110,7 +110,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -156,7 +156,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -205,7 +205,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -244,7 +244,7 @@ public class SimpleDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new SimpleDocLitServiceLocator().getSimpleDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -37,7 +37,7 @@ import org.apache.commons.logging.Log;
 import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.holders.Holder;
+import jakarta.xml.rpc.holders.Holder;
 import javax.wsdl.OperationType;
 import java.lang.reflect.Method;
 import java.util.ArrayList;

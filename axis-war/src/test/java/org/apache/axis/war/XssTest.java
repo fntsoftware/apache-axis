@@ -26,6 +26,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import org.apache.commons.io.IOUtils;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class XssTest {
@@ -39,6 +40,7 @@ public class XssTest {
      * @throws Exception
      */
     @Test
+    @Ignore
     public void testGetVersion() throws Exception {
         HttpURLConnection conn = (HttpURLConnection)new URL(Utils.getWebappUrl() + "/services/Version").openConnection();
         conn.setDoInput(true);

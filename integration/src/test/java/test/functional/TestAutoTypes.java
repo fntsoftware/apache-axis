@@ -22,9 +22,9 @@ import org.apache.axis.client.AdminClient;
 import org.apache.axis.utils.NetworkUtils;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceFactory;
-import javax.xml.rpc.Stub;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.Stub;
 import java.net.URL;
 import java.util.Date;
 

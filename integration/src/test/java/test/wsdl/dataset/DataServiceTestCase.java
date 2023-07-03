@@ -22,7 +22,7 @@ public class DataServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.dataset.DataServiceSoapStub)
                     new test.wsdl.dataset.DataServiceLocator().getDataServiceSoap();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

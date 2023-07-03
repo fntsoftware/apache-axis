@@ -44,28 +44,28 @@ import test.HttpTestUtil;
 import test.wsdl.types.comprehensive_service.TypeTest;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceException;
-import javax.xml.rpc.ServiceFactory;
-import javax.xml.rpc.Stub;
-import javax.xml.rpc.holders.BigDecimalHolder;
-import javax.xml.rpc.holders.BigIntegerHolder;
-import javax.xml.rpc.holders.BooleanHolder;
-import javax.xml.rpc.holders.BooleanWrapperHolder;
-import javax.xml.rpc.holders.ByteArrayHolder;
-import javax.xml.rpc.holders.ByteHolder;
-import javax.xml.rpc.holders.CalendarHolder;
-import javax.xml.rpc.holders.DoubleHolder;
-import javax.xml.rpc.holders.DoubleWrapperHolder;
-import javax.xml.rpc.holders.FloatHolder;
-import javax.xml.rpc.holders.FloatWrapperHolder;
-import javax.xml.rpc.holders.IntHolder;
-import javax.xml.rpc.holders.IntegerWrapperHolder;
-import javax.xml.rpc.holders.LongHolder;
-import javax.xml.rpc.holders.QNameHolder;
-import javax.xml.rpc.holders.ShortHolder;
-import javax.xml.rpc.holders.ShortWrapperHolder;
-import javax.xml.rpc.holders.StringHolder;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.Stub;
+import jakarta.xml.rpc.holders.BigDecimalHolder;
+import jakarta.xml.rpc.holders.BigIntegerHolder;
+import jakarta.xml.rpc.holders.BooleanHolder;
+import jakarta.xml.rpc.holders.BooleanWrapperHolder;
+import jakarta.xml.rpc.holders.ByteArrayHolder;
+import jakarta.xml.rpc.holders.ByteHolder;
+import jakarta.xml.rpc.holders.CalendarHolder;
+import jakarta.xml.rpc.holders.DoubleHolder;
+import jakarta.xml.rpc.holders.DoubleWrapperHolder;
+import jakarta.xml.rpc.holders.FloatHolder;
+import jakarta.xml.rpc.holders.FloatWrapperHolder;
+import jakarta.xml.rpc.holders.IntHolder;
+import jakarta.xml.rpc.holders.IntegerWrapperHolder;
+import jakarta.xml.rpc.holders.LongHolder;
+import jakarta.xml.rpc.holders.QNameHolder;
+import jakarta.xml.rpc.holders.ShortHolder;
+import jakarta.xml.rpc.holders.ShortWrapperHolder;
+import jakarta.xml.rpc.holders.StringHolder;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -304,7 +304,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -322,7 +322,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -340,7 +340,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -358,7 +358,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -377,7 +377,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -395,7 +395,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -413,7 +413,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -431,7 +431,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -450,7 +450,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -468,7 +468,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -486,7 +486,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -504,7 +504,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -523,7 +523,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -541,7 +541,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -559,7 +559,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -577,7 +577,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -596,7 +596,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -614,7 +614,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -632,7 +632,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -650,7 +650,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -669,7 +669,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -687,7 +687,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -705,7 +705,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -723,7 +723,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -742,7 +742,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -760,7 +760,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -778,7 +778,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -796,7 +796,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -815,7 +815,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -833,7 +833,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -851,7 +851,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -869,7 +869,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -888,7 +888,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -906,7 +906,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -924,7 +924,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -942,7 +942,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -961,7 +961,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -979,7 +979,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -997,7 +997,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1015,7 +1015,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1034,7 +1034,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1053,7 +1053,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1072,7 +1072,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1091,7 +1091,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1110,7 +1110,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1129,7 +1129,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1148,7 +1148,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1167,7 +1167,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1186,7 +1186,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1205,7 +1205,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1224,7 +1224,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1243,7 +1243,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1262,7 +1262,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1281,7 +1281,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1300,7 +1300,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1319,7 +1319,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1338,7 +1338,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1357,7 +1357,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -1376,7 +1376,7 @@ public class DynamicProxyTestCase extends TestCase {
         try {
             binding = new test.wsdl.types.comprehensive_service.TypeTestServiceLocator().getTypeTest();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

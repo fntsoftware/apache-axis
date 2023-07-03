@@ -29,9 +29,9 @@ import org.w3c.dom.Element;
 import org.xml.sax.Attributes;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -44,7 +44,7 @@ import java.util.Vector;
  * @author Glyn Normington (glyn@apache.org)
  */
 public class SOAPBody extends MessageElement
-    implements javax.xml.soap.SOAPBody {
+    implements jakarta.xml.soap.SOAPBody {
 
     private static Log log = LogFactory.getLog(SOAPBody.class.getName());
 
@@ -195,34 +195,34 @@ public class SOAPBody extends MessageElement
 
     // JAXM methods
 
-    public javax.xml.soap.SOAPBodyElement addBodyElement(Name name)
+    public jakarta.xml.soap.SOAPBodyElement addBodyElement(Name name)
         throws SOAPException {
         SOAPBodyElement bodyElement = new SOAPBodyElement(name);
         addChildElement(bodyElement);
         return bodyElement;
     }
 
-    public javax.xml.soap.SOAPFault addFault(Name name, String s, Locale locale) throws SOAPException {
+    public jakarta.xml.soap.SOAPFault addFault(Name name, String s, Locale locale) throws SOAPException {
         AxisFault af = new AxisFault(new QName(name.getURI(), name.getLocalName()), s, "", new Element[0]);
         SOAPFault fault = new SOAPFault(af);
         addChildElement(fault);
         return fault;
     }
 
-    public javax.xml.soap.SOAPFault addFault(Name name, String s) throws SOAPException {
+    public jakarta.xml.soap.SOAPFault addFault(Name name, String s) throws SOAPException {
         AxisFault af = new AxisFault(new QName(name.getURI(), name.getLocalName()), s, "", new Element[0]);
         SOAPFault fault = new SOAPFault(af);
         addChildElement(fault);
         return fault;
     }
 
-    public javax.xml.soap.SOAPBodyElement addDocument(Document document) throws SOAPException {
+    public jakarta.xml.soap.SOAPBodyElement addDocument(Document document) throws SOAPException {
         SOAPBodyElement bodyElement = new SOAPBodyElement(document.getDocumentElement());
         addChildElement(bodyElement);
         return bodyElement;
     }
 
-    public javax.xml.soap.SOAPFault addFault() throws SOAPException {
+    public jakarta.xml.soap.SOAPFault addFault() throws SOAPException {
         
         AxisFault af = new AxisFault(new QName(Constants.NS_URI_AXIS, Constants.FAULT_SERVER_GENERAL), "", "", new Element[0]);
         SOAPFault fault = new SOAPFault(af);
@@ -230,14 +230,14 @@ public class SOAPBody extends MessageElement
         return fault;
     }
 
-    public javax.xml.soap.SOAPFault getFault() {
+    public jakarta.xml.soap.SOAPFault getFault() {
         List bodyElements = getChildren();
         if (bodyElements != null) {
             Iterator e = bodyElements.iterator();
             while (e.hasNext()) {
                 Object element = e.next();
-                if(element instanceof javax.xml.soap.SOAPFault) {
-                    return (javax.xml.soap.SOAPFault) element;
+                if(element instanceof jakarta.xml.soap.SOAPFault) {
+                    return (jakarta.xml.soap.SOAPFault) element;
                 }
             }
         }
@@ -251,7 +251,7 @@ public class SOAPBody extends MessageElement
     // overwrite the one in MessageElement and set envelope
     public void addChild(MessageElement element) throws SOAPException {
 // Commented out for SAAJ compatibility - gdaniels, 05/19/2003
-//      if (!(element instanceof javax.xml.soap.SOAPBodyElement)) {
+//      if (!(element instanceof jakarta.xml.soap.SOAPBodyElement)) {
 //        throw new SOAPException(Messages.getMessage("badSOAPBodyElement00"));
 //      }
         element.setEnvelope(getEnvelope());
@@ -262,7 +262,7 @@ public class SOAPBody extends MessageElement
     public SOAPElement addChildElement(SOAPElement element)
         throws SOAPException {
 // Commented out for SAAJ compatibility - gdaniels, 05/19/2003
-//      if (!(element instanceof javax.xml.soap.SOAPBodyElement)) {
+//      if (!(element instanceof jakarta.xml.soap.SOAPBodyElement)) {
 //        throw new SOAPException(Messages.getMessage("badSOAPBodyElement00"));
 //      }
         SOAPElement child = super.addChildElement(element);

@@ -2,7 +2,7 @@ package samples.mtomstub;
 
 import java.net.URL;
 
-import javax.xml.ws.Endpoint;
+import jakarta.xml.ws.Endpoint;
 
 import org.apache.axiom.testutils.PortAllocator;
 

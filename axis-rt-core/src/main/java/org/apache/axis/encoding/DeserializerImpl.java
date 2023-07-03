@@ -43,7 +43,7 @@ import java.util.Vector;
  */
 
 public class DeserializerImpl extends SOAPHandler
-        implements javax.xml.rpc.encoding.Deserializer, Deserializer, Callback
+        implements jakarta.xml.rpc.encoding.Deserializer, Deserializer, Callback
 {
     protected static Log log =
             LogFactory.getLog(DeserializerImpl.class.getName());

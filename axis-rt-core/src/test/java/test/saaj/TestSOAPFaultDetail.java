@@ -10,7 +10,7 @@ import org.apache.axis.message.SOAPEnvelope;
 import org.apache.axis.encoding.DeserializationContext;
 import org.xml.sax.InputSource;
 
-import javax.xml.soap.DetailEntry;
+import jakarta.xml.soap.DetailEntry;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.Iterator;
@@ -50,7 +50,7 @@ public class TestSOAPFaultDetail extends junit.framework.TestCase
                 bodyItem.getClass().getName(), bodyItem instanceof SOAPFault);
         SOAPFault flt = (SOAPFault)bodyItem;
         flt.addDetail();
-        javax.xml.soap.Detail d = flt.getDetail();
+        jakarta.xml.soap.Detail d = flt.getDetail();
         Iterator i = d.getDetailEntries();
         while (i.hasNext())
         {

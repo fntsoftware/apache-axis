@@ -21,9 +21,9 @@ import org.apache.axis.message.SOAPHeaderElement;
 import org.apache.axis.utils.Messages;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
@@ -34,7 +34,7 @@ import java.util.Vector;
 * This class is the base for all generated stubs.
 */
 
-public abstract class Stub implements javax.xml.rpc.Stub {
+public abstract class Stub implements jakarta.xml.rpc.Stub {
 
     protected Service service = null;
 
@@ -82,9 +82,9 @@ public abstract class Stub implements javax.xml.rpc.Stub {
      * specifies a standard set of properties that may be passed 
      * to the Stub._setProperty method. These properties include:
      * <UL>
-     * <LI>javax.xml.rpc.security.auth.username: Username for the HTTP Basic Authentication
-     * <LI>javax.xml.rpc.security.auth.password: Password for the HTTP Basic Authentication
-     * <LI>javax.xml.rpc.service.endpoint.address: Target service endpoint address.
+     * <LI>jakarta.xml.rpc.security.auth.username: Username for the HTTP Basic Authentication
+     * <LI>jakarta.xml.rpc.security.auth.password: Password for the HTTP Basic Authentication
+     * <LI>jakarta.xml.rpc.service.endpoint.address: Target service endpoint address.
      * <LI>[TBD: Additional properties]
      * </UL>
      *

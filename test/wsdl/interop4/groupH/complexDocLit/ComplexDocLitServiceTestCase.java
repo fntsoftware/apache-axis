@@ -32,9 +32,9 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testComplexDocLitPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.interop4.groupH.complexDocLit.ComplexDocLitServiceLocator().getComplexDocLitPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop4.groupH.complexDocLit.ComplexDocLitServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop4.groupH.complexDocLit.ComplexDocLitServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -44,7 +44,7 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new ComplexDocLitServiceLocator().getComplexDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -73,7 +73,7 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new ComplexDocLitServiceLocator().getComplexDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -102,7 +102,7 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new ComplexDocLitServiceLocator().getComplexDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -139,7 +139,7 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new ComplexDocLitServiceLocator().getComplexDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -191,7 +191,7 @@ public class ComplexDocLitServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new ComplexDocLitServiceLocator().getComplexDocLitPort(url);
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -26,8 +26,8 @@ import java.io.Reader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPException;
 
 import org.apache.axis.AxisFault;
 import org.apache.axis.Constants;

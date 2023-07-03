@@ -1,9 +1,9 @@
 package test.jaxrpc;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.Handler;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.MessageContext;
+import jakarta.xml.rpc.handler.Handler;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.MessageContext;
 import java.util.Map;
 
 public class AAAHandler implements Handler {

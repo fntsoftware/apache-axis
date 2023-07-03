@@ -18,9 +18,9 @@ package org.apache.axis.soap;
 import org.apache.axis.Message;
 import org.apache.axis.message.SOAPEnvelope;
 
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -29,7 +29,7 @@ import java.io.InputStream;
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class MessageFactoryImpl extends javax.xml.soap.MessageFactory {
+public class MessageFactoryImpl extends jakarta.xml.soap.MessageFactory {
     /**
      * Creates a new <CODE>SOAPMessage</CODE> object with the
      *   default <CODE>SOAPPart</CODE>, <CODE>SOAPEnvelope</CODE>,

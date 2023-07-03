@@ -17,8 +17,8 @@ import org.apache.axis.session.Session;
 import org.apache.axis.session.SimpleSession;
 import org.apache.axis.transport.local.LocalTransport;
 
-import javax.xml.rpc.ServiceException;
-import javax.xml.rpc.server.ServiceLifecycle;
+import jakarta.xml.rpc.ServiceException;
+import jakarta.xml.rpc.server.ServiceLifecycle;
 
 /**
  * Test the SimpleSession implementation (using SOAP headers for session
@@ -166,7 +166,7 @@ public class TestSimpleSession extends TestCase implements ServiceLifecycle {
      * init method to initialize its configuration and setup access
      * to any external resources.
      *  @param   context Initialization context for a JAX-RPC service
-     endpoint; Carries javax.servlet.ServletContext
+     endpoint; Carries jakarta.servlet.ServletContext
      for the servlet based JAX-RPC endpoints
      *  @throws  ServiceException If any error in initialization of the
      service endpoint; or if any illegal context has

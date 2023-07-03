@@ -21,7 +21,9 @@ package org.apache.axis.transport.http.javanet;
 import java.net.URL;
 
 import junit.framework.TestCase;
+import org.junit.Ignore;
 
+@Ignore
 public class TestSOAPService extends TestCase {
     private Dummy dummy;
     

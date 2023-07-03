@@ -7,18 +7,18 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Document;
 import org.custommonkey.xmlunit.XMLUnit;
 
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPFactory;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPHeaderElement;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPBodyElement;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPFactory;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPHeaderElement;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPPart;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPBodyElement;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.Iterator;
@@ -179,16 +179,16 @@ public class TestDOM extends AxisTestBase {
       org.apache.axis.Message msg = new org.apache.axis.Message
 	(is, false, "text/xml;charset=utf-8", null);
       // get the SOAPEnvelope (a SAAJ instance)
-      javax.xml.soap.SOAPEnvelope senv = msg.getSOAPEnvelope();
-      javax.xml.soap.SOAPBody sbody = senv.getBody();
-      javax.xml.soap.SOAPElement rtnElement = 
-	(javax.xml.soap.SOAPElement) sbody.getChildElements().next();
-      javax.xml.soap.SOAPElement addrElement = 
-	(javax.xml.soap.SOAPElement) rtnElement.getChildElements().next();
-      javax.xml.soap.SOAPElement nameElement = 
-	(javax.xml.soap.SOAPElement) addrElement.getChildElements().next();
-      javax.xml.soap.Node textNode = 
-	(javax.xml.soap.Node) nameElement.getChildElements().next();
+      jakarta.xml.soap.SOAPEnvelope senv = msg.getSOAPEnvelope();
+      jakarta.xml.soap.SOAPBody sbody = senv.getBody();
+      jakarta.xml.soap.SOAPElement rtnElement = 
+	(jakarta.xml.soap.SOAPElement) sbody.getChildElements().next();
+      jakarta.xml.soap.SOAPElement addrElement = 
+	(jakarta.xml.soap.SOAPElement) rtnElement.getChildElements().next();
+      jakarta.xml.soap.SOAPElement nameElement = 
+	(jakarta.xml.soap.SOAPElement) addrElement.getChildElements().next();
+      jakarta.xml.soap.Node textNode = 
+	(jakarta.xml.soap.Node) nameElement.getChildElements().next();
       assertNotNull
 	("A DOM node parent (within a SOAPElement) should never be null.",
 	 (org.w3c.dom.Node) textNode.getParentNode());

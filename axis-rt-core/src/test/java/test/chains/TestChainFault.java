@@ -23,7 +23,7 @@ import org.apache.axis.SimpleChain;
 import org.apache.axis.handlers.BasicHandler;
 import org.apache.axis.server.AxisServer;
 
-import javax.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPBody;
 
 /**
 * Used to verify that Faults are processed properly in the Handler chain
@@ -111,7 +111,7 @@ public class TestChainFault extends TestCase
             stRetval = oBody.getFault().getFaultString();
           }
       }
-      catch (javax.xml.soap.SOAPException e) {
+      catch (jakarta.xml.soap.SOAPException e) {
           e.printStackTrace();
           assertTrue("Unforseen soap exception", false);
       }

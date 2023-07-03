@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 
 import test.HttpTestUtil;
 
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 
 public class Qualify_ServiceTestCase extends junit.framework.TestCase {
 
@@ -46,7 +46,7 @@ public class Qualify_ServiceTestCase extends junit.framework.TestCase {
         Qualify_BindingStub binding;
         try {
             binding = (Qualify_BindingStub)locator.getQualify(HttpTestUtil.getTestEndpoint(locator.getQualifyAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -103,7 +103,7 @@ public class Qualify_ServiceTestCase extends junit.framework.TestCase {
         test.wsdl.qualify.Qualify_BindingStub binding;
         try {
             binding = (test.wsdl.qualify.Qualify_BindingStub)locator.getQualify(HttpTestUtil.getTestEndpoint(locator.getQualifyAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

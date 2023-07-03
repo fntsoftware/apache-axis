@@ -2,19 +2,19 @@ package test.saaj;
 
 import test.AxisTestBase;
 
-import javax.xml.soap.Detail;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPFactory;
-import javax.xml.soap.SOAPFault;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.DetailEntry;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPPart;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPHeaderElement;
+import jakarta.xml.soap.Detail;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPFactory;
+import jakarta.xml.soap.SOAPFault;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.DetailEntry;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPPart;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPHeaderElement;
 import java.io.ByteArrayOutputStream;
 import java.util.Iterator;
 

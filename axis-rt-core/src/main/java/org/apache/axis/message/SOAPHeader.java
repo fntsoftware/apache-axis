@@ -32,9 +32,9 @@ import org.w3c.dom.DOMException;
 import org.w3c.dom.Element;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -48,7 +48,7 @@ import java.util.Vector;
  * @author Glyn Normington (glyn@apache.org)
  */
 public class SOAPHeader extends MessageElement
-    implements javax.xml.soap.SOAPHeader {
+    implements jakarta.xml.soap.SOAPHeader {
 
     private static Log log = LogFactory.getLog(SOAPHeader.class.getName());
 
@@ -88,7 +88,7 @@ public class SOAPHeader extends MessageElement
         }
     }
 
-    public javax.xml.soap.SOAPHeaderElement addHeaderElement(Name name)
+    public jakarta.xml.soap.SOAPHeaderElement addHeaderElement(Name name)
         throws SOAPException {
         SOAPHeaderElement headerElement = new SOAPHeaderElement(name);
         addChildElement(headerElement);

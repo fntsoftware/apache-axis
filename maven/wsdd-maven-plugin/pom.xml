@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>maven</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>wsdd-maven-plugin</artifactId>
@@ -33,10 +33,16 @@
     </description>
     <url>${baseUrl}/maven/wsdd</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/maven/wsdd</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>

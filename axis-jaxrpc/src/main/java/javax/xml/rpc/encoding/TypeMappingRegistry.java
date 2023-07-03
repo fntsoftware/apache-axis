@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.encoding;
+package jakarta.xml.rpc.encoding;
 
 /**
- * The interface <code>javax.xml.rpc.encoding.TypeMappingRegistry</code>
+ * The interface <code>jakarta.xml.rpc.encoding.TypeMappingRegistry</code>
  * defines a registry of TypeMapping instances for various encoding
  * styles.
  *
@@ -39,7 +39,7 @@ public interface TypeMappingRegistry extends java.io.Serializable {
      *     if there was no TypeMapping associated with the specified
      *     <code>encodingStyleURI</code>
      *
-     * @throws javax.xml.rpc.JAXRPCException if there is any error that prevents
+     * @throws jakarta.xml.rpc.JAXRPCException if there is any error that prevents
      *              the registration of the <code>TypeMapping</code> for
      *              the specified <code>encodingStyleURI</code>
      */
@@ -61,7 +61,7 @@ public interface TypeMappingRegistry extends java.io.Serializable {
      *
      * @param mapping TypeMapping instance
      *
-     * @throws javax.xml.rpc.JAXRPCException if there is any error that
+     * @throws jakarta.xml.rpc.JAXRPCException if there is any error that
      *              prevents the registration of the default
      *              <code>TypeMapping</code>
      */

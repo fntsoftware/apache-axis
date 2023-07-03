@@ -23,9 +23,9 @@ import org.apache.axis.utils.SessionUtils;
 import org.apache.axis.utils.IOUtils;
 import org.apache.commons.logging.Log;
 
-import javax.activation.DataHandler;
+import jakarta.activation.DataHandler;
 import javax.imageio.ImageIO;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPException;
 import javax.xml.transform.stream.StreamSource;
 import java.util.Iterator;
 import java.io.ByteArrayOutputStream;
@@ -37,7 +37,7 @@ import java.io.InputStream;
  *
  *
  */
-public class AttachmentPart extends javax.xml.soap.AttachmentPart
+public class AttachmentPart extends jakarta.xml.soap.AttachmentPart
         implements Part {
 
     /** Field log           */
@@ -49,11 +49,11 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
      * <p>
      * TODO: make private?
      * */
-    javax.activation.DataHandler datahandler = null;
+    jakarta.activation.DataHandler datahandler = null;
 
     /** Field mimeHeaders.           */
-    private javax.xml.soap.MimeHeaders mimeHeaders =
-            new javax.xml.soap.MimeHeaders();
+    private jakarta.xml.soap.MimeHeaders mimeHeaders =
+            new jakarta.xml.soap.MimeHeaders();
 
     private Object contentObject;
 
@@ -74,13 +74,13 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
      *
      * @param dh the <code>DataHandler</code>
      */
-    public AttachmentPart(javax.activation.DataHandler dh) {
+    public AttachmentPart(jakarta.activation.DataHandler dh) {
         setMimeHeader(HTTPConstants.HEADER_CONTENT_ID,
                 SessionUtils.generateSessionId());
         datahandler = dh;
         if(dh != null) {
             setMimeHeader(HTTPConstants.HEADER_CONTENT_TYPE, dh.getContentType());
-        javax.activation.DataSource ds = dh.getDataSource();
+        jakarta.activation.DataSource ds = dh.getDataSource();
         if (ds instanceof ManagedMemoryDataSource) {
     	extractFilename((ManagedMemoryDataSource)ds); //and get the filename if appropriate
 
@@ -103,7 +103,7 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
      *
      * @return the activation <code>DataHandler</code>
      */
-    public javax.activation.DataHandler getActivationDataHandler() {
+    public jakarta.activation.DataHandler getActivationDataHandler() {
         return datahandler;
     }
 
@@ -149,9 +149,9 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
      * @return true if all header name, values in <code>headers</code> are
      *              found, false otherwise
      */
-    public boolean matches(javax.xml.soap.MimeHeaders headers) {
+    public boolean matches(jakarta.xml.soap.MimeHeaders headers) {
         for (Iterator i = headers.getAllHeaders(); i.hasNext();) {
-            javax.xml.soap.MimeHeader hdr = (javax.xml.soap.MimeHeader) i.next();
+            jakarta.xml.soap.MimeHeader hdr = (jakarta.xml.soap.MimeHeader) i.next();
             String values[] = mimeHeaders.getHeader(hdr.getName());
             boolean found = false;
             if (values != null) {
@@ -270,7 +270,7 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
         this.datahandler = datahandler;
         setMimeHeader(HTTPConstants.HEADER_CONTENT_TYPE, datahandler.getContentType());
         //now look at the source of the data
-        javax.activation.DataSource ds = datahandler.getDataSource();
+        jakarta.activation.DataSource ds = datahandler.getDataSource();
         if (ds instanceof ManagedMemoryDataSource) {
             //and get the filename if appropriate
             extractFilename((ManagedMemoryDataSource)ds);
@@ -321,7 +321,7 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
             throw new SOAPException(Messages.getMessage("noContent"));
         }
 
-        javax.activation.DataSource ds = datahandler.getDataSource();
+        jakarta.activation.DataSource ds = datahandler.getDataSource();
         InputStream is = null;
         try {
             is = ds.getInputStream();;
@@ -530,7 +530,7 @@ public class AttachmentPart extends javax.xml.soap.AttachmentPart
      */
     public synchronized void dispose() {
         if (attachmentFile != null) {
-            javax.activation.DataSource ds = datahandler.getDataSource();
+            jakarta.activation.DataSource ds = datahandler.getDataSource();
             if (ds instanceof ManagedMemoryDataSource) {
                 ((ManagedMemoryDataSource) ds).delete(); //and delete the file
             } else {

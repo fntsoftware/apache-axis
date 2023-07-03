@@ -13,9 +13,9 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testRoundTrip2TestWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2TestAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -25,7 +25,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -47,7 +47,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -69,7 +69,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -91,7 +91,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -113,7 +113,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -135,7 +135,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -157,7 +157,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -179,7 +179,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -201,7 +201,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -223,7 +223,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -245,7 +245,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -267,7 +267,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -289,7 +289,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -311,7 +311,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -333,7 +333,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -355,7 +355,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -377,7 +377,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -399,7 +399,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -421,7 +421,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -443,7 +443,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -465,7 +465,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -487,7 +487,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -509,7 +509,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -531,7 +531,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -553,7 +553,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -575,7 +575,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -597,7 +597,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -619,7 +619,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -641,7 +641,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -663,7 +663,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -685,7 +685,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -707,7 +707,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -729,7 +729,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -751,7 +751,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -773,7 +773,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -795,7 +795,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -817,7 +817,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -839,7 +839,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -861,7 +861,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -883,7 +883,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -905,7 +905,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -927,7 +927,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -949,7 +949,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -971,7 +971,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -993,7 +993,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1015,7 +1015,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -1037,7 +1037,7 @@ public class RoundTrip2TestServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.roundtrip2.RoundTrip2TestSoapBindingStub)
                           new test.wsdl.roundtrip2.RoundTrip2TestServiceLocator().getRoundTrip2Test();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

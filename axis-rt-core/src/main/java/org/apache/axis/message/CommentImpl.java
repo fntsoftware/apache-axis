@@ -19,7 +19,7 @@ package org.apache.axis.message;
 import org.w3c.dom.Comment;
 import org.w3c.dom.DOMException;
 
-import javax.xml.soap.Text;
+import jakarta.xml.soap.Text;
 
 /**
  * Most of methods are inherited from TEXT, defined for its Interface Marker

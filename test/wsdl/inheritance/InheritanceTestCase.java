@@ -27,7 +27,7 @@ import javax.wsdl.Operation;
 import javax.wsdl.PortType;
 import javax.wsdl.factory.WSDLFactory;
 import javax.wsdl.xml.WSDLReader;
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 import java.io.File;
 import java.util.Iterator;
 import java.util.List;

@@ -29,10 +29,10 @@ import org.xml.sax.Attributes;
 import org.xml.sax.helpers.AttributesImpl;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.DetailEntry;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.DetailEntry;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Iterator;
@@ -43,7 +43,7 @@ import java.util.Iterator;
  * @author Glen Daniels (gdaniels@apache.org)
  * @author Tom Jordahl (tomj@macromedia.com)
  */
-public class SOAPFault extends SOAPBodyElement implements javax.xml.soap.SOAPFault
+public class SOAPFault extends SOAPBodyElement implements jakarta.xml.soap.SOAPFault
 {
     protected AxisFault fault;
     protected String prefix;
@@ -298,7 +298,7 @@ public class SOAPFault extends SOAPBodyElement implements javax.xml.soap.SOAPFau
      * @return  a <CODE>Detail</CODE> object with
      *     application-specific error information
      */
-    public javax.xml.soap.Detail getDetail() {
+    public jakarta.xml.soap.Detail getDetail() {
         List children = this.getChildren();
         if(children==null || children.size()<=0)
             return null;
@@ -306,8 +306,8 @@ public class SOAPFault extends SOAPBodyElement implements javax.xml.soap.SOAPFau
         // find detail element
         for (int i=0; i < children.size(); i++) {
             Object obj = children.get(i);
-            if (obj instanceof javax.xml.soap.Detail) {
-                return (javax.xml.soap.Detail) obj;
+            if (obj instanceof jakarta.xml.soap.Detail) {
+                return (jakarta.xml.soap.Detail) obj;
             }
         }
         return null;
@@ -326,7 +326,7 @@ public class SOAPFault extends SOAPBodyElement implements javax.xml.soap.SOAPFau
      *     <CODE>SOAPFaultException</CODE> object already contains a valid
      *     <CODE>Detail</CODE> object
      */
-    public javax.xml.soap.Detail addDetail() throws SOAPException {
+    public jakarta.xml.soap.Detail addDetail() throws SOAPException {
         if(getDetail() != null){
             throw new SOAPException(Messages.getMessage("valuePresent"));
         }

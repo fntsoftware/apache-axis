@@ -33,15 +33,15 @@ import org.xml.sax.InputSource;
 import test.AxisTestBase;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPBodyElement;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
-import javax.xml.soap.Text;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPBody;
+import jakarta.xml.soap.SOAPBodyElement;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPPart;
+import jakarta.xml.soap.Text;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
@@ -283,7 +283,7 @@ public class TestMessageElement extends AxisTestBase {
                 "      </operation>\n" +
                 "\n" +
                 " <typeMapping deserializer=\"org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory\"\n" +
-                "   languageSpecificType=\"java:javax.activation.DataHandler\" qname=\"ns1:DataHandler\"\n" +
+                "   languageSpecificType=\"java:jakarta.activation.DataHandler\" qname=\"ns1:DataHandler\"\n" +
                 "    serializer=\"org.apache.axis.encoding.ser.JAFDataHandlerSerializerFactory\"\n" +
                 "    encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"\n" +
                 "     />\n" +

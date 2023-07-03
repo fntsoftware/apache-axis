@@ -18,7 +18,7 @@ package test.wsdl.roundtrip.holders;
 
 import test.wsdl.roundtrip.BondInvestment;
 
-import javax.xml.rpc.holders.Holder;
+import jakarta.xml.rpc.holders.Holder;
 
 public final class BondInvestmentHolder implements Holder {
 

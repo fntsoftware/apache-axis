@@ -19,7 +19,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import javax.activation.DataHandler;
+import jakarta.activation.DataHandler;
 
 
 /**
@@ -82,7 +82,7 @@ public class EchoAttachmentsService {
     public Document attachments( Document xml)
       throws org.apache.axis.AxisFault,java.io.IOException, org.xml.sax.SAXException,
       java.awt.datatransfer.UnsupportedFlavorException,javax.xml.parsers.ParserConfigurationException,
-      java.lang.ClassNotFoundException,javax.xml.soap.SOAPException  {
+      java.lang.ClassNotFoundException,jakarta.xml.soap.SOAPException  {
       System.err.println("In message handling attachments directly.");
       org.apache.axis.MessageContext msgContext= org.apache.axis.MessageContext.getCurrentContext(); 
 
@@ -186,7 +186,7 @@ public class EchoAttachmentsService {
       StringBuffer ret= new StringBuffer();
       for(java.util.Iterator i= p.getMatchingMimeHeaders( new String[]{samples.attachments.TestRef.positionHTTPHeader});
           i.hasNext();){
-          javax.xml.soap.MimeHeader mh= (javax.xml.soap.MimeHeader) i.next();
+          jakarta.xml.soap.MimeHeader mh= (jakarta.xml.soap.MimeHeader) i.next();
           String v= mh.getValue();  
           if(v != null) ret.append(v.trim());
       }

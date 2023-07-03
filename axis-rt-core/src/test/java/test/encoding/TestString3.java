@@ -8,7 +8,7 @@ import org.apache.axis.message.RPCParam;
 import org.apache.axis.server.AxisServer;
 import org.xml.sax.InputSource;
 
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPMessage;
 import java.io.ByteArrayInputStream;
 
 /** 

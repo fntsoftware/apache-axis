@@ -24,9 +24,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.holders.BooleanHolder;
-import javax.xml.rpc.holders.IntHolder;
-import javax.xml.rpc.holders.QNameHolder;
+import jakarta.xml.rpc.holders.BooleanHolder;
+import jakarta.xml.rpc.holders.IntHolder;
+import jakarta.xml.rpc.holders.QNameHolder;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;

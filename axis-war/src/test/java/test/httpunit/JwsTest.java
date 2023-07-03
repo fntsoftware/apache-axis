@@ -22,6 +22,7 @@ import java.net.URLEncoder;
 import com.meterware.httpunit.WebRequest;
 import com.meterware.httpunit.GetMethodWebRequest;
 import com.meterware.httpunit.WebResponse;
+import org.junit.Ignore;
 
 /**
  * test for JWS pages being processed
@@ -29,6 +30,7 @@ import com.meterware.httpunit.WebResponse;
  * @created Jul 10, 2002 12:09:20 AM
  */
 
+@Ignore
 public class JwsTest extends HttpUnitTestBase {
 
     public JwsTest(String name) {

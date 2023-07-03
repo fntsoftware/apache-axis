@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.soap;
+package jakarta.xml.rpc.soap;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.Detail;
+import jakarta.xml.soap.Detail;
 
 /**
  * The <code>SOAPFaultException</code> exception represents a
@@ -26,8 +26,8 @@ import javax.xml.soap.Detail;
  * <code>faultdetail</code> element accessible through the
  * <code>getDetail</code> method on the <code>SOAPFaultException</code>.
  * The method <code>createDetail</code> on the
- * <code>javax.xml.soap.SOAPFactory</code> creates an instance
- * of the <code>javax.xml.soap.Detail</code>.
+ * <code>jakarta.xml.soap.SOAPFactory</code> creates an instance
+ * of the <code>jakarta.xml.soap.Detail</code>.
  * <p>
  * The <code>faultstring</code> provides a human-readable
  * description of the SOAP fault. The <code>faultcode</code>

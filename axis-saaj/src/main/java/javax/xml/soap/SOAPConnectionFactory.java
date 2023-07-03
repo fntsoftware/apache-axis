@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 /**
  * A factory for creating <code>SOAPConnection</code> objects. Implementation of
@@ -61,5 +61,5 @@ public abstract class SOAPConnectionFactory {
         "org.apache.axis.soap.SOAPConnectionFactoryImpl";
 
     private static final String SF_PROPERTY =
-        "javax.xml.soap.SOAPConnectionFactory";
+        "jakarta.xml.soap.SOAPConnectionFactory";
 }

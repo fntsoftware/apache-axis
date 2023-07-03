@@ -119,7 +119,7 @@ public class EnvelopeBuilder extends SOAPHandler
 
                 throw new SAXException(fault);
 
-            } catch (javax.xml.soap.SOAPException e) {
+            } catch (jakarta.xml.soap.SOAPException e) {
                 throw new SAXException(e);
             }
         }

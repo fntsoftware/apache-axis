@@ -18,8 +18,8 @@ package test.wsdl.oneway;
 import junit.framework.AssertionFailedError;
 import junit.framework.TestCase;
 
-import javax.xml.rpc.ServiceException;
-import javax.xml.rpc.Stub;
+import jakarta.xml.rpc.ServiceException;
+import jakarta.xml.rpc.Stub;
 
 import test.HttpTestUtil;
 

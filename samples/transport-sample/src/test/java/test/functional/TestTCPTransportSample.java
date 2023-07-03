@@ -32,7 +32,7 @@ import samples.transport.tcp.GetQuote;
 import samples.transport.tcp.TCPSender;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
+import jakarta.xml.rpc.ParameterMode;
 import java.net.URL;
 
 /** Test the stock sample code.

@@ -308,11 +308,11 @@
      */
 
     // need to check if the available version of SAAJ API meets requirements
-    String className = "javax.xml.soap.SOAPPart";
+    String className = "jakarta.xml.soap.SOAPPart";
     String interfaceName = "org.w3c.dom.Document";
     Class clazz = classExists(className);
     if (clazz == null || implementsInterface(clazz, interfaceName)) {
-        needed = needClass(out, "javax.xml.soap.SOAPMessage",
+        needed = needClass(out, "jakarta.xml.soap.SOAPMessage",
         	"saaj.jar",
                 "SAAJ API",
                 getMessage("criticalErrorMessage"),
@@ -326,7 +326,7 @@
         out.print("<br>");
     }
 
-    needed+=needClass(out, "javax.xml.rpc.Service",
+    needed+=needClass(out, "jakarta.xml.rpc.Service",
             "jaxrpc.jar",
             "JAX-RPC API",
             getMessage("criticalErrorMessage"),
@@ -370,7 +370,7 @@
             getMessage("criticalErrorMessage"),
             "http://xml.apache.org/xerces-j/");
 
-    needed+=needClass(out,"javax.activation.DataHandler",
+    needed+=needClass(out,"jakarta.activation.DataHandler",
             "activation.jar",
             "Activation API",
             getMessage("criticalErrorMessage"),
@@ -385,7 +385,7 @@
     /*
      * now the stuff we can live without
      */
-    wanted+=wantClass(out,"javax.mail.internet.MimeMessage",
+    wanted+=wantClass(out,"jakarta.mail.internet.MimeMessage",
             "mail.jar",
             "Mail API",
             getMessage("attachmentsError"),

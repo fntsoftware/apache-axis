@@ -32,7 +32,7 @@ public class DataSerFactory implements SerializerFactory {
 
     public DataSerFactory() {
     }
-    public javax.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType) {
+    public jakarta.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType) {
         return new DataSer();
     }
     public Iterator getSupportedMechanismTypes() {

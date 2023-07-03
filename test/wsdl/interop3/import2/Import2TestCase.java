@@ -41,7 +41,7 @@ public class Import2TestCase extends junit.framework.TestCase {
                 binding = new Import2Locator().getSoapInteropImport2Port(url);
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -90,7 +90,7 @@ public class Import2TestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop3.absimport2.Import2Locator().getSoapInteropImport2Port();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -128,7 +128,7 @@ public class Import2TestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop3.absimport2.step6.definitions.SoapInteropImport2PortTypeServiceLocator().getSoapInteropImport2Port();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

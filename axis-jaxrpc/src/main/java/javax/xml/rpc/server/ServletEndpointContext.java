@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.server;
+package jakarta.xml.rpc.server;
 
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
-import javax.xml.rpc.handler.MessageContext;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpSession;
+import jakarta.xml.rpc.handler.MessageContext;
 import java.security.Principal;
 
 /**
@@ -27,7 +27,7 @@ import java.security.Principal;
  * servlet container based JAX-RPC runtime system, the context
  * parameter in the <code>ServiceLifecycle.init</code> method is
  * required to be of the Java type
- * <code>javax.xml.rpc.server.ServletEndpointContext</code>.
+ * <code>jakarta.xml.rpc.server.ServletEndpointContext</code>.
  * <p>
  * A servlet container based JAX-RPC runtime system implements
  * the <code>ServletEndpointContext</code> interface. The JAX-RPC
@@ -78,7 +78,7 @@ public interface ServletEndpointContext {
 
     /**
      * The <code>getHttpSession</code> method returns the current
-     * HTTP session (as a <code>javax.servlet.http.HTTPSession</code>).
+     * HTTP session (as a <code>jakarta.servlet.http.HTTPSession</code>).
      * When invoked by the service endpoint within a remote method
      * implementation, the <code>getHttpSession</code> returns the
      * HTTP session associated currently with this method invocation.
@@ -94,7 +94,7 @@ public interface ServletEndpointContext {
      *
      * @return The HTTP session associated with the current
      * invocation or <code>null</code> if there is no active session.
-     * @throws javax.xml.rpc.JAXRPCException - If this method invoked by a non-HTTP bound
+     * @throws jakarta.xml.rpc.JAXRPCException - If this method invoked by a non-HTTP bound
      *         endpoints.
      */
     public HttpSession getHttpSession();

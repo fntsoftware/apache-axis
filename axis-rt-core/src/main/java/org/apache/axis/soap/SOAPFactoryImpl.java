@@ -19,16 +19,16 @@ import org.apache.axis.message.Detail;
 import org.apache.axis.message.MessageElement;
 import org.apache.axis.message.PrefixedQName;
 
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 
 /**
  * SOAP Element Factory implementation
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class SOAPFactoryImpl extends javax.xml.soap.SOAPFactory {
+public class SOAPFactoryImpl extends jakarta.xml.soap.SOAPFactory {
     /**
      * Create a <CODE>SOAPElement</CODE> object initialized with
      * the given <CODE>Name</CODE> object.
@@ -77,7 +77,7 @@ public class SOAPFactoryImpl extends javax.xml.soap.SOAPFactory {
         return new MessageElement(localName, prefix, uri);
     }
 
-    public javax.xml.soap.Detail createDetail()
+    public jakarta.xml.soap.Detail createDetail()
             throws SOAPException {
         return new Detail();
     }

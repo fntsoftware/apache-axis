@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.handler;
+package jakarta.xml.rpc.handler;
 
 import java.util.List;
 import java.util.Map;
 
 /**
- * The <code>javax.xml.rpc.handler.HandlerChain</code> represents
+ * The <code>jakarta.xml.rpc.handler.HandlerChain</code> represents
  * a list of handlers. All elements in the HandlerChain are of
- * the type <code>javax.xml.rpc.handler.Handler</code>.
+ * the type <code>jakarta.xml.rpc.handler.Handler</code>.
  * <p>
  * An implementation class for the <code>HandlerChain</code>
  * interface abstracts the policy and mechanism for the invocation
@@ -42,7 +42,7 @@ public interface HandlerChain extends List {
      *             if a handler in the chain returned
      *             <code>false</code> from its handleRequest
      *             method.
-     * @throws javax.xml.rpc.JAXRPCException if any processing error happens
+     * @throws jakarta.xml.rpc.JAXRPCException if any processing error happens
      */
     public boolean handleRequest(MessageContext context);
 
@@ -56,7 +56,7 @@ public interface HandlerChain extends List {
      *             chain have been processed. Returns <code>false</code>
      *             if a handler in the chain returned
      *             <code>false</code> from its handleResponse method.
-     * @throws javax.xml.rpc.JAXRPCException if any processing error happens
+     * @throws jakarta.xml.rpc.JAXRPCException if any processing error happens
      */
     public boolean handleResponse(MessageContext context);
 
@@ -70,7 +70,7 @@ public interface HandlerChain extends List {
      *             chain have been processed. Returns <code>false</code>
      *             if a handler in the chain returned
      *             <code>false</code> from its handleFault method.
-     * @throws javax.xml.rpc.JAXRPCException if any processing error happens
+     * @throws jakarta.xml.rpc.JAXRPCException if any processing error happens
      */
     public boolean handleFault(MessageContext context);
 
@@ -80,7 +80,7 @@ public interface HandlerChain extends List {
      * @param config Configuration for the initialization of this handler
      *                 chain
      *
-     * @throws javax.xml.rpc.JAXRPCException if there is any error that prevents
+     * @throws jakarta.xml.rpc.JAXRPCException if there is any error that prevents
      *              initialization
      */
     public void init(Map config);
@@ -88,7 +88,7 @@ public interface HandlerChain extends List {
     /**
      * Indicates the end of lifecycle for a HandlerChain.
      *
-     * @throws javax.xml.rpc.JAXRPCException if there was any error that
+     * @throws jakarta.xml.rpc.JAXRPCException if there was any error that
      *              prevented destroy from completing
      */
     public void destroy();

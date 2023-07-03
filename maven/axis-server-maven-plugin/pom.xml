@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>maven</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>axis-server-maven-plugin</artifactId>
@@ -33,10 +33,16 @@
     </description>
     <url>${baseUrl}/maven/axis-server</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/maven/axis-server</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
@@ -59,24 +65,24 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-toolchain</artifactId>
-            <version>1.0</version>
+            <version>2.2.1</version>
         </dependency>
         
         <!-- These dependencies are here merely to ensure that in the Axis build they are built
              before this project. This is necessary because these artifacts may be loaded by
              the plug-in at runtime and we need to make sure that they are available and that
              we get the latest version. -->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>daemon-launcher</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>axis-standalone-server</artifactId>
-            <version>${project.version}</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>${project.groupId}</groupId>-->
+<!--            <artifactId>daemon-launcher</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>${project.groupId}</groupId>-->
+<!--            <artifactId>axis-standalone-server</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
 </project>

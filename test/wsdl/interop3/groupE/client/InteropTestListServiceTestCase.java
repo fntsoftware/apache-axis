@@ -42,7 +42,7 @@ public class InteropTestListServiceTestCase extends junit.framework.TestCase {
             } else {
                 binding = new InteropTestListServiceLocator().getInteropTestList(url);
             }
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

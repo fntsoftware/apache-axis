@@ -45,7 +45,7 @@ public class DocLitParamTestCase extends junit.framework.TestCase {
                 binding = new WSDLInteropTestDocLitServiceLocator().getWSDLInteropTestDocLitParamPort();
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertNotNull("binding is null", binding);

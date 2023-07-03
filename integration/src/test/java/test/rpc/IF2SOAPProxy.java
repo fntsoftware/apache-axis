@@ -7,7 +7,7 @@ import org.apache.axis.encoding.ser.BeanDeserializerFactory;
 import org.apache.axis.encoding.ser.BeanSerializerFactory;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
+import jakarta.xml.rpc.ParameterMode;
 import java.util.Calendar;
 
 public final class IF2SOAPProxy implements IF2SOAP

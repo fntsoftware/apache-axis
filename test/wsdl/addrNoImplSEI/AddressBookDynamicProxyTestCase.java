@@ -21,11 +21,11 @@ import org.apache.axis.transport.http.SimpleAxisWorker;
 import org.apache.axis.utils.NetworkUtils;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceFactory;
-import javax.xml.rpc.Stub;
-import javax.xml.rpc.encoding.TypeMapping;
-import javax.xml.rpc.encoding.TypeMappingRegistry;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.Stub;
+import jakarta.xml.rpc.encoding.TypeMapping;
+import jakarta.xml.rpc.encoding.TypeMappingRegistry;
 import java.net.URL;
 
 

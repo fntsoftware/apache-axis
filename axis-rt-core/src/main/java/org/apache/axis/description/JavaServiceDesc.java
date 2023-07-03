@@ -35,7 +35,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.holders.Holder;
+import jakarta.xml.rpc.holders.Holder;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -829,8 +829,8 @@ public class JavaServiceDesc implements ServiceDesc {
         } else if (params.length == 2) {
             if (((params[0] == SOAPEnvelope.class) &&
                     (params[1] == SOAPEnvelope.class)) || 
-                ((params[0] == javax.xml.soap.SOAPEnvelope.class) &&
-                    (params[1] == javax.xml.soap.SOAPEnvelope.class)) &&
+                ((params[0] == jakarta.xml.soap.SOAPEnvelope.class) &&
+                    (params[1] == jakarta.xml.soap.SOAPEnvelope.class)) &&
                     (method.getReturnType() == void.class)){
                 return OperationDesc.MSG_METHOD_SOAPENVELOPE;
             }
@@ -923,7 +923,7 @@ public class JavaServiceDesc implements ServiceDesc {
      * @return true if this method is from ServiceLifeCycle interface
      */ 
     private boolean isServiceLifeCycleMethod(Class implClass, Method m) {
-        if(javax.xml.rpc.server.ServiceLifecycle.class.isAssignableFrom(implClass)) {
+        if(jakarta.xml.rpc.server.ServiceLifecycle.class.isAssignableFrom(implClass)) {
             String methodName = m.getName(); 
 
             if(methodName.equals("init")) {

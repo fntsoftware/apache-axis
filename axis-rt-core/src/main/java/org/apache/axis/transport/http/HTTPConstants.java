@@ -120,9 +120,9 @@ public class HTTPConstants {
     public static final String MC_GZIP_REQUEST = "transport.http.gzipRequest";
  
     /**
-     * @deprecated Should use javax.xml.rpc.Call.SOAPACTION_URI_PROPERTY instead.
+     * @deprecated Should use jakarta.xml.rpc.Call.SOAPACTION_URI_PROPERTY instead.
      */
-    public static String MC_HTTP_SOAPACTION = javax.xml.rpc.Call.SOAPACTION_URI_PROPERTY;
+    public static String MC_HTTP_SOAPACTION = jakarta.xml.rpc.Call.SOAPACTION_URI_PROPERTY;
 
     /** HTTP header field values
      */

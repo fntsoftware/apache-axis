@@ -85,7 +85,7 @@
     <mkdir dir="${build.dir}/work"/>
 
     <available property="servlet.present"
-      classname="javax.servlet.Servlet"
+      classname="jakarta.servlet.Servlet"
       classpathref="classpath"/>
 
     <available property="regexp.present"
@@ -121,7 +121,7 @@
       classpathref="classpath"/>
 
     <available property="activation.present"
-      classname="javax.activation.DataHandler"
+      classname="jakarta.activation.DataHandler"
       classpathref="classpath"/>
 
     <available property="security.present"
@@ -129,7 +129,7 @@
       classpathref="classpath"/>
 
     <available property="mailapi.present"
-      classname="javax.mail.internet.MimeMessage"
+      classname="jakarta.mail.internet.MimeMessage"
       classpathref="classpath"/>
 
     <available property="httpunit.present"
@@ -142,7 +142,7 @@
 
     <condition property="jetty.present" >
       <and>
-        <available classname="javax.servlet.Servlet" classpathref="classpath" />
+        <available classname="jakarta.servlet.Servlet" classpathref="classpath" />
         <available classname="org.mortbay.http.HttpServer" classpathref="classpath" />
       </and>
     </condition>
@@ -177,8 +177,8 @@
 
     <condition property="attachments.present" >
       <and>
-        <available classname="javax.activation.DataHandler" classpathref="classpath" />
-        <available classname="javax.mail.internet.MimeMessage" classpathref="classpath" />
+        <available classname="jakarta.activation.DataHandler" classpathref="classpath" />
+        <available classname="jakarta.mail.internet.MimeMessage" classpathref="classpath" />
       </and>
     </condition>
 
@@ -204,19 +204,19 @@
 
     <condition property="jimiAndAttachments.present">
       <and>
-        <available classname="javax.activation.DataHandler" classpathref="classpath" />
-        <available classname="javax.mail.internet.MimeMessage" classpathref="classpath" />
+        <available classname="jakarta.activation.DataHandler" classpathref="classpath" />
+        <available classname="jakarta.mail.internet.MimeMessage" classpathref="classpath" />
         <available classname="com.sun.jimi.core.Jimi" classpathref="classpath" />
       </and>
     </condition>
 
     <condition property="jms.present" >
-      <available classname="javax.jms.Message" classpathref="classpath" />
+      <available classname="jakarta.jms.Message" classpathref="classpath" />
     </condition>
 
     <condition property="jmsAndSonicMQ.present" >
       <and>
-        <available classname="javax.jms.Message" classpathref="classpath" />
+        <available classname="jakarta.jms.Message" classpathref="classpath" />
         <available classname="progress.message.jclient.Message" classpathref="classpath" />
       </and>
     </condition>

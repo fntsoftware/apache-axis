@@ -16,9 +16,9 @@
 
 package org.apache.axis.message;
 
-import javax.xml.soap.DetailEntry;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.DetailEntry;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPException;
 import java.util.Iterator;
 
 /**
@@ -26,7 +26,7 @@ import java.util.Iterator;
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class Detail extends SOAPFaultElement implements javax.xml.soap.Detail {
+public class Detail extends SOAPFaultElement implements jakarta.xml.soap.Detail {
 
     public Detail() {
     }

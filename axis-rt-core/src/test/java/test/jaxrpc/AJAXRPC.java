@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.rpc.handler.HandlerChain;
-import javax.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.HandlerChain;
+import jakarta.xml.rpc.handler.HandlerInfo;
 
 import junit.framework.TestCase;
 

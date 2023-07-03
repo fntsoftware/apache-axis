@@ -32,9 +32,9 @@ import org.apache.axis.types.UnsignedShort;
 import org.apache.axis.utils.JavaUtils;
 import org.apache.axis.utils.Options;
 
-import javax.xml.rpc.holders.FloatHolder;
-import javax.xml.rpc.holders.IntHolder;
-import javax.xml.rpc.holders.StringHolder;
+import jakarta.xml.rpc.holders.FloatHolder;
+import jakarta.xml.rpc.holders.IntHolder;
+import jakarta.xml.rpc.holders.StringHolder;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Array;

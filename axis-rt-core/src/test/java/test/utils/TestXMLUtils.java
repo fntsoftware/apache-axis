@@ -13,8 +13,8 @@ import org.xml.sax.InputSource;
 import org.custommonkey.xmlunit.XMLUnit;
 
 import javax.xml.parsers.SAXParser;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPBodyElement;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPBodyElement;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;

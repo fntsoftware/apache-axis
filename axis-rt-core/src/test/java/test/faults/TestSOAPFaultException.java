@@ -38,10 +38,10 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.soap.SOAPFaultException;
-import javax.xml.soap.Detail;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPFactory;
+import jakarta.xml.rpc.soap.SOAPFaultException;
+import jakarta.xml.soap.Detail;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPFactory;
 
 /**
  * Tests for the conversion of a JAX-RPC SOAPFaultException to an AxisFault

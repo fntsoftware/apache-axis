@@ -1,8 +1,8 @@
 package test.wsdl.jaxrpcdynproxy;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceFactory;
 import java.net.URL;
 
 import test.HttpTestUtil;

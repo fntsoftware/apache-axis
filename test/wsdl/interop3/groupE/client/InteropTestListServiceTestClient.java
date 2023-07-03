@@ -28,7 +28,7 @@ import javax.wsdl.Definition;
 import javax.wsdl.factory.WSDLFactory;
 import javax.wsdl.xml.WSDLReader;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
+import jakarta.xml.rpc.Service;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;

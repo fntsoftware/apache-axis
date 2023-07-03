@@ -75,10 +75,10 @@ import javax.wsdl.extensions.soap.SOAPAddress;
 import javax.wsdl.extensions.soap.SOAPBody;
 import javax.wsdl.extensions.soap.SOAPOperation;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.ParameterMode;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.ParameterMode;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
 
 import java.io.StringWriter;
 import java.net.MalformedURLException;
@@ -120,7 +120,7 @@ import java.rmi.RemoteException;
  * @author Steve Loughran
  */
 
-public class Call implements javax.xml.rpc.Call {
+public class Call implements jakarta.xml.rpc.Call {
     protected static Log log =
         LogFactory.getLog(Call.class.getName());
     private static Log tlog =
@@ -374,8 +374,8 @@ public class Call implements javax.xml.rpc.Call {
      * JAX-RPC specification and declared in the Call and Stub classes.
      * It is not possible to set any other properties beginning in java. or
      * javax. that are not in the specification.
-     * @see javax.xml.rpc.Stub
-     * @see javax.xml.rpc.Call
+     * @see jakarta.xml.rpc.Stub
+     * @see jakarta.xml.rpc.Call
      *
      * There are other properties implemented in this class above and
      * beyond those of the JAX-RPC spec
@@ -1500,7 +1500,7 @@ public class Call implements javax.xml.rpc.Call {
             // Get the javaType
             String javaType = null;
             if (parameters.returnParam.getMIMEInfo() != null) {
-                javaType = "javax.activation.DataHandler";
+                javaType = "jakarta.activation.DataHandler";
             }
             else {
                 javaType = parameters.returnParam.getType().getName();
@@ -2807,7 +2807,7 @@ public class Call implements javax.xml.rpc.Call {
             if(operation == null ||
                     operation.getReturnClass() == null ||
                     operation.getReturnClass() !=
-                        javax.xml.soap.SOAPMessage.class) {
+                        jakarta.xml.soap.SOAPMessage.class) {
                 //unless we don't care about the return value or we want
                 //a raw message back
                 //get the fault from the body and throw it

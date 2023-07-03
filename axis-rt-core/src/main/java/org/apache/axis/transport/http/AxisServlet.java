@@ -26,15 +26,15 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Iterator;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpUtils;
-import javax.xml.soap.MimeHeader;
-import javax.xml.soap.MimeHeaders;
-import javax.xml.soap.SOAPException;
-import javax.xml.soap.SOAPMessage;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpUtils;
+import jakarta.xml.soap.MimeHeader;
+import jakarta.xml.soap.MimeHeaders;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPMessage;
 
 import org.apache.axis.AxisEngine;
 import org.apache.axis.AxisFault;
@@ -145,7 +145,7 @@ public class AxisServlet extends AxisServletBase {
     /**
      * Initialization method.
      */
-    public void init() throws javax.servlet.ServletException {
+    public void init() throws jakarta.servlet.ServletException {
         super.init();
         ServletContext context = getServletConfig().getServletContext();
 
@@ -948,7 +948,7 @@ public class AxisServlet extends AxisServletBase {
                                req.getHeader(HTTPConstants.HEADER_AUTHORIZATION));
         msgContext.setProperty(Constants.MC_REMOTE_ADDR, req.getRemoteAddr());
 
-        // Set up a javax.xml.rpc.server.ServletEndpointContext
+        // Set up a jakarta.xml.rpc.server.ServletEndpointContext
         ServletEndpointContextImpl sec = new ServletEndpointContextImpl();
 
         msgContext.setProperty(Constants.MC_SERVLET_ENDPOINT_CONTEXT, sec);

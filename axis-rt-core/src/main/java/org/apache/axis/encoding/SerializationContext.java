@@ -29,8 +29,8 @@ import java.util.Iterator;
 import java.util.Stack;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.JAXRPCException;
-import javax.xml.rpc.holders.QNameHolder;
+import jakarta.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.holders.QNameHolder;
 
 import org.apache.axis.AxisEngine;
 import org.apache.axis.AxisProperties;
@@ -81,7 +81,7 @@ import org.xml.sax.helpers.AttributesImpl;
  * @author Glen Daniels (gdaniels@apache.org)
  * @author Rich Scheuerle (scheu@us.ibm.com)
  */
-public class SerializationContext implements javax.xml.rpc.encoding.SerializationContext
+public class SerializationContext implements jakarta.xml.rpc.encoding.SerializationContext
 {
     protected static Log log =
             LogFactory.getLog(SerializationContext.class.getName());

@@ -44,7 +44,7 @@ public class Compound1TestCase extends junit.framework.TestCase {
                 binding = new Compound1Locator().getSoapInteropCompound1Port();
             }
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

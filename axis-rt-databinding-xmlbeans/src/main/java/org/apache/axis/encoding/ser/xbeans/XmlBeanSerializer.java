@@ -32,6 +32,7 @@ import org.apache.xmlbeans.XmlBeans;
 import org.apache.xmlbeans.XmlCursor;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlObject;
+import org.apache.xmlbeans.impl.xb.substwsdl.DefinitionsDocument;
 import org.apache.xmlbeans.impl.xb.xsdschema.LocalElement;
 import org.apache.xmlbeans.impl.xb.xsdschema.SchemaDocument;
 import org.apache.xmlbeans.impl.xb.xsdschema.TopLevelComplexType;
@@ -41,8 +42,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.xml.sax.Attributes;
-import org.xmlsoap.schemas.wsdl.DefinitionsDocument;
-import org.xmlsoap.schemas.wsdl.TTypes;
+
 
 import javax.xml.namespace.QName;
 import java.io.File;
@@ -254,7 +254,7 @@ public class XmlBeanSerializer implements Serializer {
                 throw new RuntimeException("WSDL file not found: " + schemaSrc);
             }
             if (schemaSrc.toLowerCase().endsWith(".wsdl")) {
-                TTypes tt = parseWSDL(stream).getDefinitions().getTypesArray(0);
+                XmlObject tt = parseWSDL(stream).getDefinitions().getTypesArray(0);
                 schemas = selectChildren(tt, SchemaDocument.Schema.class);
             } else {
                 SchemaDocument schemaDoc = parseSchema(stream);

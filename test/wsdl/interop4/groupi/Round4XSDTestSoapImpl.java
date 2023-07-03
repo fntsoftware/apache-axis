@@ -70,7 +70,7 @@ public class Round4XSDTestSoapImpl implements test.wsdl.interop4.groupi.Round4XS
         return inputHexBinary;
     }
 
-    public void echoComplexTypeAsSimpleTypes(test.wsdl.interop4.groupi.xsd.SOAPComplexType inputComplexType, javax.xml.rpc.holders.StringHolder outputString, javax.xml.rpc.holders.IntHolder outputInteger, javax.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
+    public void echoComplexTypeAsSimpleTypes(test.wsdl.interop4.groupi.xsd.SOAPComplexType inputComplexType, jakarta.xml.rpc.holders.StringHolder outputString, jakarta.xml.rpc.holders.IntHolder outputInteger, jakarta.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
         outputString.value = new java.lang.String(inputComplexType.getVarString());
         outputInteger.value = inputComplexType.getVarInt();
         outputFloat.value = inputComplexType.getVarFloat();

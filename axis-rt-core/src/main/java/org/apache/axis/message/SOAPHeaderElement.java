@@ -26,9 +26,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.xml.sax.Attributes;
 
 import javax.xml.namespace.QName;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPException;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPElement;
+import jakarta.xml.soap.SOAPException;
 
 /**
  * A simple header element abstraction.  Extends MessageElement with
@@ -38,7 +38,7 @@ import javax.xml.soap.SOAPException;
  * @author Glyn Normington (glyn@apache.org)
  */
 public class SOAPHeaderElement extends MessageElement
-    implements javax.xml.soap.SOAPHeaderElement 
+    implements jakarta.xml.soap.SOAPHeaderElement 
 {
 
     protected boolean   processed = false;

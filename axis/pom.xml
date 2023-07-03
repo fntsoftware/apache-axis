@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>axis</artifactId>
@@ -83,7 +83,7 @@
                                     <include>${project.groupId}:axis-rt-compat</include>
                                     <include>${project.groupId}:axis-rt-core</include>
                                     <include>${project.groupId}:axis-rt-databinding-castor</include>
-                                    <include>${project.groupId}:axis-rt-databinding-xmlbeans</include>
+<!--                                    <include>${project.groupId}:axis-rt-databinding-xmlbeans</include>-->
                                     <include>${project.groupId}:axis-rt-management</include>
                                     <include>${project.groupId}:axis-rt-jws</include>
                                     <include>${project.groupId}:axis-rt-provider-bsf</include>

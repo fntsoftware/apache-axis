@@ -23,5 +23,5 @@ package org.apache.axis.message;
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class SOAPFaultElement extends MessageElement implements javax.xml.soap.SOAPFaultElement {
+public class SOAPFaultElement extends MessageElement implements jakarta.xml.soap.SOAPFaultElement {
 }

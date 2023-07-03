@@ -21,7 +21,7 @@ public class VerifyTestCase extends junit.framework.TestCase {
         try {
             ParameterOrderServiceLocator loc = new ParameterOrderServiceLocator();
             binding = loc.getParameterOrder(HttpTestUtil.getTestEndpoint(loc.getParameterOrderAddress()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -31,12 +31,12 @@ public class VerifyTestCase extends junit.framework.TestCase {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.oneInout(new javax.xml.rpc.holders.IntHolder(0));
+            binding.oneInout(new jakarta.xml.rpc.holders.IntHolder(0));
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.oneOut(new javax.xml.rpc.holders.IntHolder());
+            binding.oneOut(new jakarta.xml.rpc.holders.IntHolder());
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
@@ -46,12 +46,12 @@ public class VerifyTestCase extends junit.framework.TestCase {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.fiveInoutNoOrder(new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0));
+            binding.fiveInoutNoOrder(new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0));
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.fiveOutNoOrder(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder());
+            binding.fiveOutNoOrder(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder());
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
@@ -61,34 +61,34 @@ public class VerifyTestCase extends junit.framework.TestCase {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.fiveInout(new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0));
+            binding.fiveInout(new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0));
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
-            binding.fiveOut(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder());
-        } catch (java.rmi.RemoteException re) {
-            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
-        }
-        try {
-            int value = -3;
-            value = binding.someInoutPartialOrder1(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0));
-        } catch (java.rmi.RemoteException re) {
-            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
-        }
-        try {
-            binding.someInoutPartialOrder2(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(0), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder());
-        } catch (java.rmi.RemoteException re) {
-            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
-        }
-        try {
-            binding.fourOutPartialOrder(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder());
+            binding.fiveOut(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder());
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }
         try {
             int value = -3;
-            value = binding.oneReturn(new javax.xml.rpc.holders.IntHolder(), new javax.xml.rpc.holders.IntHolder());
+            value = binding.someInoutPartialOrder1(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0));
+        } catch (java.rmi.RemoteException re) {
+            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
+        }
+        try {
+            binding.someInoutPartialOrder2(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(0), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder());
+        } catch (java.rmi.RemoteException re) {
+            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
+        }
+        try {
+            binding.fourOutPartialOrder(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder());
+        } catch (java.rmi.RemoteException re) {
+            throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
+        }
+        try {
+            int value = -3;
+            value = binding.oneReturn(new jakarta.xml.rpc.holders.IntHolder(), new jakarta.xml.rpc.holders.IntHolder());
         } catch (java.rmi.RemoteException re) {
             throw new junit.framework.AssertionFailedError("Remote Exception caught: " + re );
         }

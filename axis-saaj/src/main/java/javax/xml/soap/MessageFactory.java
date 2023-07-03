@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -165,5 +165,5 @@ public abstract class MessageFactory {
         "org.apache.axis.soap.MessageFactoryImpl";
 
     private static final String MESSAGE_FACTORY_PROPERTY =
-        "javax.xml.soap.MessageFactory";
+        "jakarta.xml.soap.MessageFactory";
 }

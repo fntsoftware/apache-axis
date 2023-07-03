@@ -38,16 +38,16 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
     }
 
     public void testSoap12TestDocPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(DOC_ENDPOINT + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.assertion.WhiteMesaSoap12TestSvcLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.assertion.WhiteMesaSoap12TestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
     public void testSoap12TestRpcPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(RPC_ENDPOINT + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.assertion.WhiteMesaSoap12TestSvcLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.assertion.WhiteMesaSoap12TestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -57,7 +57,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -78,7 +78,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -106,7 +106,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -134,7 +134,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -149,9 +149,9 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
         input.setVarInt(10);
         input.setVarString("EchoStructAsSimpleTypes");
         
-        javax.xml.rpc.holders.StringHolder out1 = new javax.xml.rpc.holders.StringHolder();
-        javax.xml.rpc.holders.IntHolder out2 = new javax.xml.rpc.holders.IntHolder();
-        javax.xml.rpc.holders.FloatHolder out3 = new javax.xml.rpc.holders.FloatHolder();
+        jakarta.xml.rpc.holders.StringHolder out1 = new jakarta.xml.rpc.holders.StringHolder();
+        jakarta.xml.rpc.holders.IntHolder out2 = new jakarta.xml.rpc.holders.IntHolder();
+        jakarta.xml.rpc.holders.FloatHolder out3 = new jakarta.xml.rpc.holders.FloatHolder();
 
         // Test operation
         binding.echoStructAsSimpleTypes(input, out1, out2, out3);
@@ -167,7 +167,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -196,7 +196,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -232,7 +232,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -262,7 +262,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -292,7 +292,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -321,7 +321,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -350,7 +350,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -376,7 +376,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -399,7 +399,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -425,7 +425,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -451,7 +451,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -475,7 +475,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -499,7 +499,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -522,7 +522,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (Soap12TestRpcBindingStub)
                           new WhiteMesaSoap12TestSvcLocator().getSoap12TestRpcPort(new URL(RPC_ENDPOINT));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -681,7 +681,7 @@ public class WhiteMesaSoap12TestSvcTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.soap12.assertion.Soap12TestDocBindingStub)
                           new test.wsdl.soap12.assertion.WhiteMesaSoap12TestSvcLocator().getSoap12TestDocPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

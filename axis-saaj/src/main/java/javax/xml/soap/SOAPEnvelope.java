@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
 /**
  * The container for the SOAPHeader and SOAPBody portions of a
@@ -46,7 +46,7 @@ package javax.xml.soap;
  *   <P>It is possible to change the body or header of a <CODE>
  *   SOAPEnvelope</CODE> object by retrieving the current one,
  *   deleting it, and then adding a new body or header. The <CODE>
- *   javax.xml.soap.Node</CODE> method <CODE>detachNode</CODE>
+ *   jakarta.xml.soap.Node</CODE> method <CODE>detachNode</CODE>
  *   detaches the XML element (node) on which it is called. For
  *   example, the following line of code deletes the <CODE>
  *   SOAPBody</CODE> object that is retrieved by the method <CODE>

@@ -25,7 +25,7 @@ import org.w3c.dom.Element;
 import org.xml.sax.helpers.AttributesImpl;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.HandlerInfo;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;

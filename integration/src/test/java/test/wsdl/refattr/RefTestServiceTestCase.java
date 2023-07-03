@@ -23,7 +23,7 @@ public class RefTestServiceTestCase extends junit.framework.TestCase {
             RefTestServiceLocator loc = new RefTestServiceLocator();
             binding = new RefTestServiceLocator().getRefTest(HttpTestUtil.getTestEndpoint(loc.getRefTestAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre );
         }
         

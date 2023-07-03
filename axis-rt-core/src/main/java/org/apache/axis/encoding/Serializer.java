@@ -36,7 +36,7 @@ import java.io.IOException;
  * to determine how to construct a deserializer.
  * The xmlType, javaType arguments are filled in with the values known by the factory.
  */
-public interface Serializer extends javax.xml.rpc.encoding.Serializer {
+public interface Serializer extends jakarta.xml.rpc.encoding.Serializer {
     /**
      * Serialize an element named name, with the indicated attributes
      * and value.

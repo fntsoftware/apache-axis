@@ -14,9 +14,9 @@ public class StarWarsTestCase extends junit.framework.TestCase {
 
     /** TODO: Fix me
     public void testStarWarsPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new samples.xbeans.StarWarsLocator().getStarWarsPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new samples.xbeans.StarWarsLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new samples.xbeans.StarWarsLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -28,7 +28,7 @@ public class StarWarsTestCase extends junit.framework.TestCase {
             binding = (samples.xbeans.StarWarsBindingStub)
                           new samples.xbeans.StarWarsLocator().getStarWarsPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

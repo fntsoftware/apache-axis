@@ -199,7 +199,7 @@ Sent 'Hello!', got 'Hello!'
 
 <source>call.addParameter("testParam", 
   org.apache.axis.Constants.XSD_STRING,
-  javax.xml.rpc.ParameterMode.IN);
+  jakarta.xml.rpc.ParameterMode.IN);
 call.setReturnType(org.apache.axis.Constants.XSD_STRING);</source>
 
 <p>This will assign the name <b>testParam</b> to the 1st (and only) parameter on the invoke call. This will also define the type of the parameter
@@ -805,7 +805,7 @@ to tell Axis what precisely is the item type of the Array.</p>
 <source>
 package samples.addr.holders;
 
-public final class PhoneHolder implements javax.xml.rpc.holders.Holder {
+public final class PhoneHolder implements jakarta.xml.rpc.holders.Holder {
   public samples.addr.Phone value;
 
   public PhoneHolder() {
@@ -818,7 +818,7 @@ public final class PhoneHolder implements javax.xml.rpc.holders.Holder {
 
 <p>A holder class is <b>only</b> generated for a type if that type is used as an inout or out parameter. Note that the holder class has the suffix "Holder" appended to the class name, and it is generated in a sub-package with the "holders".</p>
 
-<p>The holder classes for the primitive types can be found in javax.xml.rpc.holders.</p>
+<p>The holder classes for the primitive types can be found in jakarta.xml.rpc.holders.</p>
 
 <h4>PortTypes</h4>
 
@@ -870,9 +870,9 @@ public final class PhoneHolder implements javax.xml.rpc.holders.Holder {
   public AddressBookSOAPBindingStub() throws org.apache.axis.AxisFault {...}
 
   public AddressBookSOAPBindingStub(URL endpointURL,
-      javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {...}
+      jakarta.xml.rpc.Service service) throws org.apache.axis.AxisFault {...}
 
-  public AddressBookSOAPBindingStub(javax.xml.rpc.Service service)
+  public AddressBookSOAPBindingStub(jakarta.xml.rpc.Service service)
       throws org.apache.axis.AxisFault {...}
 
   public void addEntry(String name, Address address)
@@ -891,13 +891,13 @@ public final class PhoneHolder implements javax.xml.rpc.holders.Holder {
 
 <p>WSDL2Java will generate the service interface:</p>
 
-<source>public interface AddressBookService extends javax.xml.rpc.Service {
+<source>public interface AddressBookService extends jakarta.xml.rpc.Service {
   public String getAddressBookAddress();
 
-  public AddressBook getAddressBook() throws javax.xml.rpc.ServiceException;
+  public AddressBook getAddressBook() throws jakarta.xml.rpc.ServiceException;
 
   public AddressBook getAddressBook(URL portAddress)
-      throws javax.xml.rpc.ServiceException;
+      throws jakarta.xml.rpc.ServiceException;
 }</source>
 
 <p>WSDL2Java will also generate the locator which implements this interface:</p>
@@ -1119,56 +1119,56 @@ public interface WidgetPrice {
     <ul>
       <li>javax.xml.messaging.Endpoint</li>
       <li>javax.xml.messaging.URLEndpoint</li>
-      <li>javax.xml.rpc.Call</li>
-      <li>javax.xml.rpc.FaultException</li>
-      <li>javax.xml.rpc.JAXRPCException</li>
-      <li>javax.xml.rpc.ParameterMode</li>
-      <li>javax.xml.rpc.Service</li>
-      <li>javax.xml.rpc.ServiceException</li>
-      <li>javax.xml.rpc.ServiceFactory</li>
-      <li>javax.xml.rpc.Stub</li>
-      <li>javax.xml.rpc.encoding.DeserializationContext</li>
-      <li>javax.xml.rpc.encoding.Deserializer</li>
-      <li>javax.xml.rpc.encoding.DeserializerFactory</li>
-      <li>javax.xml.rpc.encoding.SerializationContext</li>
-      <li>javax.xml.rpc.encoding.Serializer</li>
-      <li>javax.xml.rpc.encoding.SerializerFactory</li>
-      <li>javax.xml.rpc.encoding.TypeMapping</li>
-      <li>javax.xml.rpc.encoding.TypeMappingRegistry</li>
-      <li>javax.xml.rpc.handler.Handler</li>
-      <li>javax.xml.rpc.handler.HandlerChain</li>
-      <li>javax.xml.rpc.handler.HandlerInfo</li>
-      <li>javax.xml.rpc.handler.HandlerRegistry</li>
-      <li>javax.xml.rpc.handler.MessageContext</li>
-      <li>javax.xml.rpc.handler.soap.SOAPMessageContext</li>
-      <li>javax.xml.rpc.holders.BigDecimalHolder</li>
-      <li>javax.xml.rpc.holders.BigIntegerHolder</li>
-      <li>javax.xml.rpc.holders.BooleanHolder</li>
-      <li>javax.xml.rpc.holders.BooleanWrapperHolder</li>
-      <li>javax.xml.rpc.holders.ByteArrayHolder</li>
-      <li>javax.xml.rpc.holders.ByteHolder</li>
-      <li>javax.xml.rpc.holders.ByteWrapperArrayHolder</li>
-      <li>javax.xml.rpc.holders.ByteWrapperHolder</li>
-      <li>javax.xml.rpc.holders.CalendarHolder</li>
-      <li>javax.xml.rpc.holders.DateHolder</li>
-      <li>javax.xml.rpc.holders.DoubleHolder</li>
-      <li>javax.xml.rpc.holders.DoubleWrapperHolder</li>
-      <li>javax.xml.rpc.holders.FloatHolder</li>
-      <li>javax.xml.rpc.holders.FloatWrapperHolder</li>
-      <li>javax.xml.rpc.holders.Holder</li>
-      <li>javax.xml.rpc.holders.IntHolder</li>
-      <li>javax.xml.rpc.holders.IntegerWrapperHolder</li>
-      <li>javax.xml.rpc.holders.LongHolder</li>
-      <li>javax.xml.rpc.holders.LongWrapperHolder</li>
-      <li>javax.xml.rpc.holders.ObjectHolder</li>
-      <li>javax.xml.rpc.holders.QNameHolder</li>
-      <li>javax.xml.rpc.holders.ShortHolder</li>
-      <li>javax.xml.rpc.holders.ShortWrapperHolder</li>
-      <li>javax.xml.rpc.holders.StringHolder</li>
-      <li>javax.xml.rpc.namespace.QName</li>
-      <li>javax.xml.rpc.server.ServiceLifecycle</li>
-      <li>javax.xml.rpc.soap.SOAPFault</li>
-      <li>javax.xml.rpc.soap.SOAPHeaderFault</li>
+      <li>jakarta.xml.rpc.Call</li>
+      <li>jakarta.xml.rpc.FaultException</li>
+      <li>jakarta.xml.rpc.JAXRPCException</li>
+      <li>jakarta.xml.rpc.ParameterMode</li>
+      <li>jakarta.xml.rpc.Service</li>
+      <li>jakarta.xml.rpc.ServiceException</li>
+      <li>jakarta.xml.rpc.ServiceFactory</li>
+      <li>jakarta.xml.rpc.Stub</li>
+      <li>jakarta.xml.rpc.encoding.DeserializationContext</li>
+      <li>jakarta.xml.rpc.encoding.Deserializer</li>
+      <li>jakarta.xml.rpc.encoding.DeserializerFactory</li>
+      <li>jakarta.xml.rpc.encoding.SerializationContext</li>
+      <li>jakarta.xml.rpc.encoding.Serializer</li>
+      <li>jakarta.xml.rpc.encoding.SerializerFactory</li>
+      <li>jakarta.xml.rpc.encoding.TypeMapping</li>
+      <li>jakarta.xml.rpc.encoding.TypeMappingRegistry</li>
+      <li>jakarta.xml.rpc.handler.Handler</li>
+      <li>jakarta.xml.rpc.handler.HandlerChain</li>
+      <li>jakarta.xml.rpc.handler.HandlerInfo</li>
+      <li>jakarta.xml.rpc.handler.HandlerRegistry</li>
+      <li>jakarta.xml.rpc.handler.MessageContext</li>
+      <li>jakarta.xml.rpc.handler.soap.SOAPMessageContext</li>
+      <li>jakarta.xml.rpc.holders.BigDecimalHolder</li>
+      <li>jakarta.xml.rpc.holders.BigIntegerHolder</li>
+      <li>jakarta.xml.rpc.holders.BooleanHolder</li>
+      <li>jakarta.xml.rpc.holders.BooleanWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.ByteArrayHolder</li>
+      <li>jakarta.xml.rpc.holders.ByteHolder</li>
+      <li>jakarta.xml.rpc.holders.ByteWrapperArrayHolder</li>
+      <li>jakarta.xml.rpc.holders.ByteWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.CalendarHolder</li>
+      <li>jakarta.xml.rpc.holders.DateHolder</li>
+      <li>jakarta.xml.rpc.holders.DoubleHolder</li>
+      <li>jakarta.xml.rpc.holders.DoubleWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.FloatHolder</li>
+      <li>jakarta.xml.rpc.holders.FloatWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.Holder</li>
+      <li>jakarta.xml.rpc.holders.IntHolder</li>
+      <li>jakarta.xml.rpc.holders.IntegerWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.LongHolder</li>
+      <li>jakarta.xml.rpc.holders.LongWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.ObjectHolder</li>
+      <li>jakarta.xml.rpc.holders.QNameHolder</li>
+      <li>jakarta.xml.rpc.holders.ShortHolder</li>
+      <li>jakarta.xml.rpc.holders.ShortWrapperHolder</li>
+      <li>jakarta.xml.rpc.holders.StringHolder</li>
+      <li>jakarta.xml.rpc.namespace.QName</li>
+      <li>jakarta.xml.rpc.server.ServiceLifecycle</li>
+      <li>jakarta.xml.rpc.soap.SOAPFault</li>
+      <li>jakarta.xml.rpc.soap.SOAPHeaderFault</li>
       <li>javax.xml.transform.Source</li>
     </ul>
   </li>

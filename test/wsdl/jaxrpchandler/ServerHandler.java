@@ -1,16 +1,16 @@
 package test.wsdl.jaxrpchandler;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.handler.Handler;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.MessageContext;
-import javax.xml.rpc.handler.soap.SOAPMessageContext;
-import javax.xml.soap.Name;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPHeaderElement;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
+import jakarta.xml.rpc.handler.Handler;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.MessageContext;
+import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import jakarta.xml.soap.Name;
+import jakarta.xml.soap.SOAPEnvelope;
+import jakarta.xml.soap.SOAPHeader;
+import jakarta.xml.soap.SOAPHeaderElement;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.xml.soap.SOAPPart;
 import java.util.Iterator;
 
 /**
@@ -30,7 +30,7 @@ public class ServerHandler implements Handler {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#handleRequest(MessageContext)
+	 * @see jakarta.xml.rpc.handler.Handler#handleRequest(MessageContext)
 	 */
 	public boolean handleRequest(MessageContext context) {
 		System.out.println("Hey - in Handle request");
@@ -59,7 +59,7 @@ public class ServerHandler implements Handler {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#handleResponse(MessageContext)
+	 * @see jakarta.xml.rpc.handler.Handler#handleResponse(MessageContext)
 	 */
 	public boolean handleResponse(MessageContext context) {
 
@@ -82,7 +82,7 @@ public class ServerHandler implements Handler {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#handleFault(MessageContext)
+	 * @see jakarta.xml.rpc.handler.Handler#handleFault(MessageContext)
 	 */
 	public boolean handleFault(MessageContext context) {
 		try {
@@ -105,19 +105,19 @@ public class ServerHandler implements Handler {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#init(HandlerInfo)
+	 * @see jakarta.xml.rpc.handler.Handler#init(HandlerInfo)
 	 */
 	public void init(HandlerInfo config) {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#destroy()
+	 * @see jakarta.xml.rpc.handler.Handler#destroy()
 	 */
 	public void destroy() {
 	}
 
 	/**
-	 * @see javax.xml.rpc.handler.Handler#getHeaders()
+	 * @see jakarta.xml.rpc.handler.Handler#getHeaders()
 	 */
 	public QName[] getHeaders() {
 		return null;

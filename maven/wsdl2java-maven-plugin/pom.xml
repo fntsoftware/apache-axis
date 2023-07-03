@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>maven</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>wsdl2java-maven-plugin</artifactId>
@@ -33,10 +33,16 @@
     </description>
     <url>${baseUrl}/maven/wsdl2java</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/maven/wsdl2java</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
@@ -71,47 +77,47 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
-    <profiles>
-        <profile>
-            <id>run-its</id>
-            <activation>
-                <property>
-                    <name>skipTests</name>
-                    <value>!true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-invoker-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>integration-test</id>
-                                <goals>
-                                    <goal>install</goal>
-                                    <goal>run</goal>
-                                </goals>
-                                <configuration>
-                                    <debug>true</debug>
-                                    <projectsDirectory>src/it</projectsDirectory>
-                                    <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-                                    <pomIncludes>
-                                        <pomInclude>*/pom.xml</pomInclude>
-                                    </pomIncludes>
-                                    <preBuildHookScript>setup</preBuildHookScript>
-                                    <postBuildHookScript>verify</postBuildHookScript>
-                                    <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-                                    <settingsFile>src/it/settings.xml</settingsFile>
-                                    <goals>
-                                        <goal>clean</goal>
-                                        <goal>install</goal>
-                                    </goals>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>run-its</id>-->
+<!--            <activation>-->
+<!--                <property>-->
+<!--                    <name>skipTests</name>-->
+<!--                    <value>!true</value>-->
+<!--                </property>-->
+<!--            </activation>-->
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    <plugin>-->
+<!--                        <artifactId>maven-invoker-plugin</artifactId>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>integration-test</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>install</goal>-->
+<!--                                    <goal>run</goal>-->
+<!--                                </goals>-->
+<!--                                <configuration>-->
+<!--                                    <debug>true</debug>-->
+<!--                                    <projectsDirectory>src/it</projectsDirectory>-->
+<!--                                    <cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>-->
+<!--                                    <pomIncludes>-->
+<!--                                        <pomInclude>*/pom.xml</pomInclude>-->
+<!--                                    </pomIncludes>-->
+<!--                                    <preBuildHookScript>setup</preBuildHookScript>-->
+<!--                                    <postBuildHookScript>verify</postBuildHookScript>-->
+<!--                                    <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>-->
+<!--                                    <settingsFile>src/it/settings.xml</settingsFile>-->
+<!--                                    <goals>-->
+<!--                                        <goal>clean</goal>-->
+<!--                                        <goal>install</goal>-->
+<!--                                    </goals>-->
+<!--                                </configuration>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>

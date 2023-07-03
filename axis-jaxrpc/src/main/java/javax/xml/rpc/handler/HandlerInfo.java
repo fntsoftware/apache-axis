@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc.handler;
+package jakarta.xml.rpc.handler;
 
 import javax.xml.namespace.QName;
 import java.io.Serializable;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The <code>javax.xml.rpc.handler.HandlerInfo</code> represents
+ * The <code>jakarta.xml.rpc.handler.HandlerInfo</code> represents
  * information about a handler in the HandlerChain. A HandlerInfo
  * instance is passed in the <code>Handler.init</code> method to
  * initialize a <code>Handler</code> instance.

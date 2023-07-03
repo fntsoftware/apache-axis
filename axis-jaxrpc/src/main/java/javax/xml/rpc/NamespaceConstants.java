@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc;
+package jakarta.xml.rpc;
 
 /**
  * Constants used in JAX-RPC for namespace prefixes and URIs.

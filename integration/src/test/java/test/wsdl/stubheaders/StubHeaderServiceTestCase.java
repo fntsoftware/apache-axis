@@ -17,9 +17,9 @@ public class StubHeaderServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testStubHeaderServiceWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.stubheaders.StubHeaderServiceLocator().getStubHeaderServiceAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.stubheaders.StubHeaderServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.stubheaders.StubHeaderServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -29,7 +29,7 @@ public class StubHeaderServiceTestCase extends junit.framework.TestCase {
             StubHeaderServiceLocator loc = new StubHeaderServiceLocator();
             binding = (StubHeaderStub)loc.getStubHeaderService(HttpTestUtil.getTestEndpoint(loc.getStubHeaderServiceAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

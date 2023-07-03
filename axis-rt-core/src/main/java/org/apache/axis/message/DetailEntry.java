@@ -21,8 +21,8 @@ package org.apache.axis.message;
  *
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public class DetailEntry extends MessageElement implements javax.xml.soap.DetailEntry {
-    public DetailEntry(javax.xml.soap.Name name){
+public class DetailEntry extends MessageElement implements jakarta.xml.soap.DetailEntry {
+    public DetailEntry(jakarta.xml.soap.Name name){
         super(name);
     }
 }

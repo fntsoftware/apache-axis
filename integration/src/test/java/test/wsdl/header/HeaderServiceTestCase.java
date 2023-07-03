@@ -17,9 +17,9 @@ public class HeaderServiceTestCase extends junit.framework.TestCase {
     
     /* FIXME: RUNTIME WSDL broken.
     public void testheaderWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.header.HeaderServiceLocator().getheaderAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.header.HeaderServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.header.HeaderServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -30,7 +30,7 @@ public class HeaderServiceTestCase extends junit.framework.TestCase {
             HeaderServiceLocator loc = new HeaderServiceLocator();
             binding = (BindingStub)loc.getheader(HttpTestUtil.getTestEndpoint(loc.getheaderAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -57,7 +57,7 @@ public class HeaderServiceTestCase extends junit.framework.TestCase {
             HeaderServiceLocator loc = new HeaderServiceLocator();
             binding = (BindingStub)loc.getheader(HttpTestUtil.getTestEndpoint(loc.getheaderAddress()));
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

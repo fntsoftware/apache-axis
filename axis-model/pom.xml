@@ -22,17 +22,23 @@
     <parent>
         <groupId>org.apache.axis</groupId>
         <artifactId>axis-project</artifactId>
-        <version>1.4.3-SNAPSHOT</version>
+        <version>1.4.3-FNT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>axis-model</artifactId>
     <name>EMF Model for WSDD Files</name>
     <url>${baseUrl}/model</url>
     <distributionManagement>
-        <site>
-            <id>axis</id>
-            <url>${baseSiteUrl}/model</url>
-        </site>
+        <repository>
+            <id>release</id>
+            <name>Github Packages</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Github Packages-snapshots</name>
+            <url>https://maven.pkg.github.com/fntsoftware/apache-axis</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencies>
         <dependency>
@@ -76,9 +82,9 @@
         </extensions>
         <plugins>
             <plugin>
-                <groupId>com.github.veithen.cosmos</groupId>
+                <groupId>com.github.veithen.maven</groupId>
                 <artifactId>emf-maven-plugin</artifactId>
-                <version>0.1-SNAPSHOT</version>
+                <version>0.1.1</version>
                 <executions>
                     <execution>
                         <goals>

@@ -11,7 +11,7 @@ import org.apache.axis.transport.jms.SimpleJMSListener;
 import org.apache.axis.utils.Options;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
+import jakarta.xml.rpc.ParameterMode;
 import java.util.HashMap;
 
 /**
@@ -94,7 +94,7 @@ public class JMSURLTest {
     }
 
     public static Float getQuote(String ticker, String username, String password)
-        throws javax.xml.rpc.ServiceException, AxisFault
+        throws jakarta.xml.rpc.ServiceException, AxisFault
     {
         Float res = new Float(-1.0);
 

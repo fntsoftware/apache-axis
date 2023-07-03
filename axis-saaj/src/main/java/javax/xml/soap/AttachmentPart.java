@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.soap;
+package jakarta.xml.soap;
 
-import javax.activation.DataHandler;
+import jakarta.activation.DataHandler;
 import java.util.Iterator;
 
 /**

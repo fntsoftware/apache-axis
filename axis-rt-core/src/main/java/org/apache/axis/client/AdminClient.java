@@ -26,7 +26,7 @@ import org.apache.axis.utils.Options;
 import org.apache.axis.utils.StringUtils;
 import org.apache.commons.logging.Log;
 
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;

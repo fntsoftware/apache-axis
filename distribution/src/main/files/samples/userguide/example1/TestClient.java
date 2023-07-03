@@ -37,7 +37,7 @@ public class TestClient
            // Call to addParameter/setReturnType as described in user-guide.html
            //call.addParameter("testParam",
            //                  org.apache.axis.Constants.XSD_STRING,
-           //                  javax.xml.rpc.ParameterMode.IN);
+           //                  jakarta.xml.rpc.ParameterMode.IN);
            //call.setReturnType(org.apache.axis.Constants.XSD_STRING);
 
            String ret = (String) call.invoke( new Object[] { "Hello!" } );

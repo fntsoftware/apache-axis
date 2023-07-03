@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package javax.xml.rpc;
+package jakarta.xml.rpc;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.encoding.TypeMappingRegistry;
-import javax.xml.rpc.handler.HandlerRegistry;
+import jakarta.xml.rpc.encoding.TypeMappingRegistry;
+import jakarta.xml.rpc.handler.HandlerRegistry;
 
 /**
  * <code>Service</code> class acts as a factory of the following:
  * <ul>
  * <li>Dynamic proxy for the target service endpoint.
- * <li>Instance of the type <code>javax.xml.rpc.Call</code> for
+ * <li>Instance of the type <code>jakarta.xml.rpc.Call</code> for
  *     the dynamic invocation of a remote operation on the
  *     target service endpoint.
  * <li>Instance of a generated stub class

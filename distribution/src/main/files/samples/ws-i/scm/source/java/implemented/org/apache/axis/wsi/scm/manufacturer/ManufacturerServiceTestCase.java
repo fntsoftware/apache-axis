@@ -14,9 +14,9 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testManufacturerCPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerCPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -27,7 +27,7 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.manufacturer.ManufacturerSoapBindingStub)
                           new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerCPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -53,9 +53,9 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testManufacturerBPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerBPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -66,7 +66,7 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.manufacturer.ManufacturerSoapBindingStub)
                           new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerBPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -92,9 +92,9 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testManufacturerAPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerAPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -105,7 +105,7 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.manufacturer.ManufacturerSoapBindingStub)
                           new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getManufacturerAPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -132,9 +132,9 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testWarehouseCallbackPortWSDL() throws Exception {
-        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
+        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getWarehouseCallbackPortAddress() + "?WSDL");
-        javax.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
+        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -145,7 +145,7 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.manufacturer.WarehouseCallbackSoapBindingStub)
                           new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getWarehouseCallbackPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -175,7 +175,7 @@ public class ManufacturerServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.manufacturer.WarehouseCallbackSoapBindingStub)
                           new org.apache.axis.wsi.scm.manufacturer.ManufacturerServiceLocator().getWarehouseCallbackPort();
         }
-        catch (javax.xml.rpc.ServiceException jre) {
+        catch (jakarta.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

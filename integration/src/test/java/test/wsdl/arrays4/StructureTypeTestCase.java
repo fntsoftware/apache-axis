@@ -20,7 +20,7 @@ public class StructureTypeTestCase extends junit.framework.TestCase {
             ArrayTest4ServiceLocator loc = new ArrayTest4ServiceLocator();
             binding = (ArrayTest4SOAPBindingStub)
                     loc.getArrayTest4(HttpTestUtil.getTestEndpoint(loc.getArrayTest4Address()));
-        } catch (javax.xml.rpc.ServiceException jre) {
+        } catch (jakarta.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

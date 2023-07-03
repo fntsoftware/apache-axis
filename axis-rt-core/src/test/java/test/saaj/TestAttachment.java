@@ -1,12 +1,12 @@
 package test.saaj;
 
-import javax.xml.soap.AttachmentPart;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPConnectionFactory;
-import javax.xml.soap.SOAPMessage;
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
+import jakarta.xml.soap.AttachmentPart;
+import jakarta.xml.soap.MessageFactory;
+import jakarta.xml.soap.SOAPConnection;
+import jakarta.xml.soap.SOAPConnectionFactory;
+import jakarta.xml.soap.SOAPMessage;
+import jakarta.activation.DataHandler;
+import jakarta.activation.DataSource;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -53,19 +53,19 @@ public class TestAttachment extends junit.framework.TestCase {
         java.net.URL url1 = TestAttachment.class.getResource("slashdot.xml");
         java.net.URL url2 = TestAttachment.class.getResource("LICENSE.txt");
 
-        AttachmentPart a1 = msg.createAttachmentPart(new javax.activation.DataHandler(url1));
+        AttachmentPart a1 = msg.createAttachmentPart(new jakarta.activation.DataHandler(url1));
         a1.setContentType("text/xml");
         msg.addAttachmentPart(a1);
-        AttachmentPart a2 = msg.createAttachmentPart(new javax.activation.DataHandler(url1));
+        AttachmentPart a2 = msg.createAttachmentPart(new jakarta.activation.DataHandler(url1));
         a2.setContentType("text/xml");
         msg.addAttachmentPart(a2);
-        AttachmentPart a3 = msg.createAttachmentPart(new javax.activation.DataHandler(url2));
+        AttachmentPart a3 = msg.createAttachmentPart(new jakarta.activation.DataHandler(url2));
         a3.setContentType("text/plain");
         msg.addAttachmentPart(a3);
 
         assertTrue(msg.countAttachments()==3);
 
-        javax.xml.soap.MimeHeaders mimeHeaders = new javax.xml.soap.MimeHeaders();
+        jakarta.xml.soap.MimeHeaders mimeHeaders = new jakarta.xml.soap.MimeHeaders();
         mimeHeaders.addHeader("Content-Type", "text/xml");
 
         int nAttachments = 0;

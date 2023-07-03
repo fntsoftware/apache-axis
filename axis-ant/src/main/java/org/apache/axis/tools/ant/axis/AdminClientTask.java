@@ -26,7 +26,7 @@ import org.apache.tools.ant.taskdefs.MatchingTask;
 import org.apache.tools.ant.types.Path;
 import org.apache.tools.ant.types.Reference;
 
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.ServiceException;
 import java.io.File;
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -18,7 +18,7 @@ package test.wsdl.roundtrip;
 
 import test.wsdl.roundtrip.holders.BondInvestmentHolder;
 
-import javax.xml.rpc.holders.StringHolder;
+import jakarta.xml.rpc.holders.StringHolder;
 
 /**
  * The RoundtripPortTypeB defines methods for RoundtripPortType

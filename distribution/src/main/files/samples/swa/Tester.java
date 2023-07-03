@@ -16,10 +16,10 @@
 
 package samples.swa;
 
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMultipart;
+import jakarta.activation.DataHandler;
+import jakarta.activation.FileDataSource;
+import jakarta.mail.internet.MimeBodyPart;
+import jakarta.mail.internet.MimeMultipart;
 
 /**
  * Class Tester
@@ -65,7 +65,7 @@ public class Tester {
         try {
             endpoint = new java.net.URL(address);
         } catch (java.net.MalformedURLException e) {
-            throw new javax.xml.rpc.ServiceException(e);
+            throw new jakarta.xml.rpc.ServiceException(e);
         }
 
         SwaPort port = (SwaPort) service.getSwaHttp(endpoint);
@@ -109,7 +109,7 @@ public class Tester {
                     HEADER_CONTENT_TRANSFER_ENCODING,
                     "binary");    // Safe and fastest for anything other than mail
             mp.addBodyPart(messageBodyPart);
-        } catch (javax.mail.MessagingException e) {
+        } catch (jakarta.mail.MessagingException e) {
         }
     }
 }

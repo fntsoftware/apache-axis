@@ -25,7 +25,7 @@ import org.apache.axis.utils.BeanUtils;
 import org.apache.axis.utils.JavaUtils;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.JAXRPCException;
+import jakarta.xml.rpc.JAXRPCException;
 
 /**
  * SerializerFactory for Bean
@@ -59,7 +59,7 @@ public class BeanSerializerFactory extends BaseSerializerFactory {
         }
     }
 
-    public javax.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType)
+    public jakarta.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType)
         throws JAXRPCException {
         return (Serializer) super.getSerializerAs(mechanismType);
     }
