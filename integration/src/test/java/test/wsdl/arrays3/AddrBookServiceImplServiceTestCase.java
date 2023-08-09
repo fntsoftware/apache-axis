@@ -18,9 +18,9 @@ public class AddrBookServiceImplServiceTestCase extends junit.framework.TestCase
     }
 
     public void testAddressBookWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.arrays3.testclient.AddrBookServiceImplServiceLocator().getarrays3Address() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.arrays3.testclient.AddrBookServiceImplServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.arrays3.testclient.AddrBookServiceImplServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -30,7 +30,7 @@ public class AddrBookServiceImplServiceTestCase extends junit.framework.TestCase
             AddrBookServiceImplServiceLocator loc = new AddrBookServiceImplServiceLocator();
             binding = (Arrays3SoapBindingStub)loc.getarrays3(HttpTestUtil.getTestEndpoint(loc.getarrays3Address()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

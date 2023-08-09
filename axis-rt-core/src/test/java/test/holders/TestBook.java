@@ -24,7 +24,7 @@ import org.apache.axis.constants.Use;
 import test.GenericLocalTest;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import java.rmi.RemoteException;
 import java.util.List;
 

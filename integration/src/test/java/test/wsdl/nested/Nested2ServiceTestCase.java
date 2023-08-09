@@ -19,9 +19,9 @@ public class Nested2ServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testNestedWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.nested.Nested2ServiceLocator().getNestedAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.nested.Nested2ServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.nested.Nested2ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -32,7 +32,7 @@ public class Nested2ServiceTestCase extends junit.framework.TestCase {
             Nested2ServiceLocator loc = new Nested2ServiceLocator();
             binding = loc.getNested(HttpTestUtil.getTestEndpoint(loc.getNestedAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

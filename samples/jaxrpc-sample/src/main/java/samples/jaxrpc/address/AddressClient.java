@@ -1,8 +1,8 @@
 package samples.jaxrpc.address;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceFactory;
 import java.net.URL;
 
 public class AddressClient {

@@ -1,10 +1,9 @@
 package test.wsdl.jaxrpchandlereval;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.handler.Handler;
-import jakarta.xml.rpc.handler.HandlerInfo;
-import jakarta.xml.rpc.handler.MessageContext;
-import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import javax.xml.rpc.handler.Handler;
+import javax.xml.rpc.handler.HandlerInfo;
+import javax.xml.rpc.handler.MessageContext;
 import jakarta.xml.soap.Name;
 import jakarta.xml.soap.SOAPEnvelope;
 import jakarta.xml.soap.SOAPHeader;
@@ -14,9 +13,7 @@ import jakarta.xml.soap.SOAPMessage;
 import jakarta.xml.soap.SOAPPart;
 import java.util.Iterator;
 import jakarta.xml.soap.*;
-import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
-import jakarta.xml.rpc.soap.*;
-import jakarta.xml.rpc.*;
+import javax.xml.rpc.handler.soap.SOAPMessageContext;
 
 
 /**
@@ -32,7 +29,7 @@ public ClientHandler() {
 }
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#handleRequest(MessageContext)
+ * @see javax.xml.rpc.handler.Handler#handleRequest(MessageContext)
  */
 public boolean handleRequest(MessageContext context) {
     System.out.println("ClientHandler:handleRequest");
@@ -101,7 +98,7 @@ public SOAPMessage prepareError(SOAPMessageContext soapMsgCtx) throws Exception{
 
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#handleResponse(MessageContext)
+ * @see javax.xml.rpc.handler.Handler#handleResponse(MessageContext)
  */
 public boolean handleResponse(MessageContext context) {
     System.out.println("ClientHandler:handleResponse");
@@ -135,7 +132,7 @@ public boolean handleResponse(MessageContext context) {
 }
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#handleFault(MessageContext)
+ * @see javax.xml.rpc.handler.Handler#handleFault(MessageContext)
  */
 public boolean handleFault(MessageContext context) {
     System.out.println("ClientHandler:handleFault");
@@ -161,7 +158,7 @@ public boolean handleFault(MessageContext context) {
 }
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#init(HandlerInfo)
+ * @see javax.xml.rpc.handler.Handler#init(HandlerInfo)
  */
 public void init(HandlerInfo config) {
     System.out.println("ClientHandler.init");
@@ -169,14 +166,14 @@ public void init(HandlerInfo config) {
 }
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#destroy()
+ * @see javax.xml.rpc.handler.Handler#destroy()
  */
 public void destroy() {
     System.out.println("ClientHandler.destroy");
 }
 
 /**
- * @see jakarta.xml.rpc.handler.Handler#getHeaders()
+ * @see javax.xml.rpc.handler.Handler#getHeaders()
  */
 public QName[] getHeaders() {
     System.out.println("ClientHandler.getheaders");

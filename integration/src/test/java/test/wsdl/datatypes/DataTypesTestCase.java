@@ -21,7 +21,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -42,7 +42,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -63,7 +63,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -88,7 +88,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -109,7 +109,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -131,7 +131,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -163,7 +163,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -192,7 +192,7 @@ public class DataTypesTestCase extends junit.framework.TestCase {
             DataTypes_ServiceLocator loc = new DataTypes_ServiceLocator();
             binding = loc.getDataTypes(HttpTestUtil.getTestEndpoint(loc.getDataTypesAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

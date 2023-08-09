@@ -19,7 +19,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -38,7 +38,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -57,7 +57,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -76,7 +76,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -84,7 +84,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
         assertTrue("binding is null", binding != null);
 
         java.lang.String value = null;
-        jakarta.xml.rpc.holders.StringHolder ioarg = new jakarta.xml.rpc.holders.StringHolder("in1");
+        javax.xml.rpc.holders.StringHolder ioarg = new javax.xml.rpc.holders.StringHolder("in1");
         value = binding.echoStringIOret(ioarg);
         assertEquals(value, "return");
         assertNotNull(ioarg);
@@ -97,14 +97,14 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
 
-        jakarta.xml.rpc.holders.StringHolder holder = new jakarta.xml.rpc.holders.StringHolder("in2");
+        javax.xml.rpc.holders.StringHolder holder = new javax.xml.rpc.holders.StringHolder("in2");
         binding.echoStringInIO("in1", holder);
         assertNotNull(holder);
         assertEquals(holder.value, "in1");
@@ -116,7 +116,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -124,8 +124,8 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
         assertTrue("binding is null", binding != null);
 
         java.lang.String value = null;
-        jakarta.xml.rpc.holders.StringHolder ioarg1 = new jakarta.xml.rpc.holders.StringHolder("ioarg1");
-        jakarta.xml.rpc.holders.StringHolder ioarg2 = new jakarta.xml.rpc.holders.StringHolder("ioarg2");
+        javax.xml.rpc.holders.StringHolder ioarg1 = new javax.xml.rpc.holders.StringHolder("ioarg1");
+        javax.xml.rpc.holders.StringHolder ioarg2 = new javax.xml.rpc.holders.StringHolder("ioarg2");
         value = binding.echoStringBig("firstin1", ioarg1, ioarg2);
         assertNotNull(value);
         assertEquals(value, "firstin1");
@@ -139,17 +139,17 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
 
-        jakarta.xml.rpc.holders.StringHolder ioarg1 = new jakarta.xml.rpc.holders.StringHolder("ioarg1");
-        jakarta.xml.rpc.holders.StringHolder ioarg2 = new jakarta.xml.rpc.holders.StringHolder("ioarg2");
-        jakarta.xml.rpc.holders.StringHolder ioarg3 = new jakarta.xml.rpc.holders.StringHolder("ioarg3");
-        jakarta.xml.rpc.holders.StringHolder ioarg4 = new jakarta.xml.rpc.holders.StringHolder("ioarg4");
+        javax.xml.rpc.holders.StringHolder ioarg1 = new javax.xml.rpc.holders.StringHolder("ioarg1");
+        javax.xml.rpc.holders.StringHolder ioarg2 = new javax.xml.rpc.holders.StringHolder("ioarg2");
+        javax.xml.rpc.holders.StringHolder ioarg3 = new javax.xml.rpc.holders.StringHolder("ioarg3");
+        javax.xml.rpc.holders.StringHolder ioarg4 = new javax.xml.rpc.holders.StringHolder("ioarg4");
         binding.helloInOut(ioarg1, ioarg2, ioarg3, ioarg4, "onlyInput");
         assertEquals(ioarg1.value, "out1");
         assertEquals(ioarg2.value, "out2");
@@ -163,7 +163,7 @@ public class WrappedInOutTestCase extends junit.framework.TestCase {
             WrappedInOutLocator loc = new WrappedInOutLocator();
             binding = loc.getWrappedInOut(HttpTestUtil.getTestEndpoint(loc.getWrappedInOutAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

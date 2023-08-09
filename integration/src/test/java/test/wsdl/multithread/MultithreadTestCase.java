@@ -12,7 +12,7 @@ public class MultithreadTestCase extends TestCase {
     /**
      * This test calls a single stub multiple times from multiple threads.  Before the
      * stub was made threadsafe, there was a good chance this test would fail with an
-     * IllegalStateException or "jakarta.xml.rpc.ServiceException: Number of parameters
+     * IllegalStateException or "javax.xml.rpc.ServiceException: Number of parameters
      * passed in (2) doesn't match the number of IN/INOUT parameters (4) from the
      * addParameter() calls" or something else just as cryptic.
      */

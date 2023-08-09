@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.soap;
+package javax.xml.rpc.soap;
 
 import javax.xml.namespace.QName;
 import jakarta.xml.soap.Detail;

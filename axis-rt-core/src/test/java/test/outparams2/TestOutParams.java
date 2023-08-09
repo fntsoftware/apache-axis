@@ -17,7 +17,7 @@ import org.apache.axis.providers.java.RPCProvider;
 import org.apache.axis.server.AxisServer;
 import org.apache.axis.transport.local.LocalTransport;
 
-import jakarta.xml.rpc.holders.StringHolder;
+import javax.xml.rpc.holders.StringHolder;
 import javax.xml.namespace.QName;
 
 public class TestOutParams extends TestCase { 

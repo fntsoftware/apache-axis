@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.server;
+package javax.xml.rpc.server;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpSession;
-import jakarta.xml.rpc.handler.MessageContext;
+import javax.xml.rpc.handler.MessageContext;
+import javax.xml.rpc.JAXRPCException;
 import java.security.Principal;
 
 /**
@@ -27,7 +28,7 @@ import java.security.Principal;
  * servlet container based JAX-RPC runtime system, the context
  * parameter in the <code>ServiceLifecycle.init</code> method is
  * required to be of the Java type
- * <code>jakarta.xml.rpc.server.ServletEndpointContext</code>.
+ * <code>javax.xml.rpc.server.ServletEndpointContext</code>.
  * <p>
  * A servlet container based JAX-RPC runtime system implements
  * the <code>ServletEndpointContext</code> interface. The JAX-RPC
@@ -94,7 +95,7 @@ public interface ServletEndpointContext {
      *
      * @return The HTTP session associated with the current
      * invocation or <code>null</code> if there is no active session.
-     * @throws jakarta.xml.rpc.JAXRPCException - If this method invoked by a non-HTTP bound
+     * @throws JAXRPCException - If this method invoked by a non-HTTP bound
      *         endpoints.
      */
     public HttpSession getHttpSession();

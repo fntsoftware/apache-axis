@@ -25,7 +25,7 @@ public class Wrapped_HoldersTestCase extends junit.framework.TestCase {
             Wrapped_holdersLocator loc = new Wrapped_holdersLocator();
             binding = loc.getThing(HttpTestUtil.getTestEndpoint(loc.getThingAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

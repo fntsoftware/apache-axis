@@ -15,6 +15,7 @@ import org.apache.axis.server.AxisServer;
 import org.apache.axis.transport.local.LocalTransport;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.ParameterMode;
 import java.util.Map;
 
 /**
@@ -76,15 +77,15 @@ public class TestOutParams extends TestCase {
         client.addParameter(
                 new QName("", "string"),
                 XMLType.XSD_STRING,
-                jakarta.xml.rpc.ParameterMode.IN);
+                ParameterMode.IN);
         client.addParameter(
                 new QName("", "out1"),
                 XMLType.XSD_STRING,
-                jakarta.xml.rpc.ParameterMode.OUT);
+                ParameterMode.OUT);
         client.addParameter(
                 new QName("", "out2"),
                 XMLType.XSD_FLOAT,
-                jakarta.xml.rpc.ParameterMode.OUT);
+                ParameterMode.OUT);
         client.setReturnType(XMLType.XSD_INT);
         // Invoke the Axis server
         Object ret = client.invoke(serviceURN, "method",

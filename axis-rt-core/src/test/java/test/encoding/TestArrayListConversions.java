@@ -11,7 +11,7 @@ import org.apache.axis.server.AxisServer;
 import org.apache.axis.transport.local.LocalTransport;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

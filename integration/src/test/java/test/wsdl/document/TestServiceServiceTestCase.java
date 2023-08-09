@@ -19,9 +19,9 @@ public class TestServiceServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testDocumentTestWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.document.TestServiceServiceLocator().getDocumentTestAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.document.TestServiceServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.document.TestServiceServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -31,7 +31,7 @@ public class TestServiceServiceTestCase extends junit.framework.TestCase {
             TestServiceServiceLocator loc = new TestServiceServiceLocator();
             binding = (DocumentTestSoapBindingStub)loc.getDocumentTest(HttpTestUtil.getTestEndpoint(loc.getDocumentTestAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -55,7 +55,7 @@ public class TestServiceServiceTestCase extends junit.framework.TestCase {
             TestServiceServiceLocator loc = new TestServiceServiceLocator();
             binding = (DocumentTestSoapBindingStub)loc.getDocumentTest(HttpTestUtil.getTestEndpoint(loc.getDocumentTestAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

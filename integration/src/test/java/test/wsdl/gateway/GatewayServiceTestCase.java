@@ -19,7 +19,7 @@ public class GatewayServiceTestCase extends junit.framework.TestCase {
             GatewayServiceLocator loc = new GatewayServiceLocator();
             binding = loc.getGateway(HttpTestUtil.getTestEndpoint(loc.getGatewayAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -40,7 +40,7 @@ public class GatewayServiceTestCase extends junit.framework.TestCase {
             GatewayServiceLocator loc = new GatewayServiceLocator();
             binding = loc.getGateway(HttpTestUtil.getTestEndpoint(loc.getGatewayAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -60,7 +60,7 @@ public class GatewayServiceTestCase extends junit.framework.TestCase {
             GatewayServiceLocator loc = new GatewayServiceLocator();
             binding = loc.getGateway(HttpTestUtil.getTestEndpoint(loc.getGatewayAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -79,7 +79,7 @@ public class GatewayServiceTestCase extends junit.framework.TestCase {
             GatewayServiceLocator loc = new GatewayServiceLocator();
             binding = loc.getGateway(HttpTestUtil.getTestEndpoint(loc.getGatewayAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -3,9 +3,9 @@ package test.wsdl.jaxrpchandler2;
 import junit.framework.TestCase;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Call;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Call;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceFactory;
 
 import test.HttpTestUtil;
 

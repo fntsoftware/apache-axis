@@ -4,8 +4,8 @@ import org.apache.axis.holders.DateHolder;
 import test.wsdl.inout.holders.AddressHolder;
 import test.wsdl.inout.holders.PhoneHolder;
 
-import jakarta.xml.rpc.holders.IntHolder;
-import jakarta.xml.rpc.holders.StringHolder;
+import javax.xml.rpc.holders.IntHolder;
+import javax.xml.rpc.holders.StringHolder;
 import java.util.Date;
 
 public class InoutSOAPBindingImpl implements Inout

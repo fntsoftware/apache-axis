@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc;
+package javax.xml.rpc;
 
 import java.util.Iterator;
 
 /**
- * The interface <code>jakarta.xml.rpc.Stub</code> is the common base interface
+ * The interface <code>javax.xml.rpc.Stub</code> is the common base interface
  * for the stub classes. All generated stub classes are required to
- * implement the <code>jakarta.xml.rpc.Stub</code> interface. An instance
+ * implement the <code>javax.xml.rpc.Stub</code> interface. An instance
  * of a stub class represents a client side proxy or stub instance for
  * the target service endpoint.
  *
- * <p>The <code>jakarta.xml.rpc.Stub</code> interface provides an
+ * <p>The <code>javax.xml.rpc.Stub</code> interface provides an
  * extensible property mechanism for the dynamic configuration of
  * a stub instance.
  *
@@ -54,7 +54,7 @@ public interface Stub {
      * <p>Type: java.lang.String
      */
     public static final String ENDPOINT_ADDRESS_PROPERTY =
-        "jakarta.xml.rpc.service.endpoint.address";
+        "javax.xml.rpc.service.endpoint.address";
 
     /**
      * Standard property: This boolean property is used by a service

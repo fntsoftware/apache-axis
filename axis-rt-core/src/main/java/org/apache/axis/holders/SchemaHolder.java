@@ -16,12 +16,14 @@
 
 package org.apache.axis.holders;
 
+import javax.xml.rpc.holders.Holder;
+
 /**
  * Custom class for supporting XSD schema
  * 
  * @author Davanum Srinivas (dims@yahoo.com)
  */
-public final class SchemaHolder implements jakarta.xml.rpc.holders.Holder {
+public final class SchemaHolder implements Holder {
     public org.apache.axis.types.Schema value;
 
     public SchemaHolder() {

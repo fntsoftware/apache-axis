@@ -19,9 +19,9 @@ package org.apache.axis.encoding;
 
 import java.io.Serializable;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
-import jakarta.xml.rpc.encoding.DeserializerFactory;
-import jakarta.xml.rpc.encoding.SerializerFactory;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.encoding.DeserializerFactory;
+import javax.xml.rpc.encoding.SerializerFactory;
 
 
 
@@ -29,7 +29,7 @@ import jakarta.xml.rpc.encoding.SerializerFactory;
  * This interface describes the AXIS TypeMapping.
  */
 public interface TypeMapping 
-    extends jakarta.xml.rpc.encoding.TypeMapping, Serializable  {
+    extends javax.xml.rpc.encoding.TypeMapping, Serializable  {
 
     /**
      * Gets the SerializerFactory registered for the specified pair
@@ -108,7 +108,7 @@ public interface TypeMapping
      * @param javaType
      * @param xmlType
      * @return the type's QName
-     * @throws jakarta.xml.rpc.JAXRPCException
+     * @throws JAXRPCException
      */
     QName getXMLType(Class javaType, QName xmlType, boolean encoded)
         throws JAXRPCException;

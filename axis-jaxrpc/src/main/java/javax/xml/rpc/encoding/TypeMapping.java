@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.encoding;
+package javax.xml.rpc.encoding;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.JAXRPCException;
 
 /**
- * The <code>jakarta.xml.rpc.encoding.TypeMapping</code> is the base
+ * The <code>javax.xml.rpc.encoding.TypeMapping</code> is the base
  * interface for the representation of a type mapping. A TypeMapping
  * implementation class may support one or more encoding styles.
  * <p>
@@ -76,7 +77,7 @@ public interface TypeMapping {
      * @param sf SerializerFactory
      * @param dsf DeserializerFactory
      *
-     * @throws jakarta.xml.rpc.JAXRPCException if there are any errors that
+     * @throws JAXRPCException if there are any errors that
      *              prevent registration
      */
     public void register(Class javaType, QName xmlType, SerializerFactory sf,
@@ -113,7 +114,7 @@ public interface TypeMapping {
      * @param javaType Class of the Java type
      * @param xmlType Qualified name of the XML data type
      *
-     * @throws jakarta.xml.rpc.JAXRPCException if there is any error that prevents
+     * @throws JAXRPCException if there is any error that prevents
      *              removal of the registered SerializerFactory
      */
     public void removeSerializer(Class javaType, QName xmlType);
@@ -125,7 +126,7 @@ public interface TypeMapping {
      * @param javaType Class of the Java type
      * @param xmlType Qualified name of the XML data type
      *
-     * @throws jakarta.xml.rpc.JAXRPCException if there is any error in removing
+     * @throws JAXRPCException if there is any error in removing
      *              the registered DeserializerFactory
      */
     public void removeDeserializer(Class javaType, QName xmlType);

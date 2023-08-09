@@ -21,7 +21,7 @@ import org.apache.axis.client.Service;
 import org.apache.axis.encoding.XMLType;
 import org.apache.axis.utils.Options;
 
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 
 public class CalcClient
 {

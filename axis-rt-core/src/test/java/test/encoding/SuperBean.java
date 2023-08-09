@@ -16,8 +16,6 @@
 
 package test.encoding;
 
-import org.apache.axis.description.ElementDesc;
-
 /**
  * A simple type with several elements for testing serialization
  */

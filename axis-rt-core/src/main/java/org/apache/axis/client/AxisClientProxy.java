@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Vector;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
 
 import org.apache.axis.description.OperationDesc;
 import org.apache.axis.description.ParameterDesc;

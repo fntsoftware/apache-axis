@@ -15,9 +15,9 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testAdaptiveWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptiveAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.adaptive.AdaptiveServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.adaptive.AdaptiveServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -49,7 +49,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -76,7 +76,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -98,7 +98,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -119,7 +119,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -141,7 +141,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -163,7 +163,7 @@ public class AdaptiveServiceTestCase extends junit.framework.TestCase {
             binding = (test.wsdl.adaptive.AdaptiveInterfaceBindingStub)
                           new test.wsdl.adaptive.AdaptiveServiceLocator().getAdaptive();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

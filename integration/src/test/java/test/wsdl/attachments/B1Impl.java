@@ -14,8 +14,8 @@ import java.rmi.RemoteException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMultipart;
-import jakarta.xml.rpc.holders.FloatHolder;
-import jakarta.xml.rpc.holders.StringHolder;
+import javax.xml.rpc.holders.FloatHolder;
+import javax.xml.rpc.holders.StringHolder;
 
 import org.apache.axis.holders.ImageHolder;
 

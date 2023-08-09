@@ -15,9 +15,9 @@ public class TypeWrapper_ServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testTypeWrapperWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.primitiveWrappers.TypeWrapper_ServiceLocator().getTypeWrapperAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.primitiveWrappers.TypeWrapper_ServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.primitiveWrappers.TypeWrapper_ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class TypeWrapper_ServiceTestCase extends junit.framework.TestCase {
             TypeWrapper_ServiceLocator loc = new TypeWrapper_ServiceLocator();
             binding = (TypeWrapper_BindingStub)loc.getTypeWrapper(HttpTestUtil.getTestEndpoint(loc.getTypeWrapperAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

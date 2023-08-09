@@ -35,8 +35,10 @@ import org.apache.axis.utils.Messages;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Call;
-import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+import javax.xml.rpc.handler.HandlerChain;
+import javax.xml.rpc.Call;
+import javax.xml.rpc.handler.soap.SOAPMessageContext;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -1320,8 +1322,8 @@ public class MessageContext implements SOAPMessageContext {
      * <code>HandlerChain</code>.
      *
      * @return an array of URIs for SOAP actor roles
-     * @see jakarta.xml.rpc.handler.HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
-     * @see jakarta.xml.rpc.handler.HandlerChain#getRoles() HandlerChain.getRoles()
+     * @see HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
+     * @see HandlerChain#getRoles() HandlerChain.getRoles()
      */
     public String[] getRoles() {
         //TODO: Flesh this out.

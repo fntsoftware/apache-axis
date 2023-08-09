@@ -26,7 +26,7 @@ import org.apache.axis.AxisFault;
 import test.GenericLocalTest;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 
 /**
  * Confirm that faults using beans work 

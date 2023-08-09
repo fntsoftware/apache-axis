@@ -18,7 +18,6 @@ package test.typedesc;
 import org.apache.axis.description.AttributeDesc;
 import org.apache.axis.description.FieldDesc;
 import org.apache.axis.description.TypeDesc;
-import org.apache.axis.encoding.SimpleType;
 
 import javax.xml.namespace.QName;
 

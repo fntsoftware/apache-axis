@@ -19,6 +19,7 @@ import org.apache.axis.utils.Messages;
 import org.apache.axis.wsdl.symbolTable.TypeEntry;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.holders.Holder;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -232,9 +233,9 @@ public class ParameterDesc implements Serializable {
         // parameters that don't represent the return type.
         if (javaType != null) {
             if ((mode == IN || isReturn) &&
-                jakarta.xml.rpc.holders.Holder.class.isAssignableFrom(javaType) ||
+                Holder.class.isAssignableFrom(javaType) ||
                 mode != IN && !isReturn &&
-                !jakarta.xml.rpc.holders.Holder.class.isAssignableFrom(javaType)) {
+                !Holder.class.isAssignableFrom(javaType)) {
                 throw new IllegalArgumentException(
                      Messages.getMessage("setJavaTypeErr00",
                                           javaType.getName(),

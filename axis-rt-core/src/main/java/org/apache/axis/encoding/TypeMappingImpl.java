@@ -36,7 +36,7 @@ import org.apache.axis.wsdl.symbolTable.Utils;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -214,8 +214,8 @@ public class TypeMappingImpl implements Serializable
      * @throws JAXRPCException - If any error during the registration
      */
     public void register(Class javaType, QName xmlType,
-                         jakarta.xml.rpc.encoding.SerializerFactory sf,
-                         jakarta.xml.rpc.encoding.DeserializerFactory dsf)
+                         javax.xml.rpc.encoding.SerializerFactory sf,
+                         javax.xml.rpc.encoding.DeserializerFactory dsf)
         throws JAXRPCException {
         // At least a serializer or deserializer factory must be specified.
         if (sf == null && dsf == null) {
@@ -235,8 +235,8 @@ public class TypeMappingImpl implements Serializable
      * @throws JAXRPCException
      */
     protected void internalRegister(Class javaType, QName xmlType,
-                         jakarta.xml.rpc.encoding.SerializerFactory sf,
-                         jakarta.xml.rpc.encoding.DeserializerFactory dsf)
+                         javax.xml.rpc.encoding.SerializerFactory sf,
+                         javax.xml.rpc.encoding.DeserializerFactory dsf)
             throws JAXRPCException {
         // Both javaType and xmlType must be specified.
         if (javaType == null || xmlType == null) {
@@ -252,11 +252,11 @@ public class TypeMappingImpl implements Serializable
         
         //REMOVED_FOR_TCK
         //if (sf != null &&
-        //    !(sf instanceof jakarta.xml.rpc.encoding.SerializerFactory)) {
+        //    !(sf instanceof javax.xml.rpc.encoding.SerializerFactory)) {
         //    throw new JAXRPCException(message text);
         //}
         //if (dsf != null &&
-        //    !(dsf instanceof jakarta.xml.rpc.encoding.DeserializerFactory)) {
+        //    !(dsf instanceof javax.xml.rpc.encoding.DeserializerFactory)) {
         //    throw new JAXRPCException(message text);
         //}
 
@@ -292,11 +292,11 @@ public class TypeMappingImpl implements Serializable
      * java.lang.IllegalArgumentException -
      * If invalid or unsupported XML/Java type is specified
      */
-    public jakarta.xml.rpc.encoding.SerializerFactory
+    public javax.xml.rpc.encoding.SerializerFactory
         getSerializer(Class javaType, QName xmlType)
         throws JAXRPCException {
 
-        jakarta.xml.rpc.encoding.SerializerFactory sf = null;
+        javax.xml.rpc.encoding.SerializerFactory sf = null;
 
         // If the xmlType was not provided, get one
         if (xmlType == null) {
@@ -312,7 +312,7 @@ public class TypeMappingImpl implements Serializable
         Pair pair = new Pair(javaType, xmlType);
 
         // Now get the serializer with the pair
-        sf = (jakarta.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
+        sf = (javax.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
 
         // Need to look into hierarchy of component type.
         // ex) java.util.GregorianCalendar[]
@@ -330,7 +330,7 @@ public class TypeMappingImpl implements Serializable
             while (componentType != null) {
     			superJavaType = Array.newInstance(componentType, dimensions).getClass();
                 pair = new Pair(superJavaType, xmlType);
-                sf = (jakarta.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
+                sf = (javax.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
                 if (sf != null) {
                     break;
                 }
@@ -345,7 +345,7 @@ public class TypeMappingImpl implements Serializable
                     && pair2.javaType != null
                     && !pair2.javaType.isPrimitive() 
                     && ArrayUtil.isConvertable(pair2.javaType, javaType)) {
-                sf = (jakarta.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair2);
+                sf = (javax.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair2);
             }
         }
         
@@ -359,7 +359,7 @@ public class TypeMappingImpl implements Serializable
                     && (javaType.isAssignableFrom(pair2.javaType) || 
                        (pair2.javaType.isPrimitive() && javaType == JavaUtils.getWrapperClass(pair2.javaType))))       // for derived type (xsd:restriction) 
             {
-                sf = (jakarta.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair2);
+                sf = (javax.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair2);
             }
         }
         
@@ -400,7 +400,7 @@ public class TypeMappingImpl implements Serializable
     public QName getXMLType(Class javaType, QName xmlType, boolean encoded)
         throws JAXRPCException
     {
-        jakarta.xml.rpc.encoding.SerializerFactory sf = null;
+        javax.xml.rpc.encoding.SerializerFactory sf = null;
 
         // If the xmlType was not provided, get one
         if (xmlType == null) {
@@ -417,7 +417,7 @@ public class TypeMappingImpl implements Serializable
         Pair pair = new Pair(javaType, xmlType);
 
         // Now get the serializer with the pair
-        sf = (jakarta.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
+        sf = (javax.xml.rpc.encoding.SerializerFactory) pair2SF.get(pair);
         if (sf != null)
             return xmlType;
 
@@ -456,7 +456,7 @@ public class TypeMappingImpl implements Serializable
      * java.lang.IllegalArgumentException -
      * If invalid or unsupported XML/Java type is specified
      */
-    public jakarta.xml.rpc.encoding.DeserializerFactory
+    public javax.xml.rpc.encoding.DeserializerFactory
         getDeserializer(Class javaType, QName xmlType, TypeMappingDelegate start)
         throws JAXRPCException {
         if (javaType == null) {
@@ -470,7 +470,7 @@ public class TypeMappingImpl implements Serializable
 
         Pair pair = new Pair(javaType, xmlType);
 
-        return (jakarta.xml.rpc.encoding.DeserializerFactory) pair2DF.get(pair);
+        return (javax.xml.rpc.encoding.DeserializerFactory) pair2DF.get(pair);
     }
     
     public DeserializerFactory finalGetDeserializer(Class javaType,

@@ -25,6 +25,8 @@ import org.apache.commons.logging.Log;
 import jakarta.activation.DataHandler;
 import javax.imageio.ImageIO;
 import jakarta.xml.soap.SOAPException;
+
+import javax.xml.rpc.holders.Holder;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.awt.*;
@@ -970,7 +972,7 @@ public class JavaUtils
             Class[] intf = type.getInterfaces();
             boolean isHolder = false;
             for (int i=0; i<intf.length && !isHolder; i++) {
-                if (intf[i] == jakarta.xml.rpc.holders.Holder.class) {
+                if (intf[i] == Holder.class) {
                     isHolder = true;
                 }
             }
@@ -998,7 +1000,7 @@ public class JavaUtils
      * @return value object
      */
     public static Object getHolderValue(Object holder) throws HolderException {
-        if (!(holder instanceof jakarta.xml.rpc.holders.Holder)) {
+        if (!(holder instanceof Holder)) {
             throw new HolderException(Messages.getMessage("badHolder00"));
         }
         try {
@@ -1015,7 +1017,7 @@ public class JavaUtils
      * @param value is the object value
      */
     public static void setHolderValue(Object holder, Object value) throws HolderException {
-        if (!(holder instanceof jakarta.xml.rpc.holders.Holder)) {
+        if (!(holder instanceof Holder)) {
             throw new HolderException(Messages.getMessage("badHolder00"));
         }
         try {

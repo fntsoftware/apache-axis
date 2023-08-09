@@ -17,7 +17,8 @@
 package org.apache.axis.client ;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.handler.HandlerChain;
+import javax.xml.rpc.handler.HandlerChain;
+import javax.xml.rpc.handler.HandlerRegistry;
 
 import org.apache.axis.AxisEngine;
 import org.apache.axis.AxisFault;
@@ -246,7 +247,7 @@ public class AxisClient extends AxisEngine {
             return null;
         }
 
-        jakarta.xml.rpc.handler.HandlerRegistry registry;
+        HandlerRegistry registry;
         registry = service.getHandlerRegistry();
         if(registry != null) {
             chain = registry.getHandlerChain(portName);

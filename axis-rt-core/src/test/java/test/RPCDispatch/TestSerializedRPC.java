@@ -1,6 +1,5 @@
 package test.RPCDispatch;
 
-import junit.framework.TestCase;
 import org.apache.axis.AxisFault;
 import org.apache.axis.Constants;
 import org.apache.axis.Message;

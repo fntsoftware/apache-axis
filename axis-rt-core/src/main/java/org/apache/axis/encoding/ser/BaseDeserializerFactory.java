@@ -24,7 +24,7 @@ import org.apache.axis.i18n.Messages;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -73,7 +73,7 @@ public abstract class BaseDeserializerFactory extends BaseFactory
         this.javaType = javaType;
     }
 
-    public jakarta.xml.rpc.encoding.Deserializer
+    public javax.xml.rpc.encoding.Deserializer
         getDeserializerAs(String mechanismType)
         throws JAXRPCException {
         Deserializer deser = null;

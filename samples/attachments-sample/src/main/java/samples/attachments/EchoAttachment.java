@@ -29,7 +29,7 @@ import org.apache.axis.utils.Options;
 import jakarta.activation.DataHandler;
 import jakarta.activation.FileDataSource;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import jakarta.xml.soap.AttachmentPart;
 import jakarta.xml.soap.MessageFactory;
 import jakarta.xml.soap.SOAPBody;

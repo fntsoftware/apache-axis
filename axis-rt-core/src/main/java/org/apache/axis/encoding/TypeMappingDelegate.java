@@ -18,7 +18,9 @@ package org.apache.axis.encoding;
 
 import org.apache.axis.utils.Messages;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.encoding.DeserializerFactory;
+import javax.xml.rpc.encoding.SerializerFactory;
+import javax.xml.rpc.JAXRPCException;
 
 /**
  * The TypeMapping delegate is used to simply delegate to 
@@ -65,17 +67,17 @@ public class TypeMappingDelegate implements TypeMapping {
      * @throws JAXRPCException
      */
     public void register(Class javaType, QName xmlType,
-                         jakarta.xml.rpc.encoding.SerializerFactory sf,
-                         jakarta.xml.rpc.encoding.DeserializerFactory dsf)
+                         SerializerFactory sf,
+                         DeserializerFactory dsf)
         throws JAXRPCException {
         delegate.register(javaType, xmlType, sf, dsf);
     }
     
-    public jakarta.xml.rpc.encoding.SerializerFactory
+    public SerializerFactory
         getSerializer(Class javaType, QName xmlType)
         throws JAXRPCException
     {
-        jakarta.xml.rpc.encoding.SerializerFactory sf = delegate.getSerializer(javaType, xmlType);
+        SerializerFactory sf = delegate.getSerializer(javaType, xmlType);
 
         if (sf == null && next != null) {
             sf = next.getSerializer(javaType, xmlType);
@@ -87,23 +89,23 @@ public class TypeMappingDelegate implements TypeMapping {
 
         return sf;
     }
-    public jakarta.xml.rpc.encoding.SerializerFactory
+    public SerializerFactory
         getSerializer(Class javaType) 
         throws JAXRPCException 
     {
         return getSerializer(javaType, null);
     }
 
-    public jakarta.xml.rpc.encoding.DeserializerFactory
+    public DeserializerFactory
         getDeserializer(Class javaType, QName xmlType)
         throws JAXRPCException {
         return getDeserializer(javaType, xmlType, this);
     }
 
-    public jakarta.xml.rpc.encoding.DeserializerFactory
+    public DeserializerFactory
             getDeserializer(Class javaType, QName xmlType, TypeMappingDelegate start)
             throws JAXRPCException {
-        jakarta.xml.rpc.encoding.DeserializerFactory df =
+        DeserializerFactory df =
                 delegate.getDeserializer(javaType, xmlType, start);
         if (df == null && next != null) {
             df = next.getDeserializer(javaType, xmlType, start);
@@ -114,7 +116,7 @@ public class TypeMappingDelegate implements TypeMapping {
         return df;
     }
 
-    public jakarta.xml.rpc.encoding.DeserializerFactory
+    public DeserializerFactory
         getDeserializer(QName xmlType)
         throws JAXRPCException {
         return getDeserializer(null, xmlType);

@@ -48,8 +48,8 @@ import org.apache.axis.utils.JavaUtils;
 import org.apache.axis.utils.Messages;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
-import jakarta.xml.rpc.encoding.DeserializerFactory;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.encoding.DeserializerFactory;
 
 /**
  * This is the implementation of the axis Default TypeMapping (which extends
@@ -607,8 +607,8 @@ public class DefaultTypeMappingImpl extends TypeMappingImpl {
     // Don't allow anyone to muck with the default type mapping because
     // it is a singleton used for the whole system.
     public void register(Class javaType, QName xmlType,
-                         jakarta.xml.rpc.encoding.SerializerFactory sf,
-                         jakarta.xml.rpc.encoding.DeserializerFactory dsf)
+                         javax.xml.rpc.encoding.SerializerFactory sf,
+                         DeserializerFactory dsf)
         throws JAXRPCException {
         super.register(javaType, xmlType, sf, dsf);
     }

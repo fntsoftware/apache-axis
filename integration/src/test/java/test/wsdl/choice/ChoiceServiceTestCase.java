@@ -31,7 +31,7 @@ public class ChoiceServiceTestCase extends TestCase {
             ChoiceServiceLocator locator = new ChoiceServiceLocator();
             binding = locator.getChoiceServiceSoap(HttpTestUtil.getTestEndpoint(locator.getChoiceServiceSoapAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {
@@ -107,7 +107,7 @@ public class ChoiceServiceTestCase extends TestCase {
             ChoiceServiceLocator locator = new ChoiceServiceLocator();
             binding = locator.getChoiceServiceSoap(HttpTestUtil.getTestEndpoint(locator.getChoiceServiceSoapAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {

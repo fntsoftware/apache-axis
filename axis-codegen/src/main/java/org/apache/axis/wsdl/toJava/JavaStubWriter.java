@@ -30,7 +30,6 @@ import org.apache.axis.wsdl.symbolTable.Parameters;
 import org.apache.axis.wsdl.symbolTable.SchemaUtils;
 import org.apache.axis.wsdl.symbolTable.SymbolTable;
 import org.apache.axis.wsdl.symbolTable.TypeEntry;
-import org.apache.axis.wsdl.symbolTable.DefinedElement;
 import org.apache.commons.logging.Log;
 
 import javax.wsdl.Binding;
@@ -56,7 +55,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
 
@@ -182,14 +180,14 @@ public class JavaStubWriter extends JavaClassWriter {
         pw.println();
         pw.println(
                 "    public " + className
-                + "(java.net.URL endpointURL, jakarta.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
+                + "(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
         pw.println("         this(service);");
         pw.println("         super.cachedEndpoint = endpointURL;");
         pw.println("    }");
         pw.println();
         pw.println(
                 "    public " + className
-                + "(jakarta.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
+                + "(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {");
         pw.println("        if (service == null) {");
         pw.println(
                 "            super.service = new org.apache.axis.client.Service();");
@@ -372,7 +370,7 @@ public class JavaStubWriter extends JavaClassWriter {
 
             pw.println("                        }");
             pw.println(
-                    "                        else if (x instanceof jakarta.xml.rpc.encoding.SerializerFactory) {");
+                    "                        else if (x instanceof javax.xml.rpc.encoding.SerializerFactory) {");
             pw.println(
                     "                            org.apache.axis.encoding.SerializerFactory sf = (org.apache.axis.encoding.SerializerFactory)");
             pw.println(

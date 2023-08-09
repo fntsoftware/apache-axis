@@ -75,8 +75,8 @@ import javax.wsdl.extensions.soap.SOAPAddress;
 import javax.wsdl.extensions.soap.SOAPBody;
 import javax.wsdl.extensions.soap.SOAPOperation;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.ParameterMode;
 import jakarta.xml.soap.SOAPException;
 import jakarta.xml.soap.SOAPMessage;
 
@@ -120,7 +120,7 @@ import java.rmi.RemoteException;
  * @author Steve Loughran
  */
 
-public class Call implements jakarta.xml.rpc.Call {
+public class Call implements javax.xml.rpc.Call {
     protected static Log log =
         LogFactory.getLog(Call.class.getName());
     private static Log tlog =
@@ -374,8 +374,8 @@ public class Call implements jakarta.xml.rpc.Call {
      * JAX-RPC specification and declared in the Call and Stub classes.
      * It is not possible to set any other properties beginning in java. or
      * javax. that are not in the specification.
-     * @see jakarta.xml.rpc.Stub
-     * @see jakarta.xml.rpc.Call
+     * @see javax.xml.rpc.Stub
+     * @see javax.xml.rpc.Call
      *
      * There are other properties implemented in this class above and
      * beyond those of the JAX-RPC spec

@@ -1,6 +1,6 @@
 package test.outparams2;
 
-import jakarta.xml.rpc.holders.StringHolder;
+import javax.xml.rpc.holders.StringHolder;
 
 import junit.framework.TestCase;
 

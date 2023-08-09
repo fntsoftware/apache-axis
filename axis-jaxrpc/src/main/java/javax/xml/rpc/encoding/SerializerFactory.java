@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.encoding;
+package javax.xml.rpc.encoding;
 
+import javax.xml.rpc.JAXRPCException;
 import java.util.Iterator;
 
 /**
- * The jakarta.xml.rpc.encoding.SerializerFactory is a factory of
+ * The javax.xml.rpc.encoding.SerializerFactory is a factory of
  * the serializers. A SerializerFactory is registered with a
  * TypeMapping object as part of the TypeMappingRegistry.
  *
@@ -35,7 +36,7 @@ public interface SerializerFactory extends java.io.Serializable {
      * @return a <code>Serializer</code> for the specified XML processing
      *              mechanism type
      *
-     * @throws jakarta.xml.rpc.JAXRPCException
+     * @throws JAXRPCException
      *              if <code>SerializerFactory</code> does not support the
      *              specified XML processing mechanism
      * @throws java.lang.IllegalArgumentException

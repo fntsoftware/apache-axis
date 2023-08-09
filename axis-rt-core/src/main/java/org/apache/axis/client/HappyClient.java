@@ -326,7 +326,7 @@ public class HappyClient {
                 "happyClientNoAxis",
                 "http://xml.apache.org/axis/");
 
-        needed += needClass("jakarta.xml.rpc.Service",
+        needed += needClass("javax.xml.rpc.Service",
                 "jaxrpc.jar",
                 "JAX-RPC",
                 "happyClientNoAxis",

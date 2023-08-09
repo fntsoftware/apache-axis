@@ -44,7 +44,7 @@ public class RpcEncTestCase extends junit.framework.TestCase {
                 binding = new WSDLInteropTestRpcEncServiceLocator().getWSDLInteropTestRpcEncPort();
             }
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertNotNull("binding is null", binding);

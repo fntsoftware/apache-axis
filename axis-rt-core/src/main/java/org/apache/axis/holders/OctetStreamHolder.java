@@ -18,7 +18,7 @@ package org.apache.axis.holders;
 
 import org.apache.axis.attachments.OctetStream;
 
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
 
 /**
  * Class OctetStreamHolder

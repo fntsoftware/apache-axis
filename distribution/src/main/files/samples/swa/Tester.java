@@ -65,7 +65,7 @@ public class Tester {
         try {
             endpoint = new java.net.URL(address);
         } catch (java.net.MalformedURLException e) {
-            throw new jakarta.xml.rpc.ServiceException(e);
+            throw new javax.xml.rpc.ServiceException(e);
         }
 
         SwaPort port = (SwaPort) service.getSwaHttp(endpoint);

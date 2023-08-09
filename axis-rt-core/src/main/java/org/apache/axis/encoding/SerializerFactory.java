@@ -31,7 +31,7 @@ package org.apache.axis.encoding;
  * The xmlType, javaType arguments are filled in with the values supplied during the
  * deployment registration of the factory.
  */
-public interface SerializerFactory extends jakarta.xml.rpc.encoding.SerializerFactory {
+public interface SerializerFactory extends javax.xml.rpc.encoding.SerializerFactory {
 }
 
 

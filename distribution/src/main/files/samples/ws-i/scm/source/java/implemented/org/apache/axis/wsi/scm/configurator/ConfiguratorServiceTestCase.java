@@ -14,9 +14,9 @@ public class ConfiguratorServiceTestCase extends junit.framework.TestCase {
 
     /* FIXME: RUNTIME WSDL broken.
     public void testConfiguratorPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new org.apache.axis.wsi.scm.configurator.ConfiguratorServiceLocator().getConfiguratorPortAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.configurator.ConfiguratorServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new org.apache.axis.wsi.scm.configurator.ConfiguratorServiceLocator().getServiceName());
         assertTrue(service != null);
     }
     */
@@ -27,7 +27,7 @@ public class ConfiguratorServiceTestCase extends junit.framework.TestCase {
             binding = (org.apache.axis.wsi.scm.configurator.ConfiguratorBindingStub)
                           new org.apache.axis.wsi.scm.configurator.ConfiguratorServiceLocator().getConfiguratorPort();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

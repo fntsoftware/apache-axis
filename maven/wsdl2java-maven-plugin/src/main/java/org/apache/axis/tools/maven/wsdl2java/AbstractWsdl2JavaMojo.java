@@ -22,7 +22,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.ServiceFactory;
 
 import org.apache.axis.constants.Scope;
 import org.apache.axis.tools.maven.shared.nsmap.Mapping;

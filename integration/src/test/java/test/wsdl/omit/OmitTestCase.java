@@ -69,7 +69,7 @@ public class OmitTestCase extends junit.framework.TestCase {
             OmitTestLocator loc = new OmitTestLocator();
             binding = loc.getomit(HttpTestUtil.getTestEndpoint(loc.getomitAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);
@@ -99,7 +99,7 @@ public class OmitTestCase extends junit.framework.TestCase {
             OmitTestLocator loc = new OmitTestLocator();
             binding = loc.getomit(HttpTestUtil.getTestEndpoint(loc.getomitAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

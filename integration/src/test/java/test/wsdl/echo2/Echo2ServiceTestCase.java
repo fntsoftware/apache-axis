@@ -21,12 +21,12 @@ public class Echo2ServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testEcho2WSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory
                 .newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(
                 new test.wsdl.echo2.Echo2ServiceLocator().getEcho2Address()
                         + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url,
+        javax.xml.rpc.Service service = serviceFactory.createService(url,
                 new test.wsdl.echo2.Echo2ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
@@ -161,7 +161,7 @@ public class Echo2ServiceTestCase extends junit.framework.TestCase {
         Echo2ServiceLocator loc = new test.wsdl.echo2.Echo2ServiceLocator();
         try {
             binding = (Echo2SoapBindingStub)loc.getEcho2(HttpTestUtil.getTestEndpoint(loc.getEcho2Address()));
-        } catch (jakarta.xml.rpc.ServiceException jre) {
+        } catch (javax.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(
@@ -209,7 +209,7 @@ public class Echo2ServiceTestCase extends junit.framework.TestCase {
         try {
             Echo2ServiceLocator loc = new Echo2ServiceLocator();
             binding = (Echo2SoapBindingStub)loc.getEcho2(HttpTestUtil.getTestEndpoint(loc.getEcho2Address()));
-        } catch (jakarta.xml.rpc.ServiceException jre) {
+        } catch (javax.xml.rpc.ServiceException jre) {
             if (jre.getLinkedCause() != null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError(

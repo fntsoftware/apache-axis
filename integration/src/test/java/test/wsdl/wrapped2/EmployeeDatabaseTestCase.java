@@ -15,9 +15,9 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
     }
 
     public void testEmployeeDatabaseWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.wrapped2.EmployeeDatabaseLocator().getEmployeeDatabaseAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.wrapped2.EmployeeDatabaseLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.wrapped2.EmployeeDatabaseLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -49,7 +49,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -71,7 +71,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -93,7 +93,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -115,7 +115,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -137,7 +137,7 @@ public class EmployeeDatabaseTestCase extends junit.framework.TestCase {
             EmployeeDatabaseLocator loc = new EmployeeDatabaseLocator();
             binding = (EmployeeDBBindingStub)loc.getEmployeeDatabase(HttpTestUtil.getTestEndpoint(loc.getEmployeeDatabaseAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
