@@ -21,7 +21,7 @@ import org.apache.axis.components.logger.LogFactory;
 import jakarta.servlet.http.HttpSessionListener;
 import jakarta.servlet.http.HttpSessionEvent;
 import jakarta.servlet.http.HttpSession;
-import jakarta.xml.rpc.server.ServiceLifecycle;
+import javax.xml.rpc.server.ServiceLifecycle;
 import java.util.Enumeration;
 
 /**

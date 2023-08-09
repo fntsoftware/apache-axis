@@ -4,11 +4,11 @@ import org.apache.axis.encoding.ser.BeanSerializerFactory;
 import org.apache.axis.encoding.ser.BeanDeserializerFactory;
 import org.apache.axis.utils.Options;
 
-import jakarta.xml.rpc.ServiceFactory;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.Call;
-import jakarta.xml.rpc.encoding.TypeMappingRegistry;
-import jakarta.xml.rpc.encoding.TypeMapping;
+import javax.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.Call;
+import javax.xml.rpc.encoding.TypeMappingRegistry;
+import javax.xml.rpc.encoding.TypeMapping;
 import javax.xml.namespace.QName;
 import java.net.URL;
 

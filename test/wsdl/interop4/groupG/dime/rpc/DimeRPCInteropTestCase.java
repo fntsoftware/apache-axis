@@ -25,9 +25,9 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
     }
 
     public void testDimeRPCSoapPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPortAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -41,7 +41,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -61,7 +61,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -86,7 +86,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -106,7 +106,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -126,7 +126,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -173,7 +173,7 @@ public class DimeRPCInteropTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupG.dime.rpc.DimeRPCInteropLocator().getDimeRPCSoapPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

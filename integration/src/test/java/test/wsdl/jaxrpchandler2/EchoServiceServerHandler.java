@@ -6,8 +6,8 @@ import java.util.*;
 import java.util.Iterator;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.handler.*;
-import jakarta.xml.rpc.handler.soap.SOAPMessageContext;
+
+import javax.xml.rpc.handler.soap.SOAPMessageContext;
 import jakarta.xml.soap.*;
 import jakarta.xml.soap.SOAPMessage;
 import javax.xml.transform.stream.*;

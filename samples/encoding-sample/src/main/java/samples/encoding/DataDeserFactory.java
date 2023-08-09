@@ -32,7 +32,7 @@ public class DataDeserFactory implements DeserializerFactory {
 
     public DataDeserFactory() {
     }
-    public jakarta.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType) {
+    public javax.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType) {
         return new DataDeser();
     }
     public Iterator getSupportedMechanismTypes() {

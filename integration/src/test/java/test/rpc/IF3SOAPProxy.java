@@ -8,7 +8,7 @@ import org.apache.axis.encoding.ser.BeanSerializerFactory;
 import org.apache.axis.Constants;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import java.util.Calendar;
 
 public final class IF3SOAPProxy implements IF3SOAP

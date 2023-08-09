@@ -1,7 +1,7 @@
 package test.jaxrpc;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 
 import org.apache.axis.AxisFault;
 import org.apache.axis.ConfigurationException;

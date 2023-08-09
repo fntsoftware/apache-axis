@@ -13,17 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc;
+package javax.xml.rpc;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.soap.SOAPFaultException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 /**
- * The <code>jakarta.xml.rpc.Call</code> interface provides support
+ * The <code>javax.xml.rpc.Call</code> interface provides support
  * for the dynamic invocation of a service endpoint. The
- * <code>jakarta.xml.rpc.Service</code> interface acts as a factory
+ * <code>javax.xml.rpc.Service</code> interface acts as a factory
  * for the creation of <code>Call</code> instances.
  * <p>
  * Once a <code>Call</code> instance is created, various setter
@@ -39,14 +40,14 @@ public interface Call {
      * <p>Type: <code>java.lang.String</code>
      */
     public static final String USERNAME_PROPERTY =
-        "jakarta.xml.rpc.security.auth.username";
+        "javax.xml.rpc.security.auth.username";
 
     /**
      * Standard property: Password for authentication
      * <p>Type: <code>java.lang.String</code>
      */
     public static final String PASSWORD_PROPERTY =
-        "jakarta.xml.rpc.security.auth.password";
+        "javax.xml.rpc.security.auth.password";
 
     /**
      * Standard property for operation style. This property is
@@ -55,7 +56,7 @@ public interface Call {
      * <p>Type: <code>java.lang.String</code>
      */
     public static final String OPERATION_STYLE_PROPERTY =
-        "jakarta.xml.rpc.soap.operation.style";
+        "javax.xml.rpc.soap.operation.style";
 
     /**
      * Standard property for SOAPAction. This boolean property
@@ -65,16 +66,16 @@ public interface Call {
      * <p>Type: <code>java.lang.Boolean</code>
      */
     public static final String SOAPACTION_USE_PROPERTY =
-        "jakarta.xml.rpc.soap.http.soapaction.use";
+        "javax.xml.rpc.soap.http.soapaction.use";
 
     /**
      * Standard property for SOAPAction. Indicates the SOAPAction
-     * URI if the <code>jakarta.xml.rpc.soap.http.soapaction.use</code>
+     * URI if the <code>javax.xml.rpc.soap.http.soapaction.use</code>
      * property is set to <code>true</code>.
      * <p>Type: <code>java.lang.String</code>
      */
     public static final String SOAPACTION_URI_PROPERTY =
-        "jakarta.xml.rpc.soap.http.soapaction.uri";
+        "javax.xml.rpc.soap.http.soapaction.uri";
 
     /**
      * Standard property for encoding Style:  Encoding style specified
@@ -83,7 +84,7 @@ public interface Call {
      * <p>Type: <code>java.lang.String</code>
      */
     public static final String ENCODINGSTYLE_URI_PROPERTY =
-        "jakarta.xml.rpc.encodingstyle.namespace.uri";
+        "javax.xml.rpc.encodingstyle.namespace.uri";
 
     /**
      * Standard property: This boolean property is used by a service
@@ -95,7 +96,7 @@ public interface Call {
      * <p>Type: <code>java.lang.Boolean</code>
      */
     public static final String SESSION_MAINTAIN_PROPERTY =
-        "jakarta.xml.rpc.session.maintain";
+        "javax.xml.rpc.session.maintain";
 
     /**
      * Indicates whether <code>addParameter</code> and
@@ -337,7 +338,7 @@ public interface Call {
      * @throws java.rmi.RemoteException if there is any error in the remote
      *                                    method invocation or if the Call
      *                                    object is not configured properly.
-     * @throws jakarta.xml.rpc.soap.SOAPFaultException Indicates a SOAP fault
+     * @throws SOAPFaultException Indicates a SOAP fault
      * @throws JAXRPCException <ul>
      *
      *     <li>If there is an error in the configuration of the
@@ -363,7 +364,7 @@ public interface Call {
      *
      * @throws java.rmi.RemoteException if there is any error in the
      *     remote method invocation.
-     * @throws jakarta.xml.rpc.soap.SOAPFaultException Indicates a SOAP fault
+     * @throws SOAPFaultException Indicates a SOAP fault
      * @throws JAXRPCException <ul>
      *     <li>If there is an error in the configuration of the
      *         <code>Cal</code>l object
@@ -404,7 +405,7 @@ public interface Call {
      * @return Map Output parameters for the last <code>Call.invoke()</code>.
      *         Empty <code>Map</code> is returned if there are no output
      *         parameters.
-     * @throws jakarta.xml.rpc.JAXRPCException If this method is invoked for a
+     * @throws JAXRPCException If this method is invoked for a
      *     one-way operation or is invoked before any
      *     <code>invoke</code> method has been called.
      */

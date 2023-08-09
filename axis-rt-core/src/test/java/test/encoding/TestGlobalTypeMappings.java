@@ -24,7 +24,7 @@ import org.apache.axis.constants.Style;
 import test.GenericLocalTest;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 
 /**
  * Confirm that global type mappings work in both RPC and Document

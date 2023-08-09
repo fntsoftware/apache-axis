@@ -38,7 +38,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.soap.SOAPFaultException;
+import javax.xml.rpc.soap.SOAPFaultException;
 import jakarta.xml.soap.Detail;
 import jakarta.xml.soap.SOAPException;
 import jakarta.xml.soap.SOAPFactory;

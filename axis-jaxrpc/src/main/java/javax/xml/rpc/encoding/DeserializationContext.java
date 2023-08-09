@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.encoding;
+package javax.xml.rpc.encoding;
 
 /**
- * The jakarta.xml.rpc.encoding.DeserializationContext interface is implemented by the JAX-RPC runtime system in an XML
+ * The javax.xml.rpc.encoding.DeserializationContext interface is implemented by the JAX-RPC runtime system in an XML
  * processing mechanism specific manner. A deserializer uses this interface to access and maintain context information
  * during the deserialization..
  *

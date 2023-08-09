@@ -15,7 +15,7 @@ public class WrappedInOutSoapImpl implements test.wsdl.wrapped_inout.WrappedInOu
         return ioarg;
     }
 
-    public java.lang.String echoStringIOret(jakarta.xml.rpc.holders.StringHolder ioarg) throws java.rmi.RemoteException {
+    public java.lang.String echoStringIOret(javax.xml.rpc.holders.StringHolder ioarg) throws java.rmi.RemoteException {
         if (!ioarg.value.equals("in1")) {
             throw new java.rmi.RemoteException("Input argument didn't match expected 'in1', got: " + ioarg.value);
         }
@@ -23,17 +23,17 @@ public class WrappedInOutSoapImpl implements test.wsdl.wrapped_inout.WrappedInOu
         return "return";
     }
 
-    public void echoStringInIO(java.lang.String inarg, jakarta.xml.rpc.holders.StringHolder ioarg) throws java.rmi.RemoteException {
+    public void echoStringInIO(java.lang.String inarg, javax.xml.rpc.holders.StringHolder ioarg) throws java.rmi.RemoteException {
         ioarg.value = inarg;    
     }
 
-    public java.lang.String echoStringBig(java.lang.String inarg, jakarta.xml.rpc.holders.StringHolder ioarg1, jakarta.xml.rpc.holders.StringHolder ioarg2) throws java.rmi.RemoteException {
+    public java.lang.String echoStringBig(java.lang.String inarg, javax.xml.rpc.holders.StringHolder ioarg1, javax.xml.rpc.holders.StringHolder ioarg2) throws java.rmi.RemoteException {
         ioarg1.value = "out1";
         ioarg2.value = "out2";
         return inarg;
     }
 
-    public void helloInOut(jakarta.xml.rpc.holders.StringHolder inout1, jakarta.xml.rpc.holders.StringHolder inout2, jakarta.xml.rpc.holders.StringHolder inout3, jakarta.xml.rpc.holders.StringHolder inout4, java.lang.String inonly) throws java.rmi.RemoteException {
+    public void helloInOut(javax.xml.rpc.holders.StringHolder inout1, javax.xml.rpc.holders.StringHolder inout2, javax.xml.rpc.holders.StringHolder inout3, javax.xml.rpc.holders.StringHolder inout4, java.lang.String inonly) throws java.rmi.RemoteException {
         inout1.value = "out1";
         inout2.value = "out2";
         inout3.value = "out3";

@@ -39,7 +39,7 @@ public class Import1TestCase extends junit.framework.TestCase {
                 binding = new Import1Locator().getSoapInteropImport1Port(url);
             }
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

@@ -28,7 +28,7 @@ import org.apache.axis.transport.jms.SimpleJMSListener;
 import org.apache.axis.utils.Options;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import java.util.HashMap;
 
 /** Tests the JMS transport.  To run:

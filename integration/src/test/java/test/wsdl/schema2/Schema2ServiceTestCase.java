@@ -15,9 +15,9 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testSchema2ServiceWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         Schema2ServiceLocator loc = new Schema2ServiceLocator();
-        jakarta.xml.rpc.Service service = serviceFactory.createService(
+        javax.xml.rpc.Service service = serviceFactory.createService(
                 HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress() + "?WSDL"), loc.getServiceName());
         assertTrue(service != null);
     }
@@ -29,7 +29,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -52,7 +52,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -75,7 +75,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -98,7 +98,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -121,7 +121,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -144,7 +144,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -167,7 +167,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -190,7 +190,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -213,7 +213,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -236,7 +236,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -259,7 +259,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -282,7 +282,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -305,7 +305,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -328,7 +328,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -351,7 +351,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -374,7 +374,7 @@ public class Schema2ServiceTestCase extends junit.framework.TestCase {
             binding = (Schema2ServiceSoapBindingStub)
                           loc.getSchema2Service(HttpTestUtil.getTestEndpoint(loc.getSchema2ServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

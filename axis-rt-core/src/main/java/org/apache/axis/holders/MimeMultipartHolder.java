@@ -16,7 +16,7 @@
 package org.apache.axis.holders;
 
 import jakarta.mail.internet.MimeMultipart;
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
 
 /**
  * Class MimeMultipartHolder

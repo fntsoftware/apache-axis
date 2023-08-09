@@ -27,9 +27,9 @@ public class MArrayTestsServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testMArrayTestsWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.marrays.MArrayTestsServiceLocator().getMArrayTestsAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.marrays.MArrayTestsServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.marrays.MArrayTestsServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 

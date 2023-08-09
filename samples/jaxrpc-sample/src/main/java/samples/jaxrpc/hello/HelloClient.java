@@ -1,8 +1,8 @@
 package samples.jaxrpc.hello;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceFactory;
 import java.net.URL;
 
 public class HelloClient {
@@ -18,7 +18,7 @@ public class HelloClient {
                 new QName(nameSpaceUri, serviceName));
 
         java.util.List list = helloService.getHandlerRegistry().getHandlerChain(new QName(nameSpaceUri, portName));
-        list.add(new jakarta.xml.rpc.handler.HandlerInfo(ClientHandler.class,null,null));
+        list.add(new javax.xml.rpc.handler.HandlerInfo(ClientHandler.class,null,null));
 
         Hello myProxy = (Hello) helloService.getPort(
                 new QName(nameSpaceUri, portName),

@@ -29,7 +29,7 @@ import javax.wsdl.extensions.ExtensibilityElement;
 import javax.wsdl.extensions.soap.SOAPOperation;
 import javax.wsdl.extensions.soap12.SOAP12Operation;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.holders.BooleanHolder;
+import javax.xml.rpc.holders.BooleanHolder;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -81,7 +81,7 @@ public class Utils extends org.apache.axis.wsdl.symbolTable.Utils {
             if (mimeType.equals("image/gif") || mimeType.equals("image/jpeg")) {
                 return "org.apache.axis.holders.ImageHolder" + mimeDimensions;
             } else if (mimeType.equals("text/plain")) {
-                return "jakarta.xml.rpc.holders.StringHolder" + mimeDimensions;
+                return "javax.xml.rpc.holders.StringHolder" + mimeDimensions;
             } else if (mimeType.startsWith("multipart/")) {
                 return "org.apache.axis.holders.MimeMultipartHolder"
                         + mimeDimensions;
@@ -114,7 +114,7 @@ public class Utils extends org.apache.axis.wsdl.symbolTable.Utils {
         // byte[] has a reserved holders.
         if (typeValue.equals("byte[]") &&  type.isBaseType()) { 
 
-            return "jakarta.xml.rpc.holders.ByteArrayHolder";
+            return "javax.xml.rpc.holders.ByteArrayHolder";
         }
 
         // Anything else with [] gets its holder from the qname
@@ -159,16 +159,16 @@ public class Utils extends org.apache.axis.wsdl.symbolTable.Utils {
 
         // String also has a reserved holder
         else if (typeValue.equals("String")) {
-            return "jakarta.xml.rpc.holders.StringHolder";
+            return "javax.xml.rpc.holders.StringHolder";
         } else if (typeValue.equals("java.lang.String")) {
-            return "jakarta.xml.rpc.holders.StringHolder";
+            return "javax.xml.rpc.holders.StringHolder";
         }
 
         // Object also has a reserved holder
         else if (typeValue.equals("Object")) {
-            return "jakarta.xml.rpc.holders.ObjectHolder";
+            return "javax.xml.rpc.holders.ObjectHolder";
         } else if (typeValue.equals("java.lang.Object")) {
-            return "jakarta.xml.rpc.holders.ObjectHolder";
+            return "javax.xml.rpc.holders.ObjectHolder";
         }
 
         // Java primitive types have reserved holders
@@ -176,31 +176,31 @@ public class Utils extends org.apache.axis.wsdl.symbolTable.Utils {
                 || typeValue.equals("short") || typeValue.equals("float")
                 || typeValue.equals("double") || typeValue.equals("boolean")
                 || typeValue.equals("byte")) {
-            return "jakarta.xml.rpc.holders." + capitalizeFirstChar(typeValue)
+            return "javax.xml.rpc.holders." + capitalizeFirstChar(typeValue)
                     + "Holder";
         }
 
         // Java language classes have reserved holders (with ClassHolder)
         else if (typeValue.startsWith("java.lang.")) {
-            return "jakarta.xml.rpc.holders"
+            return "javax.xml.rpc.holders"
                     + typeValue.substring(typeValue.lastIndexOf("."))
                     + "WrapperHolder";
         } else if (typeValue.indexOf(".") < 0) {
-            return "jakarta.xml.rpc.holders" + typeValue + "WrapperHolder";
+            return "javax.xml.rpc.holders" + typeValue + "WrapperHolder";
         }
 
         // The classes have reserved holders because they
         // represent schema/soap encoding primitives
         else if (typeValue.equals("java.math.BigDecimal")) {
-            return "jakarta.xml.rpc.holders.BigDecimalHolder";
+            return "javax.xml.rpc.holders.BigDecimalHolder";
         } else if (typeValue.equals("java.math.BigInteger")) {
-            return "jakarta.xml.rpc.holders.BigIntegerHolder";
+            return "javax.xml.rpc.holders.BigIntegerHolder";
         } else if (typeValue.equals("java.util.Date")) {
             return "org.apache.axis.holders.DateHolder";
         } else if (typeValue.equals("java.util.Calendar")) {
-            return "jakarta.xml.rpc.holders.CalendarHolder";
+            return "javax.xml.rpc.holders.CalendarHolder";
         } else if (typeValue.equals("javax.xml.namespace.QName")) {
-            return "jakarta.xml.rpc.holders.QNameHolder";
+            return "javax.xml.rpc.holders.QNameHolder";
         } else if (typeValue.equals("jakarta.activation.DataHandler")) {
             return "org.apache.axis.holders.DataHandlerHolder";
         }

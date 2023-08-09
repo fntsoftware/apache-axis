@@ -27,7 +27,7 @@
     <groupId>org.apache.axis</groupId>
     <artifactId>axis-project</artifactId>
     <name>Axis</name>
-    <version>1.4.3-FNT</version>
+    <version>1.4.4-FNT</version>
     <packaging>pom</packaging>
     <url>${baseUrl}/</url>
     <issueManagement>

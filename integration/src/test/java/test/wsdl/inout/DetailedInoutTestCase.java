@@ -8,9 +8,9 @@ import test.HttpTestUtil;
 import test.wsdl.inout.holders.AddressHolder;
 import test.wsdl.inout.holders.PhoneHolder;
 
-import jakarta.xml.rpc.ServiceException;
-import jakarta.xml.rpc.holders.IntHolder;
-import jakarta.xml.rpc.holders.StringHolder;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.holders.IntHolder;
+import javax.xml.rpc.holders.StringHolder;
 import java.util.Date;
 
 /**

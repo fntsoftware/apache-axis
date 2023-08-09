@@ -29,8 +29,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.rmi.RemoteException;
 
-import jakarta.xml.rpc.ServiceException;
-import jakarta.xml.rpc.Stub;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.Stub;
 
 /**
  * Demonstrates use of wsdl2java-generated static stubs to invoke JMS endpoints.

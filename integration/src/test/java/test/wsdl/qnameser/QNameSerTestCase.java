@@ -16,7 +16,7 @@ public class QNameSerTestCase extends junit.framework.TestCase {
             PlanWS2Locator locator = new PlanWS2Locator();
             binding = locator.getPlanWS2Soap(HttpTestUtil.getTestEndpoint(locator.getPlanWS2SoapAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {
@@ -36,7 +36,7 @@ public class QNameSerTestCase extends junit.framework.TestCase {
             PlanWS2Locator locator = new PlanWS2Locator();
             binding = locator.getPlanWS2Soap(HttpTestUtil.getTestEndpoint(locator.getPlanWS2SoapAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {

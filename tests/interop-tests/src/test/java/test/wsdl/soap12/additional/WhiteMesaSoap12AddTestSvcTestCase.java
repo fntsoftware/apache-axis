@@ -25,7 +25,7 @@ import org.w3c.dom.Element;
 import test.wsdl.soap12.additional.xsd.SOAPStruct;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
 import java.util.Vector;
 import java.net.URL;
 
@@ -81,30 +81,30 @@ public class WhiteMesaSoap12AddTestSvcTestCase extends junit.framework.TestCase 
     }
 
     public void testSoap12AddTestDocUpperPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(DOC_INT_UC_ENDPOINT + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
     public void testSoap12AddTestRpcPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(RPC_ENDPOINT + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
     public void testSoap12AddTestDocIntermediaryPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(DOC_INT_ENDPOINT + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
     public void testSoap12AddTestDocPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(DOC_ENDPOINT + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -277,7 +277,7 @@ public class WhiteMesaSoap12AddTestSvcTestCase extends junit.framework.TestCase 
             binding = (test.wsdl.soap12.additional.Soap12AddTestDocBindingStub)
                           new test.wsdl.soap12.additional.WhiteMesaSoap12AddTestSvcLocator().getSoap12AddTestDocPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

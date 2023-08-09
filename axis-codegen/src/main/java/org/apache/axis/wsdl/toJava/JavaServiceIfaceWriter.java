@@ -25,6 +25,7 @@ import org.apache.axis.wsdl.symbolTable.SymbolTable;
 import javax.wsdl.Binding;
 import javax.wsdl.Port;
 import javax.wsdl.Service;
+import javax.xml.rpc.ServiceException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
@@ -67,12 +68,12 @@ public class JavaServiceIfaceWriter extends JavaClassWriter {
     }    // getClassString
 
     /**
-     * Returns "extends jakarta.xml.rpc.Service ".
+     * Returns "extends javax.xml.rpc.Service ".
      * 
      * @return 
      */
     protected String getExtendsText() {
-        return "extends jakarta.xml.rpc.Service ";
+        return "extends javax.xml.rpc.Service ";
     }    // getExtendsText
 
     /**
@@ -156,11 +157,11 @@ public class JavaServiceIfaceWriter extends JavaClassWriter {
             pw.println();
             pw.println("    public " + bindingType + " get" + portName
                     + "() throws "
-                    + jakarta.xml.rpc.ServiceException.class.getName() + ";");
+                    + ServiceException.class.getName() + ";");
             pw.println();
             pw.println("    public " + bindingType + " get" + portName
                     + "(java.net.URL portAddress) throws "
-                    + jakarta.xml.rpc.ServiceException.class.getName() + ";");
+                    + ServiceException.class.getName() + ";");
         }
     }    // writeFileBody
 }    // class JavaServiceIfaceWriter

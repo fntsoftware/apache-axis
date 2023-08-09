@@ -19,7 +19,7 @@ public class Soap12TestRpcBindingImpl implements test.wsdl.soap12.assertion.Soap
         return inputStructArray;
     }
 
-    public void echoStructAsSimpleTypes(test.wsdl.soap12.assertion.xsd.SOAPStruct inputStruct, jakarta.xml.rpc.holders.StringHolder outputString, jakarta.xml.rpc.holders.IntHolder outputInteger, jakarta.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
+    public void echoStructAsSimpleTypes(test.wsdl.soap12.assertion.xsd.SOAPStruct inputStruct, javax.xml.rpc.holders.StringHolder outputString, javax.xml.rpc.holders.IntHolder outputInteger, javax.xml.rpc.holders.FloatHolder outputFloat) throws java.rmi.RemoteException {
         outputString.value = inputStruct.getVarString();
         outputInteger.value = inputStruct.getVarInt();
         outputFloat.value = inputStruct.getVarFloat();

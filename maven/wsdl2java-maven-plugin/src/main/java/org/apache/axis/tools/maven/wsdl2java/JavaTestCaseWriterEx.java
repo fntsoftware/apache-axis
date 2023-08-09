@@ -59,8 +59,8 @@ public class JavaTestCaseWriterEx extends JavaTestCaseWriter {
     protected void writeWSDLTestCode(PrintWriter pw, String portName) {
         String httpPortSystemProperty = ((EmitterEx)emitter).getTestHttpPortSystemProperty();
         if (httpPortSystemProperty != null) {
-            pw.println("        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();");
-            pw.println("        jakarta.xml.rpc.Service service = serviceFactory.createService(new java.net.URL(getEndpoint(\"" + portName + "\") + \"?WSDL\"), new "
+            pw.println("        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();");
+            pw.println("        javax.xml.rpc.Service service = serviceFactory.createService(new java.net.URL(getEndpoint(\"" + portName + "\") + \"?WSDL\"), new "
                     + sEntry.getName() + "Locator().getServiceName());");
             pw.println("        assertTrue(service != null);");
         } else {

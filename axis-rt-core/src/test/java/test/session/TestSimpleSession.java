@@ -17,8 +17,8 @@ import org.apache.axis.session.Session;
 import org.apache.axis.session.SimpleSession;
 import org.apache.axis.transport.local.LocalTransport;
 
-import jakarta.xml.rpc.ServiceException;
-import jakarta.xml.rpc.server.ServiceLifecycle;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.server.ServiceLifecycle;
 
 /**
  * Test the SimpleSession implementation (using SOAP headers for session

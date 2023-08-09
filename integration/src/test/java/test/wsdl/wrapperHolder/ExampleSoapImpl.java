@@ -7,7 +7,7 @@
 package test.wsdl.wrapperHolder;
 
 public class ExampleSoapImpl implements test.wsdl.wrapperHolder.ExampleSoap {
-    public void doExample(byte[][] doExampleValue1, java.lang.Long out, jakarta.xml.rpc.holders.ByteArrayHolder doExampleResponseRet, jakarta.xml.rpc.holders.LongWrapperHolder out2) throws java.rmi.RemoteException {
+    public void doExample(byte[][] doExampleValue1, java.lang.Long out, javax.xml.rpc.holders.ByteArrayHolder doExampleResponseRet, javax.xml.rpc.holders.LongWrapperHolder out2) throws java.rmi.RemoteException {
         doExampleResponseRet.value = doExampleValue1[0];
         out2.value = out;
     }

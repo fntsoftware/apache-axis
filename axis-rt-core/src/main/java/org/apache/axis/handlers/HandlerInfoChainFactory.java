@@ -16,7 +16,7 @@
 
 package org.apache.axis.handlers;
 
-import jakarta.xml.rpc.handler.HandlerChain;
+import javax.xml.rpc.handler.HandlerChain;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;

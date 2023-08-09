@@ -15,9 +15,9 @@ public class DoubleBackServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testDoubleBackServiceWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new DoubleBackPortTypeServiceLocator().getDoubleBackServiceAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new DoubleBackPortTypeServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new DoubleBackPortTypeServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -27,7 +27,7 @@ public class DoubleBackServiceTestCase extends junit.framework.TestCase {
             DoubleBackPortTypeServiceLocator loc = new DoubleBackPortTypeServiceLocator();
             binding = (DoubleBackServiceSoapBindingStub)loc.getDoubleBackService(HttpTestUtil.getTestEndpoint(loc.getDoubleBackServiceAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.encoding;
+package javax.xml.rpc.encoding;
 
 /**
- * The jakarta.xml.rpc.encoding.SerializationContext interface is
+ * The javax.xml.rpc.encoding.SerializationContext interface is
  * implemented by the JAX-RPC runtime system in an XML processing
  * mechanism specific manner. A serializer uses the
  * SerializationContext interface during the serialization to get

@@ -16,8 +16,6 @@
 
 package test.encoding;
 
-import org.apache.axis.description.ElementDesc;
-
 /**
  * A type used for testing serialization of inherited elements
  */

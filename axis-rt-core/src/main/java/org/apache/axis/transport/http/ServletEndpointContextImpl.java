@@ -19,8 +19,8 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
-import jakarta.xml.rpc.handler.MessageContext;
-import jakarta.xml.rpc.server.ServletEndpointContext;
+import javax.xml.rpc.handler.MessageContext;
+import javax.xml.rpc.server.ServletEndpointContext;
 import java.security.Principal;
 
 public class ServletEndpointContextImpl implements ServletEndpointContext {

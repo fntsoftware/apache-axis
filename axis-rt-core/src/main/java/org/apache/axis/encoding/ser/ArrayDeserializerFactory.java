@@ -47,7 +47,7 @@ public class ArrayDeserializerFactory extends BaseDeserializerFactory {
      * @param mechanismType
      * @return
      */
-    public jakarta.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType) {
+    public javax.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType) {
         ArrayDeserializer dser = (ArrayDeserializer) super.getDeserializerAs(mechanismType);
         dser.defaultItemType = componentXmlType;
         return dser;

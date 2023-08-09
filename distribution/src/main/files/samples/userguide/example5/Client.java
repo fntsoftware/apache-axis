@@ -22,7 +22,7 @@ import org.apache.axis.client.Service;
 import org.apache.axis.utils.Options;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ParameterMode;
+import javax.xml.rpc.ParameterMode;
                                            
 public class Client
 {

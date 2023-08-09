@@ -24,7 +24,7 @@ import org.apache.axis.utils.Messages;
 import org.apache.commons.logging.Log;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -74,7 +74,7 @@ public abstract class BaseSerializerFactory extends BaseFactory
         this.javaType = javaType;
     }
 
-    public jakarta.xml.rpc.encoding.Serializer
+    public javax.xml.rpc.encoding.Serializer
         getSerializerAs(String mechanismType)
         throws JAXRPCException {
         synchronized (this) {

@@ -30,7 +30,7 @@ import javax.wsdl.Operation;
 import javax.wsdl.OperationType;
 import javax.wsdl.Port;
 import javax.wsdl.PortType;
-import jakarta.xml.rpc.holders.BooleanHolder;
+import javax.xml.rpc.holders.BooleanHolder;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
@@ -130,9 +130,9 @@ public class JavaTestCaseWriter extends JavaClassWriter {
     }    // writeFileBody
 
     protected void writeWSDLTestCode(PrintWriter pw, String portName) {
-        pw.println("        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();");
+        pw.println("        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();");
         pw.println("        java.net.URL url = new java.net.URL(new " + sEntry.getName() + "Locator" + "().get" + portName + "Address() + \"?WSDL\");");
-        pw.println("        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new " + sEntry.getName() + "Locator().getServiceName());");
+        pw.println("        javax.xml.rpc.Service service = serviceFactory.createService(url, new " + sEntry.getName() + "Locator().getServiceName());");
         pw.println("        assertTrue(service != null);");
     }
     

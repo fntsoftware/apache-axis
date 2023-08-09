@@ -9,8 +9,8 @@ import org.apache.axis.handlers.soap.SOAPService;
 import org.apache.axis.message.Detail;
 import org.apache.axis.server.AxisServer;
 
-import jakarta.xml.rpc.JAXRPCException;
-import jakarta.xml.rpc.soap.SOAPFaultException;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.soap.SOAPFaultException;
 
 public class TestSOAPService
         extends AJAXRPC {

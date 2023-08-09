@@ -30,7 +30,7 @@ public class WidgetPriceServiceTestCase extends junit.framework.TestCase {
         samples.userguide.example6.WidgetPrice binding;
         try {
             binding = new WidgetPriceServiceLocator().getWidgetPrice();
-        } catch (jakarta.xml.rpc.ServiceException jre) {
+        } catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre );
         }
         ((WidgetPriceSoapBindingStub)binding).setMaintainSession(true);

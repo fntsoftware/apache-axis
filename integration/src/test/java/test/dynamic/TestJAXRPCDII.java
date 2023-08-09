@@ -20,9 +20,9 @@ import junit.framework.TestCase;
 import org.apache.axis.AxisFault;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Call;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Call;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceFactory;
 import java.io.InterruptedIOException;
 import java.net.ConnectException;
 import java.net.URL;

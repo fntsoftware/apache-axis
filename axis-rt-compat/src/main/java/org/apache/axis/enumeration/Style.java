@@ -16,10 +16,6 @@
 
 package org.apache.axis.enumeration;
 
-import org.apache.axis.deployment.wsdd.WSDDConstants;
-
-import javax.xml.namespace.QName;
-
 /**
  * Simple wrapper around org.apache.axis.constants.Style
  * @author dims@yahoo.com

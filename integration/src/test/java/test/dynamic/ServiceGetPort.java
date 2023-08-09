@@ -20,8 +20,8 @@ import samples.addr.AddressBook;
 import samples.addr.AddressBookSOAPBindingStub;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceFactory;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceFactory;
 import java.net.URL;
 import java.rmi.Remote;
 

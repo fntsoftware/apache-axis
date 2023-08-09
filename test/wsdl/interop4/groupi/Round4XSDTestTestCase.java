@@ -36,7 +36,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             jre.printStackTrace();
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
@@ -57,7 +57,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -78,7 +78,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -99,7 +99,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -121,7 +121,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -144,7 +144,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -169,7 +169,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -194,7 +194,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -226,7 +226,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -254,7 +254,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -282,7 +282,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -311,7 +311,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -334,7 +334,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -356,7 +356,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -379,7 +379,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -391,9 +391,9 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
             input.setVarFloat(1024);
             input.setVarInt(2048);
             input.setVarString("Hello World");
-            jakarta.xml.rpc.holders.StringHolder value1 = new jakarta.xml.rpc.holders.StringHolder();
-            jakarta.xml.rpc.holders.IntHolder value2 = new jakarta.xml.rpc.holders.IntHolder();
-            jakarta.xml.rpc.holders.FloatHolder value3 = new jakarta.xml.rpc.holders.FloatHolder();
+            javax.xml.rpc.holders.StringHolder value1 = new javax.xml.rpc.holders.StringHolder();
+            javax.xml.rpc.holders.IntHolder value2 = new javax.xml.rpc.holders.IntHolder();
+            javax.xml.rpc.holders.FloatHolder value3 = new javax.xml.rpc.holders.FloatHolder();
             binding.echoComplexTypeAsSimpleTypes(input, value1, value2, value3);
             assertEquals(input.getVarString(), value1.value);
             assertEquals(input.getVarInt(), value2.value);
@@ -409,7 +409,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -433,7 +433,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -464,7 +464,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -493,7 +493,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -519,7 +519,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -542,7 +542,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -565,7 +565,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -591,7 +591,7 @@ public class Round4XSDTestTestCase extends junit.framework.TestCase {
         try {
             binding = new test.wsdl.interop4.groupi.Round4XSDTestLocator().getRound4XSDTestSoap(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

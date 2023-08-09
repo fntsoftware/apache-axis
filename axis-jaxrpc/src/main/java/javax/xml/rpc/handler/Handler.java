@@ -13,12 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.handler;
+package javax.xml.rpc.handler;
 
 import javax.xml.namespace.QName;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.soap.SOAPFaultException;
 
 /**
- * The <code>jakarta.xml.rpc.handler.Handler</code> interface is
+ * The <code>javax.xml.rpc.handler.Handler</code> interface is
  * required to be implemented by a SOAP message handler. The
  * <code>handleRequest</code>, <code>handleResponse</code>
  * and <code>handleFault</code> methods for a SOAP message
@@ -62,7 +64,7 @@ public interface Handler {
      *                and goes backward in the execution sequence.
      *             </ul>
      *
-     * @throws jakarta.xml.rpc.JAXRPCException
+     * @throws JAXRPCException
      *                indicates a handler-specific
      *                runtime error. If <code>JAXRPCException</code> is thrown
      *                by a handleRequest method, the HandlerChain
@@ -75,7 +77,7 @@ public interface Handler {
      *                during the processing of the message. On the
      *                client side, the exception is propagated to
      *                the client code
-     * @throws jakarta.xml.rpc.soap.SOAPFaultException
+     * @throws SOAPFaultException
      *                indicates a SOAP fault. The Handler
      *                implementation class has the the responsibility
      *                of setting the SOAP fault in the SOAP message in
@@ -114,7 +116,7 @@ public interface Handler {
      *                are invoked.
      *            </ul>
      *
-     * @throws jakarta.xml.rpc.JAXRPCException
+     * @throws JAXRPCException
      *                indicates a handler specific runtime error.
      *                If JAXRPCException is thrown by a handleResponse
      *                method, the HandlerChain terminates the further
@@ -146,7 +148,7 @@ public interface Handler {
      *                other handlers in the handler chain
      *                are invoked.
      *            </ul>
-     * @throws jakarta.xml.rpc.JAXRPCException indicates handler specific runtime
+     * @throws JAXRPCException indicates handler specific runtime
      *                error. If JAXRPCException is thrown by a handleFault
      *                method, the HandlerChain terminates the further
      *                processing of this handler chain. On the server side,
@@ -179,7 +181,7 @@ public interface Handler {
      *              handler
      *
      * @param config
-     * @throws jakarta.xml.rpc.JAXRPCException if initialization of the handler
+     * @throws JAXRPCException if initialization of the handler
      *              fails
      */
     public abstract void init(HandlerInfo config);
@@ -190,7 +192,7 @@ public interface Handler {
      * release its resources and perform cleanup in the implementation
      * of the <code>destroy</code> method.
      *
-     * @throws  jakarta.xml.rpc.JAXRPCException  if there was any error during
+     * @throws JAXRPCException  if there was any error during
      *              destroy
      */
     public abstract void destroy();

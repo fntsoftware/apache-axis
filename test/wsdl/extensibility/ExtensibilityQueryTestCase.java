@@ -30,9 +30,9 @@ public class ExtensibilityQueryTestCase extends junit.framework.TestCase {
     }
     
     public void testExtensibilityQueryPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.extensibility.ExtensibilityQueryLocator().getExtensibilityQueryPortAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.extensibility.ExtensibilityQueryLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.extensibility.ExtensibilityQueryLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -43,7 +43,7 @@ public class ExtensibilityQueryTestCase extends junit.framework.TestCase {
             binding = locator.getExtensibilityQueryPort();
             deployServer();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {
@@ -84,7 +84,7 @@ public class ExtensibilityQueryTestCase extends junit.framework.TestCase {
             binding = locator.getExtensibilityQueryPort();
             deployServer();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         } 
         catch (Exception e) {

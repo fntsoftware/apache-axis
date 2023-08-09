@@ -6,7 +6,7 @@ import org.apache.axis.client.AdminClient;
 import org.apache.axis.utils.Admin;
 
 import java.rmi.RemoteException;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 
 public class JAXRPCHandlerEvalTestCase extends TestCase {
 

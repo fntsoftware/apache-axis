@@ -39,9 +39,9 @@ import javax.wsdl.Port;
 import javax.wsdl.PortType;
 import javax.wsdl.extensions.soap.SOAPAddress;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.ServiceException;
-import jakarta.xml.rpc.encoding.TypeMappingRegistry;
-import jakarta.xml.rpc.handler.HandlerRegistry;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.encoding.TypeMappingRegistry;
+import javax.xml.rpc.handler.HandlerRegistry;
 import java.io.InputStream;
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
@@ -69,7 +69,7 @@ import java.util.WeakHashMap;
  * @author Doug Davis (dug@us.ibm.com)
  */
 
-public class Service implements jakarta.xml.rpc.Service, Serializable, Referenceable {
+public class Service implements javax.xml.rpc.Service, Serializable, Referenceable {
     private transient AxisEngine engine = null;
     private transient EngineConfiguration config = null;
 
@@ -339,7 +339,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
             Class stubClass = ClassUtils.forName(
                     pkg + "." + binding + "Stub");
             if (proxyInterface.isAssignableFrom(stubClass)) {
-                Class[] formalArgs = {jakarta.xml.rpc.Service.class};
+                Class[] formalArgs = {javax.xml.rpc.Service.class};
                 Object[] actualArgs = {this};
                 Constructor ctor = stubClass.getConstructor(formalArgs);
                 Stub stub = (Stub) ctor.newInstance(actualArgs);
@@ -446,8 +446,8 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
             }
             ClassLoader classLoader =
                     Thread.currentThread().getContextClassLoader();
-            jakarta.xml.rpc.Stub stub = (jakarta.xml.rpc.Stub) Proxy.newProxyInstance(classLoader,
-                    new Class[]{proxyInterface, jakarta.xml.rpc.Stub.class},
+            javax.xml.rpc.Stub stub = (javax.xml.rpc.Stub) Proxy.newProxyInstance(classLoader,
+                    new Class[]{proxyInterface, javax.xml.rpc.Stub.class},
                     new AxisClientProxy(call, portName));
             if(stub instanceof org.apache.axis.client.Stub){
                 ((org.apache.axis.client.Stub) stub).setPortName(portName);
@@ -467,7 +467,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
      * @return Call            Used for invoking the Web Service
      * @throws ServiceException If there's an error
      */
-    public jakarta.xml.rpc.Call createCall(QName portName)
+    public javax.xml.rpc.Call createCall(QName portName)
             throws ServiceException {
         Call call = (org.apache.axis.client.Call) createCall();
         call.setPortName(portName);
@@ -516,7 +516,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
      * @return Call            Used for invoking the Web Service
      * @throws ServiceException If there's an error
      */
-    public jakarta.xml.rpc.Call createCall(QName portName,
+    public javax.xml.rpc.Call createCall(QName portName,
                                          String operationName)
             throws ServiceException {
 
@@ -535,7 +535,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
      * @return Call            Used for invoking the Web Service
      * @throws ServiceException If there's an error
      */
-    public jakarta.xml.rpc.Call createCall(QName portName,
+    public javax.xml.rpc.Call createCall(QName portName,
                                          QName operationName)
             throws ServiceException {
 
@@ -552,7 +552,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
      * @return Call            Used for invoking the Web Service
      * @throws ServiceException If there's an error
      */
-    public jakarta.xml.rpc.Call createCall() throws ServiceException {
+    public javax.xml.rpc.Call createCall() throws ServiceException {
         return new org.apache.axis.client.Call(this);
     }
 
@@ -569,7 +569,7 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
      * @throws ServiceException - If this Service class does not have access
      * to the required WSDL metadata or if an illegal portName is specified.
      */
-    public jakarta.xml.rpc.Call[] getCalls(QName portName) throws ServiceException {
+    public javax.xml.rpc.Call[] getCalls(QName portName) throws ServiceException {
         if (portName == null)
             throw new ServiceException(Messages.getMessage("badPort00"));
 
@@ -589,11 +589,11 @@ public class Service implements jakarta.xml.rpc.Service, Serializable, Reference
         Vector calls = new Vector();
         while (i.hasNext()) {
             Operation operation = (Operation) i.next();
-            jakarta.xml.rpc.Call call = createCall(QName.valueOf(port.getName()),
+            javax.xml.rpc.Call call = createCall(QName.valueOf(port.getName()),
                                    QName.valueOf(operation.getName()));
             calls.add(call);
         }
-        jakarta.xml.rpc.Call[] array = new jakarta.xml.rpc.Call[calls.size()];
+        javax.xml.rpc.Call[] array = new javax.xml.rpc.Call[calls.size()];
         calls.toArray(array);
         return array;
     }

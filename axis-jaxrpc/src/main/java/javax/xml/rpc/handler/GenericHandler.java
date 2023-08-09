@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.handler;
+package javax.xml.rpc.handler;
 
 import javax.xml.namespace.QName;
 
 /**
- * The <code>jakarta.xml.rpc.handler.GenericHandler</code> class
+ * The <code>javax.xml.rpc.handler.GenericHandler</code> class
  * implements the <code>Handler</code> interface. SOAP Message
  * Handler developers should typically subclass
  * <code>GenericHandler</code> class unless the Handler class

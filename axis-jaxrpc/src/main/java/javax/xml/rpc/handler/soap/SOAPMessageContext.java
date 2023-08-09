@@ -13,13 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.handler.soap;
+package javax.xml.rpc.handler.soap;
 
-import jakarta.xml.rpc.handler.MessageContext;
+import javax.xml.rpc.JAXRPCException;
+import javax.xml.rpc.handler.MessageContext;
 import jakarta.xml.soap.SOAPMessage;
 
+import javax.xml.rpc.handler.HandlerChain;
+
 /**
- * The interface <code>jakarta.xml.rpc.soap.SOAPMessageContext</code>
+ * The interface <code>javax.xml.rpc.soap.SOAPMessageContext</code>
  * provides access to the SOAP message for either RPC request or
  * response. The <code>jakarta.xml.soap.SOAPMessage</code> specifies
  * the standard Java API for the representation of a SOAP 1.1 message
@@ -43,7 +46,7 @@ public interface SOAPMessageContext extends MessageContext {
      *  Sets the <code>SOAPMessage</code> for this message context.
      *
      *  @param   message  SOAP message
-     *  @throws  jakarta.xml.rpc.JAXRPCException  if any error during the setting
+     *  @throws JAXRPCException  if any error during the setting
      *     of the SOAPMessage in this message context
      *  @throws java.lang.UnsupportedOperationException if this
      *     operation is not supported
@@ -62,8 +65,8 @@ public interface SOAPMessageContext extends MessageContext {
      * SOAP message through the HandlerChain.
      *
      * @return Array of URIs for SOAP actor roles
-     * @see jakarta.xml.rpc.handler.HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
-     * @see jakarta.xml.rpc.handler.HandlerChain#getRoles() HandlerChain.getRoles()
+     * @see HandlerChain#setRoles(java.lang.String[]) HandlerChain.setRoles(java.lang.String[])
+     * @see HandlerChain#getRoles() HandlerChain.getRoles()
      */
     public abstract String[] getRoles();
 }

@@ -1,9 +1,9 @@
 package test.wsdl.getPort;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.Service;
-import jakarta.xml.rpc.ServiceException;
-import jakarta.xml.rpc.Stub;
+import javax.xml.rpc.Service;
+import javax.xml.rpc.ServiceException;
+import javax.xml.rpc.Stub;
 import java.util.Iterator;
 
 // This test makes sure that the getPort method works in various service classes.

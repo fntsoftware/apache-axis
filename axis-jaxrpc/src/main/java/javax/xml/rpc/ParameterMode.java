@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc;
+package javax.xml.rpc;
 
 /**
- * The <code>jakarta.xml.rpc.ParameterMode</code> is a type-safe
+ * The <code>javax.xml.rpc.ParameterMode</code> is a type-safe
  * enumeration for parameter mode. This class is used in the
  * <code>Call</code>API to specify parameter passing modes.
  *

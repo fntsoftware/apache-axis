@@ -19,7 +19,7 @@ public class TerraServiceTestCase extends junit.framework.TestCase {
         try {
             binding = new TerraServiceLocator().getTerraServiceSoap(new URL("http://localhost:" + System.getProperty("mock.httpPort", "9080") + "/terraservice"));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
         }
         assertTrue("binding is null", binding != null);

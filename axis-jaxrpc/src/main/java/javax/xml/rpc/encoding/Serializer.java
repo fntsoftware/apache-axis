@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.encoding;
+package javax.xml.rpc.encoding;
 
 /**
- * The jakarta.xml.rpc.encoding.Serializer interface defines the
+ * The javax.xml.rpc.encoding.Serializer interface defines the
  * base interface for serializers. A Serializer converts
  * a Java object to an XML representation using a specific XML
  * processing mechanism and based on the specified type

@@ -35,7 +35,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
+import javax.xml.rpc.server.ServiceLifecycle;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -923,7 +924,7 @@ public class JavaServiceDesc implements ServiceDesc {
      * @return true if this method is from ServiceLifeCycle interface
      */ 
     private boolean isServiceLifeCycleMethod(Class implClass, Method m) {
-        if(jakarta.xml.rpc.server.ServiceLifecycle.class.isAssignableFrom(implClass)) {
+        if(ServiceLifecycle.class.isAssignableFrom(implClass)) {
             String methodName = m.getName(); 
 
             if(methodName.equals("init")) {

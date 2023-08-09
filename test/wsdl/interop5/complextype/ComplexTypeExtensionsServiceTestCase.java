@@ -32,9 +32,9 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
     }
 
     public void testComplexTypeExtensionsPortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = new java.net.URL(new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPortAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -43,7 +43,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -67,7 +67,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -93,7 +93,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -121,7 +121,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -149,7 +149,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -179,7 +179,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -205,7 +205,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -233,7 +233,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -261,7 +261,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -285,7 +285,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -310,7 +310,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -335,7 +335,7 @@ public class ComplexTypeExtensionsServiceTestCase extends junit.framework.TestCa
         try {
             binding = new test.wsdl.interop5.complextype.ComplexTypeExtensionsServiceLocator().getComplexTypeExtensionsPort(url);
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

@@ -26,9 +26,9 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testMarshall2PortWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.marshall2.Marshall2ServiceLocator().getMarshall2PortAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.marshall2.Marshall2ServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.marshall2.Marshall2ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -38,7 +38,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -63,7 +63,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -85,7 +85,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -111,7 +111,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -133,7 +133,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -155,7 +155,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -177,7 +177,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -199,7 +199,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -221,7 +221,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -243,7 +243,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -265,7 +265,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -287,7 +287,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -309,7 +309,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -331,7 +331,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -353,7 +353,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -375,7 +375,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -397,7 +397,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -419,7 +419,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -441,7 +441,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -468,7 +468,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -490,7 +490,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -512,7 +512,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -537,7 +537,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -562,7 +562,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -584,7 +584,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -653,7 +653,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
@@ -697,7 +697,7 @@ public class Marshall2ServiceTestCase extends junit.framework.TestCase {
             Marshall2ServiceLocator loc = new Marshall2ServiceLocator();
             binding = (MarshallTestSoapBindingStub)loc.getMarshall2Port(HttpTestUtil.getTestEndpoint(loc.getMarshall2PortAddress()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

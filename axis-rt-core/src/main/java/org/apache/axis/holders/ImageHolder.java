@@ -15,7 +15,7 @@
  */
 package org.apache.axis.holders;
 
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
 import java.awt.*;
 
 /**

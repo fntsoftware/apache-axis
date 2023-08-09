@@ -55,7 +55,8 @@ import org.xml.sax.helpers.AttributesImpl;
 
 import javax.xml.namespace.QName;
 import javax.xml.parsers.SAXParser;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.holders.Holder;
+import javax.xml.rpc.JAXRPCException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.IOException;
@@ -67,7 +68,7 @@ import java.lang.reflect.Method;
  */
 
 public class DeserializationContext implements ContentHandler, DTDHandler,
-        jakarta.xml.rpc.encoding.DeserializationContext, LexicalHandler {
+        javax.xml.rpc.encoding.DeserializationContext, LexicalHandler {
     protected static Log log =
             LogFactory.getLog(DeserializationContext.class.getName());
 
@@ -505,7 +506,7 @@ public class DeserializationContext implements ContentHandler, DTDHandler,
 //        if (cls.isArray()) {
 //            cls = cls.getComponentType();
 //        }
-        if (jakarta.xml.rpc.holders.Holder.class.isAssignableFrom(cls)) {
+        if (Holder.class.isAssignableFrom(cls)) {
             try {
                 cls = cls.getField("value").getType();
             } catch (Exception e) {

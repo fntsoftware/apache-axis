@@ -17,9 +17,9 @@ public class EsrTestServiceTestCase extends junit.framework.TestCase {
     }
 
     public void testEsrTestWSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.esr.EsrTestServiceLocator().getEsrTestAddress() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.esr.EsrTestServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.esr.EsrTestServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -28,7 +28,7 @@ public class EsrTestServiceTestCase extends junit.framework.TestCase {
         try {
             //load wsdl file
             String wsdlLocation = HttpTestUtil.getTestEndpoint("http://localhost:8080/axis/services/EsrTest") + "?WSDL";
-            jakarta.xml.rpc.Service svc =
+            javax.xml.rpc.Service svc =
                     new org.apache.axis.client.Service(
                             wsdlLocation,
                             new javax.xml.namespace.QName("urn:esr.wsdl.test",
@@ -36,7 +36,7 @@ public class EsrTestServiceTestCase extends junit.framework.TestCase {
                     );
 			
             //setting up the call
-            jakarta.xml.rpc.Call call = svc.createCall(
+            javax.xml.rpc.Call call = svc.createCall(
                     new javax.xml.namespace.QName("urn:esr.wsdl.test",
                             "EsrTest"),
                     new javax.xml.namespace.QName("urn:esr.wsdl.test",
@@ -83,7 +83,7 @@ public class EsrTestServiceTestCase extends junit.framework.TestCase {
         try {
             //load wsdl file
             String wsdlLocation = HttpTestUtil.getTestEndpoint("http://localhost:8080/axis/services/EsrTest") + "?WSDL";
-            jakarta.xml.rpc.Service svc =
+            javax.xml.rpc.Service svc =
                     new org.apache.axis.client.Service(
                             wsdlLocation,
                             new javax.xml.namespace.QName("urn:esr.wsdl.test",
@@ -91,7 +91,7 @@ public class EsrTestServiceTestCase extends junit.framework.TestCase {
                     );
 			
             //setting up the call
-            jakarta.xml.rpc.Call call = svc.createCall(
+            javax.xml.rpc.Call call = svc.createCall(
                     new javax.xml.namespace.QName("urn:esr.wsdl.test",
                             "EsrTest"),
                     new javax.xml.namespace.QName("urn:esr.wsdl.test",

@@ -23,7 +23,6 @@ import org.apache.axis.components.logger.LogFactory;
 import org.apache.axis.encoding.DeserializationContext;
 import org.apache.axis.encoding.Deserializer;
 import org.apache.axis.encoding.SerializationContext;
-import org.apache.axis.encoding.TextSerializationContext;
 import org.apache.axis.constants.Style;
 import org.apache.axis.soap.SOAPConstants;
 import org.apache.axis.utils.Mapping;
@@ -48,11 +47,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.AttributesImpl;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.encoding.TypeMapping;
+import javax.xml.rpc.encoding.TypeMapping;
 import jakarta.xml.soap.Name;
 import jakarta.xml.soap.SOAPElement;
 import jakarta.xml.soap.SOAPException;
-import javax.xml.parsers.ParserConfigurationException;
+
 import java.io.Reader;
 import java.io.Serializable;
 import java.io.StringReader;

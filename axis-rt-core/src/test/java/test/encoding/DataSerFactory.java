@@ -19,6 +19,7 @@ package test.encoding;
 import org.apache.axis.Constants;
 import org.apache.axis.encoding.SerializerFactory;
 
+import javax.xml.rpc.encoding.Serializer;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -32,7 +33,7 @@ public class DataSerFactory implements SerializerFactory {
 
     public DataSerFactory() {
     }
-    public jakarta.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType) {
+    public Serializer getSerializerAs(String mechanismType) {
         return new DataSer();
     }
     public Iterator getSupportedMechanismTypes() {

@@ -20,7 +20,7 @@ import junit.framework.TestCase;
 import org.apache.axis.encoding.TypeMappingRegistryImpl;
 import org.apache.axis.Constants;
 
-import jakarta.xml.rpc.encoding.TypeMapping;
+import javax.xml.rpc.encoding.TypeMapping;
 
 /**
  * Default Type Mapping tests

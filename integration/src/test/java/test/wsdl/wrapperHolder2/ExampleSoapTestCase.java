@@ -1,7 +1,7 @@
 package test.wsdl.wrapperHolder2;
 
-import jakarta.xml.rpc.holders.ByteArrayHolder;
-import jakarta.xml.rpc.holders.LongWrapperHolder;
+import javax.xml.rpc.holders.ByteArrayHolder;
+import javax.xml.rpc.holders.LongWrapperHolder;
 
 import test.HttpTestUtil;
 
@@ -11,9 +11,9 @@ public class ExampleSoapTestCase extends junit.framework.TestCase {
     }
 
     public void testWrapperHolder2WSDL() throws Exception {
-        jakarta.xml.rpc.ServiceFactory serviceFactory = jakarta.xml.rpc.ServiceFactory.newInstance();
+        javax.xml.rpc.ServiceFactory serviceFactory = javax.xml.rpc.ServiceFactory.newInstance();
         java.net.URL url = HttpTestUtil.getTestEndpoint(new test.wsdl.wrapperHolder2.DoExample_ServiceLocator().getWrapperHolder2Address() + "?WSDL");
-        jakarta.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.wrapperHolder2.DoExample_ServiceLocator().getServiceName());
+        javax.xml.rpc.Service service = serviceFactory.createService(url, new test.wsdl.wrapperHolder2.DoExample_ServiceLocator().getServiceName());
         assertTrue(service != null);
     }
 
@@ -23,7 +23,7 @@ public class ExampleSoapTestCase extends junit.framework.TestCase {
             DoExample_ServiceLocator loc = new DoExample_ServiceLocator();
             binding = (ExampleSoapStub)loc.getWrapperHolder2(HttpTestUtil.getTestEndpoint(loc.getWrapperHolder2Address()));
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);

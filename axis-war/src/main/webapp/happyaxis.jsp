@@ -326,7 +326,7 @@
         out.print("<br>");
     }
 
-    needed+=needClass(out, "jakarta.xml.rpc.Service",
+    needed+=needClass(out, "javax.xml.rpc.Service",
             "jaxrpc.jar",
             "JAX-RPC API",
             getMessage("criticalErrorMessage"),

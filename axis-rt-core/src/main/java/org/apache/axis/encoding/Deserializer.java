@@ -44,7 +44,7 @@ import java.util.Vector;
  * to determine how to construct a deserializer.
  * The xmlType, javaType arguments are filled in with the values known by the factory.
  */
-public interface Deserializer extends jakarta.xml.rpc.encoding.Deserializer, Callback {
+public interface Deserializer extends javax.xml.rpc.encoding.Deserializer, Callback {
 
     /**
      * Get the deserialized value.

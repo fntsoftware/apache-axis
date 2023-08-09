@@ -18,7 +18,7 @@ package org.apache.axis.encoding.ser;
 import org.apache.axis.utils.JavaUtils;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.JAXRPCException;
 
 import java.io.ObjectStreamException;
 import java.lang.reflect.Constructor;
@@ -67,7 +67,7 @@ public class SimpleListDeserializerFactory extends BaseDeserializerFactory {
      * Get the Deserializer and the set the Constructor so the
      * deserializer does not have to do introspection.
      */
-    public jakarta.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType)
+    public javax.xml.rpc.encoding.Deserializer getDeserializerAs(String mechanismType)
         throws JAXRPCException {
         if (javaType == java.lang.Object.class) {
             return null;

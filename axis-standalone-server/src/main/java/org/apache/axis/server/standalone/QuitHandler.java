@@ -18,7 +18,7 @@
  */
 package org.apache.axis.server.standalone;
 
-import jakarta.xml.rpc.server.ServletEndpointContext;
+import javax.xml.rpc.server.ServletEndpointContext;
 
 import org.apache.axis.AxisFault;
 import org.apache.axis.Constants;

@@ -18,8 +18,8 @@ package org.apache.axis.tools.ant.wsdl;
 import org.apache.axis.encoding.TypeMapping;
 import org.apache.axis.encoding.ser.BaseSerializerFactory;
 import org.apache.axis.encoding.ser.BaseDeserializerFactory;
-import jakarta.xml.rpc.encoding.SerializerFactory;
-import jakarta.xml.rpc.encoding.DeserializerFactory;
+import javax.xml.rpc.encoding.SerializerFactory;
+import javax.xml.rpc.encoding.DeserializerFactory;
 import javax.xml.namespace.QName;
 
 public class ComplexType {

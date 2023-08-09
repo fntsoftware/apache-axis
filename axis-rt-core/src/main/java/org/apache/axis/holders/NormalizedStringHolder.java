@@ -18,7 +18,7 @@ package org.apache.axis.holders;
 
 import org.apache.axis.types.NormalizedString;
 
-import jakarta.xml.rpc.holders.Holder;
+import javax.xml.rpc.holders.Holder;
 
 /**
  * Class NormalizedStringHolder

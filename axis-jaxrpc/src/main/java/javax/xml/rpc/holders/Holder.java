@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jakarta.xml.rpc.holders;
+package javax.xml.rpc.holders;
 
 /**
  * The <code>java.xml.rpc.holders.Holder</code> interface represents the base interface for both standard and

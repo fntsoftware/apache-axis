@@ -22,7 +22,8 @@ package org.apache.axis.encoding.ser;
 import org.apache.axis.utils.JavaUtils;
 
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.JAXRPCException;
+import javax.xml.rpc.encoding.Serializer;
+import javax.xml.rpc.JAXRPCException;
 
 public class SimpleSerializerFactory extends BaseSerializerFactory {
 
@@ -37,7 +38,7 @@ public class SimpleSerializerFactory extends BaseSerializerFactory {
         this.isBasicType = JavaUtils.isBasic(javaType);
     }
 
-    public jakarta.xml.rpc.encoding.Serializer getSerializerAs(String mechanismType) throws JAXRPCException {
+    public Serializer getSerializerAs(String mechanismType) throws JAXRPCException {
         if (this.isBasicType) {
             return new SimpleSerializer(javaType, xmlType);
         } else {

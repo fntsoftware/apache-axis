@@ -35,7 +35,7 @@ import javax.wsdl.extensions.mime.MIMEMultipartRelated;
 import javax.wsdl.extensions.soap.SOAPBody;
 import javax.wsdl.extensions.soap12.SOAP12Body;
 import javax.xml.namespace.QName;
-import jakarta.xml.rpc.holders.BooleanHolder;
+import javax.xml.rpc.holders.BooleanHolder;
 import java.util.*;
 
 /**

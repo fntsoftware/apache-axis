@@ -25,7 +25,7 @@ public class PerfService_ServiceTestCase extends junit.framework.TestCase {
             binding = (samples.perf.PerfPortSoapBindingStub)
                           new samples.perf.PerfService_ServiceLocator().getPerfPort();
         }
-        catch (jakarta.xml.rpc.ServiceException jre) {
+        catch (javax.xml.rpc.ServiceException jre) {
             if(jre.getLinkedCause()!=null)
                 jre.getLinkedCause().printStackTrace();
             throw new junit.framework.AssertionFailedError("JAX-RPC ServiceException caught: " + jre);
